@@ -91,6 +91,11 @@
 
     let reRenderTest = true;
 
+    let passField;
+    $: if (passField !== undefined) {
+        passField.focus();
+    }
+
     let startUpPass;
     $: if (startUpPass === "isosceles") {
         page = "Read";
@@ -131,8 +136,9 @@
                 <input
                     class="w-full h-10 pl-3 pr-8 text-base placeholder-gray-600 border border-slate-400 focus:outline-none focus:border-slate-600"
                     type="text"
-                    placeholder="Search here"
+                    placeholder="Enter Password"
                     bind:value={startUpPass}
+                    bind:this={passField}
                 />
                 <button
                     on:click={() => {}}
