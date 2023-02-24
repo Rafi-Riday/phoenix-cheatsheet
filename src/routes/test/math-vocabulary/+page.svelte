@@ -95,54 +95,61 @@
     $: passField?.focus();
 
     let startUpPass;
-    $: if (startUpPass?.toLowerCase() === "rima") {
+    $: if (startUpPass === "Rima") {
         page = "Read";
     }
 </script>
 
 <main class="text-gray-900 flex flex-col gap-4 py-4 sm:px-4">
-    <center>
-        <button
-            on:click={() => (page = "Read")}
-            class="bg-sky-200 font-semibold px-2 py-1 underline"
-            >Read Vocabulary</button
-        >
-        or
-        <button
-            on:click={() => (page = "Test")}
-            class="bg-sky-200 font-semibold px-2 py-1 underline"
-            >Give Test</button
-        >
-    </center>
-    <center>
-        Click <u class="cursor-pointer">Links</u> to view definitions
-    </center>
-    <center>
-        Copyright©<a
-            class="text-sky-700 underline"
-            href="https://www.facebook.com/PhoenixAdmissionCare"
-            >Phoenix Admission Care</a
-        >
-    </center>
+    {#if page === "Read" || page === "Test"}
+        <center>
+            <button
+                on:click={() => (page = "Read")}
+                class="bg-sky-200 font-semibold px-2 py-1 underline"
+                >Read Vocabulary</button
+            >
+            or
+            <button
+                on:click={() => (page = "Test")}
+                class="bg-sky-200 font-semibold px-2 py-1 underline"
+                >Give Test</button
+            >
+        </center>
+        <center>
+            Click <u class="cursor-pointer">Links</u> to view definitions
+        </center>
+        <center>
+            Copyright©<a
+                class="text-sky-700 underline"
+                href="https://www.facebook.com/PhoenixAdmissionCare"
+                >Phoenix Admission Care</a
+            >
+        </center>
+    {/if}
 
     <center>
         <!-- Password -->
         {#if page === "Pass"}
             <center
-                class="text-gray-700 mb-4 px-2 max-w-sm flex flex-row first:grow"
+                class="flex flex-col gap-2 font-semibold fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
             >
-                <input
-                    class="w-full h-10 pl-3 pr-8 text-base placeholder-gray-600 border border-slate-400 focus:outline-none focus:border-slate-600"
-                    type="text"
-                    placeholder="Enter Password"
-                    bind:value={startUpPass}
-                    bind:this={passField}
-                />
-                <button
-                    on:click={() => {}}
-                    class="flex items-center px-4 font-bold text-white bg-indigo-600 hover:bg-indigo-500 border border-indigo-600 focus:border-black focus:outline-none"
-                    >Enter</button
+                <center>Don't Forward unless you are an admin!</center>
+                <center
+                    class="text-gray-700 mb-4 px-2 max-w-sm flex flex-row first:grow"
                 >
+                    <input
+                        class="w-full h-10 pl-3 pr-8 text-base placeholder-gray-600 border border-slate-400 focus:outline-none focus:border-slate-600"
+                        type="text"
+                        placeholder="Enter Password"
+                        bind:value={startUpPass}
+                        bind:this={passField}
+                    />
+                    <button
+                        on:click={() => {}}
+                        class="flex items-center px-4 font-bold text-white bg-indigo-600 hover:bg-indigo-500 border border-indigo-600 focus:border-black focus:outline-none"
+                        >Enter</button
+                    >
+                </center>
             </center>
         {/if}
         <!-- Read -->
@@ -230,11 +237,11 @@
                     >Right</button
                 >
                 <button
-                    class="cursor-default px-2 py-1 bg-green-50 border border-green-700"
+                    class="cursor-default px-2 py-1 bg-sky-100 border border-sky-800"
                     >Unselected Right</button
                 >
                 <button
-                    class="cursor-default px-2 py-1 bg-red-50 border border-red-600"
+                    class="cursor-default px-2 py-1 bg-red-100 border border-red-600"
                     >Wrong</button
                 >
             </center>
@@ -318,10 +325,10 @@
                                                 ? 'border-slate-300 peer-checked:bg-gray-300 peer-checked:border-slate-600'
                                                 : submitSection === 'Reset' &&
                                                   option.n === qSet.n
-                                                ? 'bg-green-50 border-green-700 peer-checked:bg-emerald-200 peer-checked:border-green-800'
+                                                ? 'bg-sky-100 border-sky-800 peer-checked:bg-emerald-200 peer-checked:border-green-800'
                                                 : submitSection === 'Reset' &&
                                                   option.n !== qSet.n
-                                                ? 'border-slate-300 peer-checked:bg-red-50 peer-checked:border-red-600'
+                                                ? 'border-slate-300 peer-checked:bg-red-100 peer-checked:border-red-600'
                                                 : ''}"
                                             for="op_{idx}_{opIdx}"
                                         >
