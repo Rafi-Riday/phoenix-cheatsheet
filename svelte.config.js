@@ -1,15 +1,12 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-vercel';
+import { vitePreprocess } from '@sveltejs/kit/vite';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  kit: {
-    adapter: adapter(),
-
-    // Override http methods in the Todo forms
-    methodOverride: {
-      allowed: ['PATCH', 'DELETE']
-    }
-  }
+	kit: {
+		adapter: adapter()
+	},
+	preprocess: vitePreprocess()
 };
 
 export default config;
