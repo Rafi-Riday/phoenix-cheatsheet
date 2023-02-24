@@ -1,0 +1,492 @@
+[
+    {
+        "n": 1,
+        "en": "Postulates",
+        "bn": "মৌলিক নীতি"
+    },
+    {
+        "n": 2,
+        "en": "Volume",
+        "bn": "আয়তন"
+    },
+    {
+        "n": 3,
+        "en": "Abscissa",
+        "bn": "ভুজ"
+    },
+    {
+        "n": 4,
+        "en": "Trigonometry",
+        "bn": "ত্রিকোণমিতি"
+    },
+    {
+        "n": 5,
+        "en": "Polyhedrons",
+        "bn": "বহুতকল"
+    },
+    {
+        "n": 6,
+        "en": "Deduction",
+        "bn": "সিদ্ধান্ত"
+    },
+    {
+        "n": 7,
+        "en": "Cylinder",
+        "bn": "নলাকার বস্তু"
+    },
+    {
+        "n": 8,
+        "en": "Theorems",
+        "bn": "উপপাদ্য"
+    },
+    {
+        "n": 9,
+        "en": "Conditional",
+        "bn": "শর্তসাপেক্ষ"
+    },
+    {
+        "n": 10,
+        "en": "Sine Ratio",
+        "bn": "সাইন অনুপাত"
+    },
+    {
+        "n": 11,
+        "en": "Proofs",
+        "bn": "প্রমাণ"
+    },
+    {
+        "n": 12,
+        "en": "Symmetry",
+        "bn": "প্রতিসাম্য"
+    },
+    {
+        "n": 13,
+        "en": "Acute angle",
+        "bn": "সূক্ষ্মকোণ"
+    },
+    {
+        "n": 14,
+        "en": "Right Angle",
+        "bn": "সমকোণ"
+    },
+    {
+        "n": 15,
+        "en": "Obtuse Angle",
+        "bn": "স্থূলকোণ"
+    },
+    {
+        "n": 16,
+        "en": "Straight Angle",
+        "bn": "সরলকোণ"
+    },
+    {
+        "n": 17,
+        "en": "Reflex Angle",
+        "bn": "প্রবৃদ্ধ কোণ"
+    },
+    {
+        "n": 18,
+        "en": "Complete Angle",
+        "bn": "সম্পূর্ণ কোণ"
+    },
+    {
+        "n": 19,
+        "en": "Equilateral Triangle",
+        "bn": "সমবাহু ত্রিভুজ"
+    },
+    {
+        "n": 20,
+        "en": "Isosceles Triangle",
+        "bn": "সমদ্বিবাহু ত্রিভুজ"
+    },
+    {
+        "n": 21,
+        "en": "Scalene Triangle",
+        "bn": "বিষমভুজ ত্রিভুজ"
+    },
+    {
+        "n": 22,
+        "en": "Quadrilateral",
+        "bn": "চতুর্ভুজ"
+    },
+    {
+        "n": 23,
+        "en": "Mathematical Operation",
+        "bn": "গাণিতিক ক্রিয়া"
+    },
+    {
+        "n": 24,
+        "en": "Decimal fraction",
+        "bn": "দশমিক ভগ্নাংশ"
+    },
+    {
+        "n": 25,
+        "en": "Numeric",
+        "bn": "সংখ্যা সূচক"
+    },
+    {
+        "n": 26,
+        "en": "Compound interest",
+        "bn": "চক্রবৃদ্ধি সুদ"
+    },
+    {
+        "n": 27,
+        "en": "Annual rate",
+        "bn": "বার্ষিক হার"
+    },
+    {
+        "n": 28,
+        "en": "Principal",
+        "bn": "মূলধন"
+    },
+    {
+        "n": 29,
+        "en": "Continuously compounded interest",
+        "bn": "ক্রমাগত চক্রবৃদ্ধি সুদ"
+    },
+    {
+        "n": 30,
+        "en": "Future value",
+        "bn": "ভবিষ্যৎ মান"
+    },
+    {
+        "n": 31,
+        "en": "Interest rate",
+        "bn": "সুদের হার"
+    },
+    {
+        "n": 32,
+        "en": "Diagonal",
+        "bn": "তির্যক"
+    },
+    {
+        "n": 33,
+        "en": "Diameter",
+        "bn": "ব্যাস"
+    },
+    {
+        "n": 34,
+        "en": "Empty set",
+        "bn": "ফাঁকা সেট"
+    },
+    {
+        "n": 35,
+        "en": "Parentheses",
+        "bn": "বন্ধনী"
+    },
+    {
+        "n": 36,
+        "en": "Integration",
+        "bn": "সমাকলন"
+    },
+    {
+        "n": 37,
+        "en": "Horizontal",
+        "bn": "অনুভূমিক"
+    },
+    {
+        "n": 38,
+        "en": "Vertical",
+        "bn": "উল্লম্ব"
+    },
+    {
+        "n": 39,
+        "en": "Square root",
+        "bn": "বর্গমূল"
+    },
+    {
+        "n": 40,
+        "en": "Hypotenuse",
+        "bn": "অতিভুজ"
+    },
+    {
+        "n": 41,
+        "en": "Unit circle",
+        "bn": "একক বৃত্ত"
+    },
+    {
+        "n": 42,
+        "en": "Unitary system",
+        "bn": "ঐকিক নিয়ম"
+    },
+    {
+        "n": 43,
+        "en": "Fraction",
+        "bn": "ভগ্নাংশ"
+    },
+    {
+        "n": 44,
+        "en": "Ratio",
+        "bn": "অনুপাত"
+    },
+    {
+        "n": 45,
+        "en": "Proportion",
+        "bn": "সমানুপাত"
+    },
+    {
+        "n": 46,
+        "en": "Decimal",
+        "bn": "দশমিক"
+    },
+    {
+        "n": 47,
+        "en": "Division",
+        "bn": "ভাগ"
+    },
+    {
+        "n": 48,
+        "en": "Multiplication",
+        "bn": "গুন"
+    },
+    {
+        "n": 49,
+        "en": "Multiple",
+        "bn": "গুণিতক"
+    },
+    {
+        "n": 50,
+        "en": "Factor",
+        "bn": "গুণনীয়ক"
+    },
+    {
+        "n": 51,
+        "en": "Odd",
+        "bn": "বিজোড়"
+    },
+    {
+        "n": 52,
+        "en": "Even",
+        "bn": "জোড়"
+    },
+    {
+        "n": 53,
+        "en": "Sum",
+        "bn": "যোগফল"
+    },
+    {
+        "n": 54,
+        "en": "Difference",
+        "bn": "বিয়োগফল"
+    },
+    {
+        "n": 55,
+        "en": "Product",
+        "bn": "গুণফল"
+    },
+    {
+        "n": 56,
+        "en": "Quotient",
+        "bn": "ভাগফল"
+    },
+    {
+        "n": 57,
+        "en": "Dividend",
+        "bn": "ভাজ্য"
+    },
+    {
+        "n": 58,
+        "en": "Divisor",
+        "bn": "ভাজক"
+    },
+    {
+        "n": 59,
+        "en": "Variable",
+        "bn": "চলক"
+    },
+    {
+        "n": 60,
+        "en": "Constant",
+        "bn": "ধ্রুবক"
+    },
+    {
+        "n": 61,
+        "en": "Numerator",
+        "bn": "লব"
+    },
+    {
+        "n": 62,
+        "en": "Denominator",
+        "bn": "হর"
+    },
+    {
+        "n": 63,
+        "en": "L.C.M.",
+        "bn": "ল সা গু"
+    },
+    {
+        "n": 64,
+        "en": "H.C.F",
+        "bn": "গ সা গু"
+    },
+    {
+        "n": 65,
+        "en": "L.C.D",
+        "bn": "সমহর"
+    },
+    {
+        "n": 66,
+        "en": "Remainder",
+        "bn": "ভাগশেষ"
+    },
+    {
+        "n": 67,
+        "en": "Approximate value",
+        "bn": "আসন্ন মান"
+    },
+    {
+        "n": 68,
+        "en": "Factorisation",
+        "bn": "উৎপাদকে বিশ্লেষণ"
+    },
+    {
+        "n": 69,
+        "en": "Progression",
+        "bn": "প্রগমন"
+    },
+    {
+        "n": 70,
+        "en": "Area",
+        "bn": "ক্ষেত্রফল"
+    },
+    {
+        "n": 71,
+        "en": "Perimeter",
+        "bn": "পরিসীমা"
+    },
+    {
+        "n": 72,
+        "en": "Cube",
+        "bn": "ঘন"
+    },
+    {
+        "n": 74,
+        "en": "Polygon",
+        "bn": "বহুভুজ"
+    },
+    {
+        "n": 75,
+        "en": "Regular polygon",
+        "bn": "সুষম বহুভুজ"
+    },
+    {
+        "n": 76,
+        "en": "Hexagon",
+        "bn": "ষড়ভুজ"
+    },
+    {
+        "n": 77,
+        "en": "Sphere",
+        "bn": "গোলক"
+    },
+    {
+        "n": 78,
+        "en": "Altitude",
+        "bn": "উচ্চতা"
+    },
+    {
+        "n": 79,
+        "en": "Surface Area",
+        "bn": "উপরিতলের ক্ষেত্রফল"
+    },
+    {
+        "n": 80,
+        "en": "Rectangular Solid",
+        "bn": "আয়তকার ঘন"
+    },
+    {
+        "n": 82,
+        "en": "Circumference",
+        "bn": "পরিধি"
+    },
+    {
+        "n": 83,
+        "en": "Tangent",
+        "bn": "স্পর্শক"
+    },
+    {
+        "n": 84,
+        "en": "Chord",
+        "bn": "জ্যা"
+    },
+    {
+        "n": 85,
+        "en": "Arc",
+        "bn": "বৃত্ত চাপ"
+    },
+    {
+        "n": 86,
+        "en": "Segment",
+        "bn": "বৃত্তাংশ"
+    },
+    {
+        "n": 87,
+        "en": "Secant",
+        "bn": "ছেদক"
+    },
+    {
+        "n": 88,
+        "en": "Semi-circle",
+        "bn": "অর্ধবৃত্ত"
+    },
+    {
+        "n": 89,
+        "en": "Inscribed Angle",
+        "bn": "বৃত্তস্থ কোণ"
+    },
+    {
+        "n": 90,
+        "en": "Central Angle",
+        "bn": "কেন্দ্রস্থ কোণ"
+    },
+    {
+        "n": 91,
+        "en": "Vertex",
+        "bn": "শীর্ষবিন্দু"
+    },
+    {
+        "n": 92,
+        "en": "Corresponding Angle",
+        "bn": "অনুরূপ কোণ"
+    },
+    {
+        "n": 93,
+        "en": "Alternate Angle",
+        "bn": "একান্তর কোণ"
+    },
+    {
+        "n": 94,
+        "en": "Adjacent Angles",
+        "bn": "সন্নিহিত কোণ"
+    },
+    {
+        "n": 95,
+        "en": "Supplementary Angle",
+        "bn": "সম্পূরক কোণ"
+    },
+    {
+        "n": 96,
+        "en": "Vertical Angle",
+        "bn": "বিপ্রতীপ কোণ"
+    },
+    {
+        "n": 97,
+        "en": "Transversal",
+        "bn": "ছেদক"
+    },
+    {
+        "n": 98,
+        "en": "Integer",
+        "bn": "পূর্ণ সংখ্যা"
+    },
+    {
+        "n": 99,
+        "en": "Perpendicular",
+        "bn": "লম্ব"
+    },
+    {
+        "n": 100,
+        "en": "Additive inverse",
+        "bn": "যোগাত্নক বিপরীত"
+    }
+]

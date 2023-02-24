@@ -1,17 +1,19 @@
 <script>
-    import vocabulary from "./vocabulary.json";
+    import mathVocabulary from "./math-vocabulary.json";
 
-    let page = "Read";
+    let page = "Pass";
 
-    let readPageVocabulary = vocabulary;
+    let readPageVocabulary = mathVocabulary;
     let searchQ = "";
     $: if (searchQ !== "") {
-        readPageVocabulary = vocabulary.filter(
-            (v) => v.en.includes(searchQ) || v.bn.includes(searchQ)
+        readPageVocabulary = mathVocabulary.filter(
+            (v) =>
+                v.en.toLowerCase().includes(searchQ.toLowerCase()) ||
+                v.bn.includes(searchQ)
         );
         console.log(readPageVocabulary);
     } else {
-        readPageVocabulary = vocabulary;
+        readPageVocabulary = mathVocabulary;
     }
 
     let questionLang = "en";
@@ -20,19 +22,19 @@
         const optionSet = [];
         for (let i = 1; i <= oneDirectionRange; i++) {
             if (idx - i >= 0) {
-                optionSet.push(vocabulary[idx - i]);
+                optionSet.push(mathVocabulary[idx - i]);
             } else {
-                optionSet.push(vocabulary[vocabulary.length + idx - i]);
+                optionSet.push(mathVocabulary[mathVocabulary.length + idx - i]);
             }
-            if (idx + i <= vocabulary.length - 1) {
-                optionSet.push(vocabulary[idx + i]);
+            if (idx + i <= mathVocabulary.length - 1) {
+                optionSet.push(mathVocabulary[idx + i]);
             } else {
-                optionSet.push(vocabulary[idx + i - vocabulary.length]);
+                optionSet.push(mathVocabulary[idx + i - mathVocabulary.length]);
             }
         }
         return {
             optionSet,
-            qSet: vocabulary[idx],
+            qSet: mathVocabulary[idx],
         };
     };
     const range = (max) => {
@@ -67,7 +69,7 @@
     let finalQuestionSet = [];
     let generateFinalQuestionSet = () => {
         finalQuestionSet = [];
-        vocabulary.forEach(({ n }, idx) => {
+        mathVocabulary.forEach(({ n }, idx) => {
             finalQuestionSet.push(returnMCQ(idx));
         });
     };
@@ -77,7 +79,7 @@
     let submitSection = "Submit";
     let markSheet;
     $: markSheet = {
-        total: vocabulary.length,
+        total: mathVocabulary.length,
         answered: Object.keys(resultSet).length,
         correct: Object.keys(resultSet).filter(
             (rIdx) => resultSet[rIdx].qSet.n === resultSet[rIdx].option.n
@@ -88,6 +90,11 @@
     };
 
     let reRenderTest = true;
+
+    let startUpPass;
+    $: if (startUpPass === "isosceles") {
+        page = "Read";
+    }
 </script>
 
 <main class="text-gray-900 flex flex-col gap-4 py-4 sm:px-4">
@@ -104,13 +111,38 @@
             >Give Test</button
         >
     </center>
+    <center>
+        Click <u class="cursor-pointer">Links</u> to view definitions
+    </center>
+    <center>
+        Copyright©<a
+            class="text-sky-700 underline"
+            href="https://www.facebook.com/PhoenixAdmissionCare"
+            >Phoenix Admission Care</a
+        >
+    </center>
 
     <center>
+        <!-- Password -->
+        {#if page === "Pass"}
+            <center
+                class="text-gray-700 mb-4 px-2 max-w-sm flex flex-row first:grow"
+            >
+                <input
+                    class="w-full h-10 pl-3 pr-8 text-base placeholder-gray-600 border border-slate-400 focus:outline-none focus:border-slate-600"
+                    type="text"
+                    placeholder="Search here"
+                    bind:value={startUpPass}
+                />
+                <button
+                    on:click={() => {}}
+                    class="flex items-center px-4 font-bold text-white bg-indigo-600 hover:bg-indigo-500 border border-indigo-600 focus:border-black focus:outline-none"
+                    >Enter</button
+                >
+            </center>
+        {/if}
         <!-- Read -->
         {#if page === "Read"}
-            <center class="mb-4">
-                Click <u class="cursor-pointer">Links</u> to view definitions
-            </center>
             <center
                 class="text-gray-700 mb-4 px-2 max-w-sm flex flex-row first:grow"
             >
@@ -133,7 +165,7 @@
             <table class="border-collapse border border-slate-400">
                 <thead>
                     <tr>
-                        {#each ["Serial No.", "Language A", "Language B", "Reference ID"] as header (header)}
+                        {#each ["Serial No.", "English", "Bangla", "Reference ID"] as header (header)}
                             <th
                                 class="bg-slate-300 border border-slate-400 px-3 py-1"
                                 >{header}</th
@@ -186,9 +218,6 @@
         <!-- Test -->
         {#if page === "Test"}
             <center class="mb-4"
-                >Click <u class="cursor-pointer">Links</u> to view definitions</center
-            >
-            <center class="mb-4"
                 >Select the <span class="text-green-700">right</span> answer</center
             >
             <center class="mb-4">
@@ -210,7 +239,7 @@
                     ? 'flex-row'
                     : 'flex-row-reverse'} gap-2 justify-center items-center"
             >
-                <span>Language A</span>
+                <span>English</span>
                 <button
                     on:click={() =>
                         questionLang === "en"
@@ -229,7 +258,7 @@
                         />
                     </svg>
                 </button>
-                <span>Language B</span>
+                <span>Bangla</span>
             </center>
             {#key reRenderTest}
                 <div
