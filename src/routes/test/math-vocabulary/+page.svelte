@@ -92,9 +92,7 @@
     let reRenderTest = true;
 
     let passField;
-    $: if (passField !== undefined) {
-        passField.focus();
-    }
+    $: passField?.focus();
 
     let startUpPass;
     $: if (startUpPass === "isosceles") {
