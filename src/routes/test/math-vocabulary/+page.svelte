@@ -95,7 +95,7 @@
     $: passField?.focus();
 
     let startUpPass;
-    $: if (startUpPass?.toLowerCase() === "isosceles") {
+    $: if (startUpPass?.toLowerCase() === "rima") {
         page = "Read";
     }
 </script>
