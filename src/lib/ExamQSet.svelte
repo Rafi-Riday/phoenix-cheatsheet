@@ -11,27 +11,39 @@
         return Math.floor(Math.random() * max);
     };
 
+    let randomizedUsableData = [];
+    const randomizeData = () => {
+        const randomData = producedUsableData[range(producedUsableData.length)];
+        if (!randomizedUsableData.find((r) => r.n === randomData.n)) {
+            randomizedUsableData.push(randomData);
+        }
+        if (randomizedUsableData.length !== producedUsableData.length) {
+            randomizeData();
+        }
+    };
+    randomizeData();
+
     const returnQuestionSet = (idx) => {
         const optionSet = [];
         for (let i = 1; i <= oneDirectionRange; i++) {
             if (idx - i >= 0) {
-                optionSet.push(producedUsableData[idx - i]);
+                optionSet.push(randomizedUsableData[idx - i]);
             } else {
                 optionSet.push(
-                    producedUsableData[producedUsableData.length + idx - i]
+                    randomizedUsableData[randomizedUsableData.length + idx - i]
                 );
             }
-            if (idx + i <= producedUsableData.length - 1) {
-                optionSet.push(producedUsableData[idx + i]);
+            if (idx + i <= randomizedUsableData.length - 1) {
+                optionSet.push(randomizedUsableData[idx + i]);
             } else {
                 optionSet.push(
-                    producedUsableData[idx + i - producedUsableData.length]
+                    randomizedUsableData[idx + i - randomizedUsableData.length]
                 );
             }
         }
         return {
             optionSet,
-            qSet: producedUsableData[idx],
+            qSet: randomizedUsableData[idx],
         };
     };
 
@@ -64,7 +76,7 @@
     let finalQuestionSet = [];
     let generateFinalQuestionSet = () => {
         finalQuestionSet = [];
-        producedUsableData.forEach(({ n }, idx) => {
+        randomizedUsableData.forEach(({ n }, idx) => {
             finalQuestionSet.push(returnMCQ(idx));
         });
     };
@@ -73,7 +85,7 @@
     const resultSet = {};
     let markSheet;
     $: markSheet = {
-        total: producedUsableData.length,
+        total: randomizedUsableData.length,
         answered: Object.keys(resultSet).length,
         correct: Object.keys(resultSet).filter(
             (rIdx) => resultSet[rIdx].qSet.n === resultSet[rIdx].option.n
@@ -216,6 +228,8 @@
             {:else}
                 <button
                     on:click={() => {
+                        randomizedUsableData = [];
+                        randomizeData();
                         generateFinalQuestionSet();
                         reRenderTest = !reRenderTest;
                         submitSection = "Submit";
