@@ -5,7 +5,7 @@
     const { title, direction, dataSet } = $page.data.mainData;
 
     // Page State
-    let currentPage = "Pass";
+    let currentPage = "Read";
     const switchToTest = () => {
         currentPage = "Test";
     };
