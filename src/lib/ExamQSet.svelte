@@ -6,7 +6,7 @@
     let reRenderTest = true;
     let submitSection = "Submit";
     const oneDirectionRange = 4;
-
+    // random number generator
     const range = (max) => {
         return Math.floor(Math.random() * max);
     };
@@ -69,7 +69,7 @@
         });
     };
     generateFinalQuestionSet();
-
+    // randomizing question set
     let randomizedQuestionSet = [];
     const randomizeQuestionSetFunc = () => {
         const randomData =
@@ -84,7 +84,7 @@
         }
     };
     randomizeQuestionSetFunc();
-
+    // result logic
     const resultSet = {};
     let markSheet;
     $: markSheet = {
