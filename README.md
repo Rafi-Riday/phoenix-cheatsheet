@@ -23,4 +23,4 @@
   - You can reset but it will generate new random Questions.
   - You can view you result in the bottom after submitting only.
 
-##### Website : https://phoenix-batch-5-vocabulary.vercel.app/ (Caution, website maybe pass protected due to copyright law)
+##### Website : https://phoenix-batch-5-practice.netlify.app/ (Caution, website maybe pass protected due to copyright law)
