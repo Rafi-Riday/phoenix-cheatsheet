@@ -11,39 +11,27 @@
         return Math.floor(Math.random() * max);
     };
 
-    let randomizedUsableData = [];
-    const randomizeData = () => {
-        const randomData = producedUsableData[range(producedUsableData.length)];
-        if (!randomizedUsableData.find((r) => r.n === randomData.n)) {
-            randomizedUsableData.push(randomData);
-        }
-        if (randomizedUsableData.length !== producedUsableData.length) {
-            randomizeData();
-        }
-    };
-    randomizeData();
-
     const returnQuestionSet = (idx) => {
         const optionSet = [];
         for (let i = 1; i <= oneDirectionRange; i++) {
             if (idx - i >= 0) {
-                optionSet.push(randomizedUsableData[idx - i]);
+                optionSet.push(producedUsableData[idx - i]);
             } else {
                 optionSet.push(
-                    randomizedUsableData[randomizedUsableData.length + idx - i]
+                    producedUsableData[producedUsableData.length + idx - i]
                 );
             }
-            if (idx + i <= randomizedUsableData.length - 1) {
-                optionSet.push(randomizedUsableData[idx + i]);
+            if (idx + i <= producedUsableData.length - 1) {
+                optionSet.push(producedUsableData[idx + i]);
             } else {
                 optionSet.push(
-                    randomizedUsableData[idx + i - randomizedUsableData.length]
+                    producedUsableData[idx + i - producedUsableData.length]
                 );
             }
         }
         return {
             optionSet,
-            qSet: randomizedUsableData[idx],
+            qSet: producedUsableData[idx],
         };
     };
 
@@ -73,19 +61,34 @@
         };
     };
 
-    let finalQuestionSet = [];
+    let serializedQuestionSet = [];
     let generateFinalQuestionSet = () => {
-        finalQuestionSet = [];
-        randomizedUsableData.forEach(({ n }, idx) => {
-            finalQuestionSet.push(returnMCQ(idx));
+        serializedQuestionSet = [];
+        producedUsableData.forEach(({ n }, idx) => {
+            serializedQuestionSet.push(returnMCQ(idx));
         });
     };
     generateFinalQuestionSet();
 
+    let randomizedQuestionSet = [];
+    const randomizeQuestionSetFunc = () => {
+        const randomData =
+            serializedQuestionSet[range(serializedQuestionSet.length)];
+        if (
+            !randomizedQuestionSet.find((r) => r.qSet.n === randomData.qSet.n)
+        ) {
+            randomizedQuestionSet.push(randomData);
+        }
+        if (randomizedQuestionSet.length !== serializedQuestionSet.length) {
+            randomizeQuestionSetFunc();
+        }
+    };
+    randomizeQuestionSetFunc();
+
     const resultSet = {};
     let markSheet;
     $: markSheet = {
-        total: randomizedUsableData.length,
+        total: producedUsableData.length,
         answered: Object.keys(resultSet).length,
         correct: Object.keys(resultSet).filter(
             (rIdx) => resultSet[rIdx].qSet.n === resultSet[rIdx].option.n
@@ -147,7 +150,7 @@
                 ? 'mb-12'
                 : 'mb-44 sm:mb-32'}"
         >
-            {#each finalQuestionSet as { finalOptionSet, qSet }, idx (qSet.n)}
+            {#each randomizedQuestionSet as { finalOptionSet, qSet }, idx (qSet.n)}
                 <fieldset
                     class="border border-solid border-slate-300 bg-white text-left p-2"
                 >
@@ -228,9 +231,8 @@
             {:else}
                 <button
                     on:click={() => {
-                        randomizedUsableData = [];
-                        randomizeData();
-                        generateFinalQuestionSet();
+                        randomizedQuestionSet = [];
+                        randomizeQuestionSetFunc();
                         reRenderTest = !reRenderTest;
                         submitSection = "Submit";
                         markSheet.answered = 0;

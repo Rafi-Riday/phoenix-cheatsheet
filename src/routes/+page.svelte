@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Home</title>
+</svelte:head>
+
 <main class="m-4">
     <div class="flex flex-col">
         <div>

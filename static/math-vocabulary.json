@@ -1,5 +1,8 @@
 {
     "title": "Math Vocabulary",
+    "description": "Math English to Bangla and vice-versa word meaning and Exam",
+    "keywords": "Math, English to Bangla, word meaning, Exam",
+    "author": "Phoenix Admission Care",
     "direction": {
         "dataOne": "English",
         "dataTwo": "Bangla"
@@ -255,11 +258,11 @@
         },
         {
             "dataOne": "L.C.M.",
-            "dataTwo": "ল সা গু"
+            "dataTwo": "ল. সা. গু"
         },
         {
             "dataOne": "H.C.F",
-            "dataTwo": "গ সা গু"
+            "dataTwo": "গ. সা. গু"
         },
         {
             "dataOne": "L.C.D",

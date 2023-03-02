@@ -2,7 +2,8 @@
     import { page } from "$app/stores";
     import ExamQSet from "$lib/ExamQSet.svelte";
     import ReadQSet from "$lib/ReadQSet.svelte";
-    const { title, direction, dataSet } = $page.data.mainData;
+    const { title, description, keywords, author, direction, dataSet } =
+        $page.data.mainData;
 
     // Page State
     let currentPage = "Pass";
@@ -24,6 +25,13 @@
         currentPage = "Read";
     }
 </script>
+
+<svelte:head>
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content={author} />
+</svelte:head>
 
 <main class="text-gray-900 flex flex-col gap-1 py-4 sm:px-4">
     <div class="flex flex-col gap-1">

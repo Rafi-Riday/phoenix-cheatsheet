@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Test</title>
+</svelte:head>
+
 <main class="m-4">
     <div>
         <span class="text-[#ff3e00] text-xs sm:text-base pr-2">│ ├</span>
