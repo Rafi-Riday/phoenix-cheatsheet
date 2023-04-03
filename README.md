@@ -15,4 +15,4 @@
 - Used SVG format of drawings (Such as for triangles, quadrilaterals etc).
 - Routes are based on subjects.
 
-##### Website : https://phoenix-batch-5-practice.netlify.app/ (Caution, website maybe simple pass protected for reasons)
+##### Website : https://phoenix-cheatsheet.netlify.app/ (Caution, website maybe simple pass protected for reasons)
