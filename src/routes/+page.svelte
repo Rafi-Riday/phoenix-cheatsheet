@@ -1,3 +1,7 @@
+<script>
+    import Katex from "$lib/Katex.svelte";
+</script>
+
 <svelte:head>
     <title>Home</title>
 </svelte:head>
@@ -39,4 +43,5 @@
             >Phoenix Admission Care</a
         >
     </small>
+    <Katex expression={`\\frac{b}{2}\\times\\sqrt{a^2-{\\frac{b^2}{4}}}`} />
 </main>

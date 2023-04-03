@@ -6,7 +6,7 @@
         $page.data.mainData;
 
     // Page State
-    let currentPage = "Pass";
+    let currentPage = "Test";
     const switchToTest = () => {
         currentPage = "Test";
     };
