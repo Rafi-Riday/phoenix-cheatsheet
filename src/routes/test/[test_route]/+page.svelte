@@ -50,16 +50,6 @@
                     >Give Test</button
                 >
             </center>
-            <center>
-                Click <u class="cursor-pointer">Links</u> to view definitions
-            </center>
-            <center>
-                Copyright©<a
-                    class="text-sky-700 underline"
-                    href="https://www.facebook.com/PhoenixAdmissionCare"
-                    >Phoenix Admission Care</a
-                >
-            </center>
         {/if}
     </div>
 
