@@ -1,9 +1,10 @@
 <script>
-    import { page } from "$app/stores";
-    import ExamQSet from "$lib/ExamQSet.svelte";
-    import ReadQSet from "$lib/ReadQSet.svelte";
+    import ExamQSet from "$lib/TwoDataObj/ExamQSet.svelte";
+    import ReadQSet from "$lib/TwoDataObj/ReadQSet.svelte";
+
+    export let mainData;
     const { title, description, keywords, author, direction, dataSet } =
-        $page.data.mainData;
+        mainData;
 
     // Page State
     let currentPage = "Test";
