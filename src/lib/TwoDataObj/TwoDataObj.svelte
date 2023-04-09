@@ -34,20 +34,19 @@
     <meta name="author" content={author} />
 </svelte:head>
 
-<main class="text-gray-900 flex flex-col gap-1 py-4 sm:px-4">
+<main class="text-gray-900 flex flex-col gap-1 p-0">
     <div class="flex flex-col gap-1">
         <center class="font-semibold text-lg">{title}</center>
         {#if currentPage === "Read" || currentPage === "Test"}
             <center>
                 <button
                     on:click={() => (currentPage = "Read")}
-                    class="bg-sky-200 font-semibold px-2 py-1 underline"
-                    >Read</button
+                    class="btn btn-sm btn-accent rounded underline">Read</button
                 >
                 or
                 <button
                     on:click={() => (currentPage = "Test")}
-                    class="bg-sky-200 font-semibold px-2 py-1 underline"
+                    class="btn btn-sm btn-accent rounded underline"
                     >Give Test</button
                 >
             </center>

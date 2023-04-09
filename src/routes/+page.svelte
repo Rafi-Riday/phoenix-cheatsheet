@@ -1,3 +1,7 @@
+<script>
+    import Katex from "../lib/Katex.svelte";
+</script>
+
 <svelte:head>
     <title>Home</title>
 </svelte:head>
@@ -10,4 +14,7 @@
         </button>
     </a>
 </main>
-.replace(/\\\\/g, "\\")
+
+<div class="text-4xl">
+    <Katex expression={"\\frac{a}{b}"} />
+</div>

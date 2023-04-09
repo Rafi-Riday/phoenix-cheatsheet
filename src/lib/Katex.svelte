@@ -8,7 +8,10 @@
         throwOnError: false,
     };
 
-    $: katexString = katex.renderToString(expression, options);
+    $: katexString = katex.renderToString(
+        expression.replace(/\\\\/g, "\\"),
+        options
+    );
 </script>
 
 <svelte:head>

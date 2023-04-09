@@ -104,18 +104,9 @@
         >Select the <span class="text-green-700">right</span> answer</center
     >
     <center class="mb-2">
-        <button
-            class="cursor-default px-2 py-1 bg-emerald-200 border border-green-800"
-            >Right</button
-        >
-        <button
-            class="cursor-default px-2 py-1 bg-sky-100 border border-sky-800"
-            >Unselected Right</button
-        >
-        <button
-            class="cursor-default px-2 py-1 bg-red-100 border border-red-600"
-            >Wrong</button
-        >
+        <button class="btn btn-sm btn-success rounded">Right</button>
+        <button class="btn btn-sm btn-info rounded">Unselected Right</button>
+        <button class="btn btn-sm btn-error rounded text-white">Wrong</button>
     </center>
     <center
         class="mb-4 flex {questionDirection === 'dataOne'
@@ -128,8 +119,9 @@
                 questionDirection === "dataOne"
                     ? (questionDirection = "dataTwo")
                     : (questionDirection = "dataOne")}
-            class="border border-sky-200 p-1 bg-sky-200 hover:bg-transparent"
+            class="btn btn-xs btn-accent"
         >
+            <!-- border border-sky-200 p-1 bg-sky-200 hover:bg-transparent -->
             <svg
                 class="w-5 h-5"
                 focusable="false"
@@ -145,17 +137,17 @@
     </center>
     {#key reRenderTest}
         <div
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-2 sm:px-0 {submitSection ===
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 {submitSection ===
             'Submit'
-                ? 'mb-12'
+                ? 'mb-14'
                 : 'mb-44 sm:mb-32'}"
         >
             {#each randomizedQuestionSet as { finalOptionSet, qSet }, idx (qSet.n)}
                 <fieldset
-                    class="border border-solid border-slate-300 bg-white text-left p-2"
+                    class="rounded border border-solid border-slate-300 bg-white text-left p-2"
                 >
                     <legend
-                        class="bg-slate-200 border border-slate-300 py-1 px-2"
+                        class="bg-base-300 border border-slate-300 py-1 px-2 rounded"
                         ><a
                             href="https://www.google.com/search?q={qSet[
                                 questionDirection
@@ -170,9 +162,11 @@
                     >
                     <div class="grid grid-cols-2 gap-2">
                         {#each finalOptionSet as option, opIdx (opIdx)}
-                            <div class="flex flex-row last:grow gap-1">
+                            <div
+                                class="flex flex-row items-center last:grow gap-1"
+                            >
                                 <input
-                                    class="peer"
+                                    class="peer radio radio-xs"
                                     disabled={submitSection === "Submit"
                                         ? false
                                         : true}
@@ -192,15 +186,15 @@
                                     ]}
                                 />
                                 <label
-                                    class="w-full border px-2 py-1 {submitSection ===
+                                    class="cursor-pointer w-full border rounded px-2 py-1 {submitSection ===
                                     'Submit'
-                                        ? 'border-slate-300 peer-checked:bg-gray-300 peer-checked:border-slate-600'
+                                        ? 'bg-base-200 border-slate-300 peer-checked:bg-neutral peer-checked:text-neutral-content peer-checked:border-neutral-focus'
                                         : submitSection === 'Reset' &&
                                           option.n === qSet.n
-                                        ? 'bg-sky-100 border-sky-800 peer-checked:bg-emerald-200 peer-checked:border-green-800'
+                                        ? 'bg-info border-sky-600 peer-checked:bg-success peer-checked:border-green-600'
                                         : submitSection === 'Reset' &&
                                           option.n !== qSet.n
-                                        ? 'border-slate-300 peer-checked:bg-red-100 peer-checked:border-red-600'
+                                        ? 'border-slate-300 peer-checked:bg-error peer-checked:text-white peer-checked:border-red-600'
                                         : ''}"
                                     for="op_{idx}_{opIdx}"
                                 >
@@ -224,7 +218,7 @@
             {#if submitSection === "Submit"}
                 <button
                     on:click={() => (submitSection = "Reset")}
-                    class="bg-sky-400 shadow-custom font-semibold px-4 py-2 underline"
+                    class="btn btn-primary shadow-custom"
                 >
                     Submit
                 </button>
@@ -239,12 +233,12 @@
                         markSheet.correct = 0;
                         markSheet.wrong = 0;
                     }}
-                    class="bg-sky-400 shadow-custom font-semibold px-4 py-2 underline"
+                    class="btn btn-warning text-warning-content shadow-custom"
                 >
                     Reset
                 </button>
                 <div
-                    class="bg-sky-200 mt-2 px-2 py-1 border border-slate-500 font-semibold shadow-custom"
+                    class="bg-primary text-primary-content rounded mt-2 px-2 py-1 shadow-custom"
                 >
                     Total: {markSheet?.total}, Answered: {markSheet?.answered},
                     Correct: {markSheet?.correct}, Wrong: {markSheet?.wrong}
@@ -253,10 +247,3 @@
         </div>
     {/key}
 </main>
-
-<style>
-    .shadow-custom {
-        box-shadow: rgba(0, 0, 0, 0.3) 0px -10px 38px,
-            rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    }
-</style>

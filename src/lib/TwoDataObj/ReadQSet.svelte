@@ -15,12 +15,9 @@
     } else {
         filteredData = producedUsableData;
     }
-
-    let searchField;
-    $: searchField?.focus();
 </script>
 
-<main class="pb-12">
+<main class="pb-14">
     <center
         class="text-gray-700 mt-2 mb-4 px-2 max-w-sm flex flex-row first:grow"
     >
@@ -29,7 +26,6 @@
             type="text"
             placeholder="Search here"
             bind:value={searchQ}
-            bind:this={searchField}
         />
         <button
             on:click={(e) => {
@@ -37,7 +33,7 @@
                     ? (searchQ = "")
                     : e.target.parentElement.children[0].focus();
             }}
-            class="flex items-center px-4 font-bold text-white bg-indigo-600 hover:bg-indigo-500 border border-indigo-600 focus:border-black focus:outline-none"
+            class="flex items-center px-4 font-bold text-primary-content bg-primary hover:bg-indigo-500 border border-primary focus:border-black focus:outline-none"
             >{searchQ === "" ? "Search" : "Clear"}</button
         >
     </center>
@@ -86,16 +82,9 @@
     <aside class="fixed -bottom-3 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <button
             on:click={switchToTest}
-            class="bg-sky-400 shadow-custom font-semibold px-4 py-2 underline"
+            class="btn btn-primary text-primary-content shadow-custom"
         >
             Give Test
         </button>
     </aside>
 </main>
-
-<style>
-    .shadow-custom {
-        box-shadow: rgba(0, 0, 0, 0.3) 0px -10px 38px,
-            rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    }
-</style>
