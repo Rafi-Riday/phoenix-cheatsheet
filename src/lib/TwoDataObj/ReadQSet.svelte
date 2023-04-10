@@ -17,7 +17,7 @@
     }
 </script>
 
-<main class="pb-14">
+<main class="relative">
     <center
         class="text-gray-700 mt-2 mb-4 px-2 max-w-sm flex flex-row first:grow"
     >
@@ -79,10 +79,10 @@
             {/each}
         </tbody>
     </table>
-    <aside class="fixed -bottom-3 left-1/2 -translate-x-1/2 -translate-y-1/2">
+    <aside class="sticky bottom-3 mt-6">
         <button
             on:click={switchToTest}
-            class="btn btn-primary text-primary-content shadow-custom"
+            class="btn btn-accent text-accent-content shadow-custom"
         >
             Give Test
         </button>

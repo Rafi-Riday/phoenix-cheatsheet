@@ -1,20 +1,29 @@
 <script>
     import NavMenu from "./NavMenu.svelte";
 
+    // let navData = [
+    //     {
+    //         section: "english",
+    //         topicList: [
+    //             "right-forms-of-verb",
+    //             "subject-verb-agreement",
+    //             "misspelling",
+    //             "article",
+    //             "essay",
+    //         ],
+    //     },
+    //     {
+    //         section: "math",
+    //         topicList: ["geometry", "algebra", "arithemetic", "vocabulary"],
+    //     },
+    //     {
+    //         section: "quiz",
+    //     },
+    // ];
     let navData = [
         {
-            section: "english",
-            topicList: [
-                "right-forms-of-verb",
-                "subject-verb-agreement",
-                "misspelling",
-                "article",
-                "essay",
-            ],
-        },
-        {
             section: "math",
-            topicList: ["geometry", "algebra", "arithemetic", "vocabulary"],
+            topicList: ["vocabulary"],
         },
         {
             section: "quiz",

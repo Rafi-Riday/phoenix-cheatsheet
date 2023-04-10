@@ -3,11 +3,19 @@
 
     const imports = {
         TwoDataObj: () => import("$lib/TwoDataObj/TwoDataObj.svelte"),
+        PageNotFound: () => import("$lib/PageNotFound/PageNotFound.svelte"),
     };
-
-    let component = $page.data.mainData.prototype;
+    const { title, description, keywords, author, prototype } =
+        $page.data.mainData;
 </script>
 
-{#await imports[component]() then response}
+<svelte:head>
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content={author} />
+</svelte:head>
+
+{#await imports[prototype]() then response}
     <svelte:component this={response.default} mainData={$page.data.mainData} />
 {/await}

@@ -3,11 +3,10 @@
     import ReadQSet from "$lib/TwoDataObj/ReadQSet.svelte";
 
     export let mainData;
-    const { title, description, keywords, author, direction, dataSet } =
-        mainData;
+    const { title, direction, dataSet } = mainData;
 
     // Page State
-    let currentPage = "Test";
+    let currentPage = "Read";
     const switchToTest = () => {
         currentPage = "Test";
     };
@@ -27,13 +26,6 @@
     }
 </script>
 
-<svelte:head>
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <meta name="keywords" content={keywords} />
-    <meta name="author" content={author} />
-</svelte:head>
-
 <main class="text-gray-900 flex flex-col gap-1 p-0">
     <div class="flex flex-col gap-1">
         <center class="font-semibold text-lg">{title}</center>
@@ -41,12 +33,13 @@
             <center>
                 <button
                     on:click={() => (currentPage = "Read")}
-                    class="btn btn-sm btn-accent rounded underline">Read</button
+                    class="btn btn-sm btn-accent text-accent-content rounded underline"
+                    >Read</button
                 >
                 or
                 <button
                     on:click={() => (currentPage = "Test")}
-                    class="btn btn-sm btn-accent rounded underline"
+                    class="btn btn-sm btn-accent text-accent-content rounded underline"
                     >Give Test</button
                 >
             </center>

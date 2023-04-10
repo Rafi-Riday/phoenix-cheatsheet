@@ -5,7 +5,12 @@ module.exports = {
     extend: {},
   },
   // plugins: [],
-  plugins: [require("daisyui")],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant('children', '& > *')
+    },
+    require("daisyui")
+  ],
   daisyui: {
     themes: ["light",],
   },

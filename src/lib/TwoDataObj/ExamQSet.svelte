@@ -99,7 +99,7 @@
     };
 </script>
 
-<main>
+<main class="relative">
     <center class="mb-2"
         >Select the <span class="text-green-700">right</span> answer</center
     >
@@ -136,12 +136,7 @@
         <span>{direction.dataTwo}</span>
     </center>
     {#key reRenderTest}
-        <div
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 {submitSection ===
-            'Submit'
-                ? 'mb-14'
-                : 'mb-44 sm:mb-32'}"
-        >
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {#each randomizedQuestionSet as { finalOptionSet, qSet }, idx (qSet.n)}
                 <fieldset
                     class="rounded border border-solid border-slate-300 bg-white text-left p-2"
@@ -211,14 +206,14 @@
             {/each}
         </div>
         <div
-            class="fixed {submitSection === 'Reset'
-                ? '-bottom-6'
-                : '-bottom-3'} left-1/2 -translate-x-1/2 -translate-y-1/2"
+            class="sticky {submitSection === 'Reset'
+                ? 'bottom-6 mt-12'
+                : 'bottom-3 mt-6'}"
         >
             {#if submitSection === "Submit"}
                 <button
                     on:click={() => (submitSection = "Reset")}
-                    class="btn btn-primary shadow-custom"
+                    class="btn btn-accent text-accent-content shadow-custom"
                 >
                     Submit
                 </button>
@@ -238,10 +233,12 @@
                     Reset
                 </button>
                 <div
-                    class="bg-primary text-primary-content rounded mt-2 px-2 py-1 shadow-custom"
+                    class="bg-warning text-warning-content rounded mt-2 px-2 py-1 shadow-custom grid grid-cols-2 w-fit"
                 >
-                    Total: {markSheet?.total}, Answered: {markSheet?.answered},
-                    Correct: {markSheet?.correct}, Wrong: {markSheet?.wrong}
+                    <span>Total: {markSheet?.total},</span>
+                    <span>Answered: {markSheet?.answered},</span>
+                    <span>Correct: {markSheet?.correct},</span>
+                    <span>Wrong: {markSheet?.wrong}</span>
                 </div>
             {/if}
         </div>
