@@ -2,7 +2,8 @@
     import { page } from "$app/stores";
 
     const imports = {
-        TwoDataObj: () => import("$lib/TwoDataObj/TwoDataObj.svelte"),
+        SharedTwoDataObj: () =>
+            import("$lib/SharedTwoDataObj/SharedTwoDataObj.svelte"),
         PageNotFound: () => import("$lib/PageNotFound/PageNotFound.svelte"),
     };
     const { title, description, keywords, author, prototype } =

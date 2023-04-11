@@ -1,5 +1,5 @@
 {
-    "prototype": "TwoDataObj",
+    "prototype": "SharedTwoDataObj",
     "title": "Math Vocabulary",
     "description": "Math English to Bangla and vice-versa word meaning and Exam",
     "keywords": "Math, English to Bangla, word meaning, Exam",

@@ -1,6 +1,6 @@
 <script>
-    import ExamQSet from "$lib/TwoDataObj/ExamQSet.svelte";
-    import ReadQSet from "$lib/TwoDataObj/ReadQSet.svelte";
+    import ExamQSet from "$lib/SharedTwoDataObj/ExamQSet.svelte";
+    import ReadQSet from "$lib/SharedTwoDataObj/ReadQSet.svelte";
 
     export let mainData;
     const { title, direction, dataSet } = mainData;

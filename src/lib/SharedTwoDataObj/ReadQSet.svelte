@@ -34,14 +34,14 @@
                     : e.target.parentElement.children[0].focus();
             }}
             class="flex items-center px-4 font-bold text-primary-content bg-primary hover:bg-indigo-500 border border-primary focus:border-black focus:outline-none"
-            >{searchQ === "" ? "Search" : "Clear"}</button
+            >{searchQ === "" ? "Filter" : "Clear"}</button
         >
     </center>
     <table class="border-collapse border border-slate-400">
         <thead>
             <tr>
-                {#each ["Serial No.", `${direction.dataOne}`, `${direction.dataTwo}`] as header (header)}
-                    <th class="bg-slate-300 border border-slate-400 px-3 py-1"
+                {#each ["Serial No.", direction.dataOne, direction.dataTwo] as header (header)}
+                    <th class="bg-base-300 border border-slate-400 px-3 py-1"
                         >{header}</th
                     >
                 {/each}
@@ -51,8 +51,8 @@
             {#each filteredData as { n, dataOne, dataTwo }, idx (n)}
                 <tr
                     class="{(idx + 1) % 2 === 0
-                        ? 'bg-slate-100'
-                        : 'bg-white'} hover:bg-slate-300"
+                        ? 'bg-base-200'
+                        : 'bg-white'} hover:bg-base-300"
                 >
                     <td class="font-semibold border border-slate-400 px-3 py-1"
                         >{idx + 1}</td

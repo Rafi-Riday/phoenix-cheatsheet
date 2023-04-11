@@ -6,7 +6,7 @@
 {#each navData as navItem}
     {#if navItem.topicList}
         <li tabindex="0">
-            <span class="justify-between p-2 gap-0">
+            <span class="justify-between p-2 pr-0 gap-0">
                 {navItem.section
                     .split("-")
                     .map((str) => str.charAt(0).toUpperCase() + str.slice(1))
@@ -23,12 +23,12 @@
                 >
             </span>
             <ul class="p-2 lg:p-3 bg-primary lg:border-0 shadow-custom">
-                {#each navItem.topicList as topicList}
+                {#each navItem.topicList as topic}
                     <li>
                         <a
-                            href="/{navItem.section}/{topicList}"
+                            href="/{navItem.section}/{topic}"
                             class="px-1 py-2 lg:px-2"
-                            >{topicList
+                            >{topic
                                 .split("-")
                                 .map(
                                     (str) =>

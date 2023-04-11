@@ -1,5 +1,6 @@
 <script>
     import "../app.css";
+    import { page } from "$app/stores";
     import NavBar from "../lib/NavBar/NavBar.svelte";
     import SideBar from "../lib/SideBar/SideBar.svelte";
 </script>

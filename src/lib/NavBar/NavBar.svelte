@@ -14,7 +14,7 @@
     //     },
     //     {
     //         section: "math",
-    //         topicList: ["geometry", "algebra", "arithemetic", "vocabulary"],
+    //         topicList: ["geometry", "algebra", "arithmetic", "vocabulary"],
     //     },
     //     {
     //         section: "quiz",
