@@ -1,13 +1,11 @@
-// import { error } from '@sveltejs/kit';
+import { index } from '$lib/index';
 
 export const load = async ({ params, fetch }) => {
-    const res = await fetch(`/db/index.json`);
-    const SideBarInfo = await res.json();
-    const info = SideBarInfo.find(sec => sec.section === params.subject);
-    if (info) {
+    const SideBarInfo = index.find(sec => sec.section === params.subject);
+    if (SideBarInfo) {
         const res2 = await fetch(`/db/${params.subject}/${params.topic}.json`);
         const mainData = await res2.json();
-        return { mainData: { sideBarInfo: info, ...mainData } }
+        return { mainData: { sideBarInfo: SideBarInfo, ...mainData } }
     } else {
         // throw error(404, { msg: 'Page not found' });
         return { mainData: { prototype: 'PageNotFound' } };
