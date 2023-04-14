@@ -1,5 +1,7 @@
 <script>
-    import Katex from "../lib/Katex.svelte";
+    import { page } from "$app/stores";
+    const { section, topicList } = $page.data.mainData.sideBarInfo;
+    import InfoOverview from "../lib/InfoOverview.svelte";
 </script>
 
 <svelte:head>
@@ -15,15 +17,10 @@
     <meta name="author" content="MD Rafiul Hossain Riday" />
 </svelte:head>
 
-<main class="">
-    <a
-        href="/math/vocabulary"
-        class="bg-[#ff3e0020] text-[#ff3e00] text-xs sm:text-base underline px-2 py-1 rounded my-1"
-    >
-        math-Vocabulary
-    </a>
-
-    <div class="text-4xl">
-        <Katex expression={"\\frac{a}{b}"} />
-    </div>
+<main>
+    <section class="flex flex-col w-full gap-2 lg:gap-4">
+        {#each topicList as topic, idx (idx)}
+            <InfoOverview {topic} {idx} />
+        {/each}
+    </section>
 </main>

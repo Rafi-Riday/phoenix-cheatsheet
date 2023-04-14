@@ -4,7 +4,7 @@
     const imports = {
         SharedTwoDataObj: () =>
             import("$lib/SharedTwoDataObj/SharedTwoDataObj.svelte"),
-        PageNotFound: () => import("$lib/PageNotFound/PageNotFound.svelte"),
+        PageNotFound: () => import("$lib/PageNotFound.svelte"),
     };
     const { title, description, keywords, author, prototype } =
         $page.data.mainData;

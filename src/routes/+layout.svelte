@@ -2,7 +2,7 @@
     import "../app.css";
     import { page } from "$app/stores";
     import NavBar from "../lib/NavBar/NavBar.svelte";
-    import SideBar from "../lib/SideBar/SideBar.svelte";
+    import SideBar from "../lib/SideBar.svelte";
 </script>
 
 <!-- <svelte:head>
@@ -21,7 +21,7 @@
 
 <SideBar>
     <main class="min-h-full flex flex-col w-full">
-        <section class="pt-20 lg:pt-20 px-2 lg:px-4 grow bg-base-200">
+        <section class="py-20 px-2 lg:px-4 grow bg-base-200">
             <slot />
         </section>
 

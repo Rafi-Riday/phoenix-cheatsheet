@@ -1,8 +1,8 @@
-import { index } from '$lib/index';
+import { indexDB } from '$lib/indexDB';
 import { error } from '@sveltejs/kit';
 
 export const load = async ({ params }) => {
-    const SideBarInfo = index.find(sec => sec.section === params.subject);
+    const SideBarInfo = indexDB.find(sec => sec.section === params.subject);
     if (SideBarInfo) {
         return { mainData: { sideBarInfo: SideBarInfo } }
     } else {

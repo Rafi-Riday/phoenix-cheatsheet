@@ -1,5 +1,6 @@
 <script>
     export let navData;
+    import { upperCaseWord } from "$lib/utilities";
 </script>
 
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
@@ -7,10 +8,7 @@
     {#if navItem.topicList}
         <li tabindex="0">
             <span class="justify-between p-2 pr-0 gap-0">
-                {navItem.section
-                    .split("-")
-                    .map((str) => str.charAt(0).toUpperCase() + str.slice(1))
-                    .join(" ")}
+                {upperCaseWord(navItem.section)}
                 <svg
                     class="fill-current"
                     xmlns="http://www.w3.org/2000/svg"
@@ -27,20 +25,12 @@
                     <li>
                         <a
                             href="/{navItem.section}/{topic}"
-                            class="px-1 py-2 lg:px-2"
-                            >{topic
-                                .split("-")
-                                .map(
-                                    (str) =>
-                                        str.charAt(0).toUpperCase() +
-                                        str.slice(1)
-                                )
-                                .join(" ")}</a
+                            class="px-1 py-2 lg:px-2">{upperCaseWord(topic)}</a
                         >
                     </li>
                 {/each}
                 <li>
-                    <a href="/{navItem.section}" class="px-1 py-2 underline"
+                    <a href="/{navItem.section}" class="px-1 py-2 lg:px-2"
                         >See all...</a
                     >
                 </li>
@@ -49,10 +39,7 @@
     {:else}
         <li>
             <a href="/{navItem.section}" class="p-2"
-                >{navItem.section
-                    .split("-")
-                    .map((str) => str.charAt(0).toUpperCase() + str.slice(1))
-                    .join(" ")}</a
+                >{upperCaseWord(navItem.section)}</a
             >
         </li>
     {/if}

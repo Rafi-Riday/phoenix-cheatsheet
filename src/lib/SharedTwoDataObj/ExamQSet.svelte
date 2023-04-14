@@ -1,4 +1,5 @@
 <script>
+    import { randomNumRange } from "$lib/utilities";
     export let producedUsableData;
     export let direction;
     // predefined
@@ -7,9 +8,6 @@
     let submitSection = "Submit";
     const oneDirectionRange = 4;
     // random number generator
-    const range = (max) => {
-        return Math.floor(Math.random() * max);
-    };
 
     const returnQuestionSet = (idx) => {
         const optionSet = [];
@@ -39,7 +37,7 @@
         const { optionSet, qSet } = returnQuestionSet(idx);
         const selectedWrongAns = [];
         const recursiveRandomOption = () => {
-            const randomOption = optionSet[range(optionSet.length)];
+            const randomOption = optionSet[randomNumRange(optionSet.length)];
             if (!selectedWrongAns.find((o) => o.n === randomOption.n)) {
                 selectedWrongAns.push(randomOption);
             }
@@ -48,7 +46,7 @@
             }
         };
         recursiveRandomOption();
-        const rightOptionNum = range(oneDirectionRange);
+        const rightOptionNum = randomNumRange(oneDirectionRange);
         const finalOptionSet = []
             .concat(selectedWrongAns.slice(0, rightOptionNum))
             .concat([qSet])
@@ -73,7 +71,7 @@
     let randomizedQuestionSet = [];
     const randomizeQuestionSetFunc = () => {
         const randomData =
-            serializedQuestionSet[range(serializedQuestionSet.length)];
+            serializedQuestionSet[randomNumRange(serializedQuestionSet.length)];
         if (
             !randomizedQuestionSet.find((r) => r.qSet.n === randomData.qSet.n)
         ) {

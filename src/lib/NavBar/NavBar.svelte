@@ -1,34 +1,6 @@
 <script>
+    import { indexDB } from "$lib/indexDB";
     import NavMenu from "./NavMenu.svelte";
-
-    // let navData = [
-    //     {
-    //         section: "english",
-    //         topicList: [
-    //             "right-forms-of-verb",
-    //             "subject-verb-agreement",
-    //             "misspelling",
-    //             "article",
-    //             "essay",
-    //         ],
-    //     },
-    //     {
-    //         section: "math",
-    //         topicList: ["geometry", "algebra", "arithmetic", "vocabulary"],
-    //     },
-    //     {
-    //         section: "quiz",
-    //     },
-    // ];
-    let navData = [
-        {
-            section: "math",
-            topicList: ["vocabulary"],
-        },
-        {
-            section: "quiz",
-        },
-    ];
 </script>
 
 <div
@@ -58,21 +30,23 @@
                 tabindex="0"
                 class="menu menu-compact dropdown-content mt-0 p-1 shadow-custom bg-primary text-primary-content rounded-box dropdown dropdown-bottom"
             >
-                <NavMenu {navData} />
+                <NavMenu navData={indexDB} />
             </ul>
         </div>
         <a href="/" class="btn btn-ghost normal-case text-xl">Phoenix</a>
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
-            <NavMenu {navData} />
+            <NavMenu navData={indexDB} />
         </ul>
     </div>
-    <div class="form-control navbar-end items-end">
+    <div
+        class="form-control navbar-end items-end children:w-full children:max-w-xs"
+    >
         <input
             type="text"
             placeholder="Search in Website"
-            class="input input-bordered text-base-content w-full max-w-xs"
+            class="input input-bordered text-base-content"
         />
     </div>
 </div>
