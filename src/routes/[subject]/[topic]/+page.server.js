@@ -7,7 +7,6 @@ export const load = async ({ params, fetch }) => {
         const mainData = await res2.json();
         return { mainData: { sideBarInfo: SideBarInfo, ...mainData } }
     } else {
-        console.log(data404);
-        return { mainData: data404 };
+        return { mainData: data404, sideBarInfo: indexDB };
     }
 };

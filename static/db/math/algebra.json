@@ -1,0 +1,41 @@
+{
+    "prototype": "FormulaDoc",
+    "title": "Algebra Formula",
+    "description": "Math Algebra formula from basic to advanched",
+    "keywords": "Math, Algebra, formula",
+    "author": "Phoenix Admission Care",
+    "dataSet": [
+        {
+            "title": "equation-solving",
+            "dataSet": [
+                "\\text{$(a+b)^2=a^2+2ab+b^2=(a+b)^2+4ab$}",
+                "\\text{$(a-b)^2=a^2-2ab+b^2=(a+b)^2-4ab$}",
+                "\\text{$a^2+b^2=(a+b)^2-2ab=(a-b)^2+2ab=\\frac{1}{2}(a+b)^2(a-b)^2$}",
+                "\\text{$a^2-b^2=(a+b)(a-b)$}",
+                "\\text{$ab={(\\frac{a+b}{2})}^2+{(\\frac{a+b}{2})}^2$}",
+                "\\text{$(a+b)^3=a^3+3a^2b+3ab^2+b^3=a^3+b^3+3ab(a+b)$}",
+                "\\text{$(a-b)^3=a^3-3a^2b+3ab^2+b^3=a^3-b^3+3ab(a-b)$}",
+                "\\text{$a^3+b^3=(a+b)^3-3ab(a+b)=(a+b)(a^2-ab+b^2)$}",
+                "\\text{$a^3-b^3=(a-b)^3+3ab(a-b)=(a-b)(a^2+ab+b^2)$}",
+                "\\text{$(a+b+c)=a^2+b^2+c^2+2(ab+bc+ca)$}",
+                "\\text{$a^3+b^3+c^3-3abc=(a+b+c)(a^2+b^2+c^2-ab-bc-ca)$}"
+            ]
+        },
+        {
+            "title": "logarithm",
+            "dataSet": [
+                "\\text{$log_aM=X$; where$M=a^X$}",
+                "\\text{$log_aN=Y$; where$N=a^Y$}",
+                "\\text{$log_aMN=log_aM+log_aN$}",
+                "\\text{$log_a\\frac{M}{N}=log_aM-log_aN$}",
+                "\\text{$log_aM^r=rlog_aM$}",
+                "\\text{$log_am=\\frac{1}{log_ma}$}",
+                "\\text{$log_xy=\\frac{lny}{lnx}$}",
+                "\\text{$log_aa=1$}",
+                "\\text{$alog_am=m$}",
+                "\\text{$log_a1=0$}",
+                "\\text{$log_ex=lnx$}"
+            ]
+        }
+    ]
+}

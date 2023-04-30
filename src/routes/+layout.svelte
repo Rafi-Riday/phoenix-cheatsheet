@@ -1,21 +1,8 @@
 <script>
     import "../app.css";
-    import { page } from "$app/stores";
     import NavBar from "../lib/NavBar/NavBar.svelte";
     import SideBar from "../lib/SideBar.svelte";
 </script>
-
-<!-- <svelte:head>
-    <meta
-        name="description"
-        content="North South University admission online coaching center, Phoenix Admission Care"
-    />
-    <meta
-        name="keywords"
-        content="Phoenix Admission Care, North South University admission online coaching center, Math, English, IBA, Private university coaching, online coaching"
-    />
-    <meta name="author" content="MD Rafiul Hossain Riday" />
-</svelte:head> -->
 
 <NavBar />
 

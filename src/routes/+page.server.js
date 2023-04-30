@@ -1,7 +1,7 @@
 import { indexDB } from '$lib/indexDB';
 
 export const load = async () => {
-    const SideBarInfo = { section: "home" };
+    const SideBarInfo = {};
     SideBarInfo.topicList = indexDB;
     return { mainData: { sideBarInfo: SideBarInfo } }
 }

@@ -2,6 +2,7 @@
     import { page } from "$app/stores";
 
     const imports = {
+        FormulaDoc: () => import("$lib/FormulaDoc/FormulaDoc.svelte"),
         SharedTwoDataObj: () =>
             import("$lib/SharedTwoDataObj/SharedTwoDataObj.svelte"),
         PageNotFound: () => import("$lib/PageNotFound.svelte"),

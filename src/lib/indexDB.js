@@ -9,9 +9,7 @@ export const indexDB = [
             "subject-verb-agreement",
             "synonym-antonym",
             "spelling",
-            "vocabulary",
             "true,-false,-not-given",
-            "parts-of-speech",
             "mcq-from-passage",
         ]
     },

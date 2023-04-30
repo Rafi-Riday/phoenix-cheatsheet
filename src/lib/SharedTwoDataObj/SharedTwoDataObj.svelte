@@ -28,7 +28,7 @@
 
 <main class="text-gray-900 flex flex-col gap-1 p-0">
     <div class="flex flex-col gap-1">
-        <center class="font-semibold text-lg">{title}</center>
+        <center class="font-semibold text-2xl mb-2 mt-1">{title}</center>
         {#if currentPage === "Read" || currentPage === "Test"}
             <center>
                 <button

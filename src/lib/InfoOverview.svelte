@@ -19,9 +19,11 @@
     <div class="flex flex-col gap-2">
         {#each topic.topicList as sectionTitle}
             <li class="pl-1">
-                <span class="underline underline-offset-4 font-medium"
-                    >{upperCaseWord(sectionTitle)}</span
-                >
+                <a
+                    href="/{topic.section}/{sectionTitle}"
+                    class="underline underline-offset-4 font-medium"
+                    >{upperCaseWord(sectionTitle)}
+                </a>
                 {#if topic.topicDetails}
                     {#each Object.keys(topic.topicDetails) as d}
                         {#if d.toLowerCase() === sectionTitle.toLowerCase()}
@@ -29,15 +31,12 @@
                                 class="pl-10 no-underline flex flex-row flex-wrap gap-x-2"
                             >
                                 {#each topic.topicDetails[d] as ttd, idx (idx)}
-                                    <a
-                                        class="underline underline-offset-4"
-                                        href="/#{ttd}"
-                                    >
-                                        {ttd.split("-").join(" ")}{idx ===
+                                    <span class="underline underline-offset-4">
+                                        {ttd.split("-").join(" ")}{idx !==
                                         topic.topicDetails[d].length - 1
-                                            ? ""
-                                            : ","}
-                                    </a>
+                                            ? ","
+                                            : ""}
+                                    </span>
                                 {/each}
                             </div>
                         {/if}

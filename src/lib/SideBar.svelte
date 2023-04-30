@@ -1,3 +1,9 @@
+<script>
+    import { page } from "$app/stores";
+    import { SideBarInfo } from "$lib/stores";
+    import { upperCaseWord } from "$lib/utilities";
+</script>
+
 <!-- .split("-").map((str) => str.charAt(0).toUpperCase() + str.slice(1)).join(" ") -->
 <div class="drawer drawer-mobile">
     <input id="app-sidebar" type="checkbox" class="drawer-toggle" />
@@ -29,40 +35,21 @@
             class="menu p-4 bg-base-100 text-base-content pt-20 w-3/4 lg:w-full lg:border-2 lg:border-slate-200"
         >
             <!-- Sidebar content here -->
-            <aside class="flex flex-col gap-3">
-                <a
-                    href="/"
-                    class="border-2 border-l-8 border-primary text-neutral px-2 py-1 rounded"
-                >
-                    Subject verb agreement
-                </a>
-                {#each [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] as n}
-                    <a
-                        href="/"
-                        class="border border-neutral text-neutral px-2 py-1 rounded"
-                    >
-                        Misspelling
-                    </a>
-                {/each}
+            <aside class="flex flex-col">
+                {#if $SideBarInfo}
+                    {#each $SideBarInfo.titles as title}
+                        <a
+                            href="{$SideBarInfo.prefix}/{title}"
+                            class="{$page.url.pathname ===
+                            `${$SideBarInfo.prefix}/${title}`
+                                ? 'btn btn-primary' // 'btn btn-info bg-[#2292e4] text-white hover:bg-[#2292e4]'
+                                : 'btn btn-ghost'} justify-start rounded"
+                        >
+                            {upperCaseWord(title)}
+                        </a>
+                    {/each}
+                {/if}
             </aside>
-            <!-- <label
-                for="app-sidebar"
-                class="btn btn-circle btn-error fixed bottom-4 right-4 drawer-overlay lg:hidden"
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    ><path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M6 18L18 6M6 6l12 12"
-                    /></svg
-                >
-            </label> -->
         </ul>
     </div>
 </div>
