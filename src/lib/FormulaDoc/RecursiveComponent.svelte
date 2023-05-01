@@ -17,19 +17,16 @@
                 {upperCaseWord(title)}
             </h2>
         {/if}
-        {#each dataSet as formula}
+        {#each dataSet as formula, idxFormula (idxFormula)}
             {#if typeof formula === "string" && formula.includes("\\text{")}
                 <!-- `\\text{$a$}`.replace(/\\text{/g, '').slice(0, -1).split('$').map((a,idx)=>idx%2) -->
                 <div>
                     {#each formula
                         .replace(/\\text{/g, "")
                         .slice(0, -1)
-                        .split("$") as part, idx (idx)}
-                        {#if idx % 2 === 0}
-                            {@html `<span>${part.replace(
-                                /^\s|\s$/g,
-                                "&nbsp;"
-                            )}</span>`}
+                        .split("$") as part, idxPart (idxPart)}
+                        {#if idxPart % 2 === 0}
+                            {@html `${part}`}
                         {:else}
                             <Katex expression={part} />
                         {/if}
@@ -37,16 +34,16 @@
                 </div>
             {:else if Array.isArray(formula)}
                 <div>
-                    {#each formula as part (part)}
+                    {#each formula as part, idxPart (idxPart)}
                         {#if !Array.isArray(part)}
-                            {part}
+                            {@html `${part}`}
                         {:else}
                             <Katex expression={part[0]} />
                         {/if}
                     {/each}
                 </div>
             {:else if typeof formula === "string" && !formula.includes("\\text{")}
-                <div>{formula}</div>
+                {@html `<div>${formula}</div>`}
             {:else if typeof formula === "object" && !Array.isArray(formula)}
                 <svelte:self dataSet={[formula]} titleSize={titleSize + 1} />
             {/if}

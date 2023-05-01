@@ -2,15 +2,15 @@ export const indexDB = [
     {
         "section": "english",
         "topicList": [
-            "vocabulary",
-            "article",
-            "parts-of-speech",
-            "right-form-of-verbs",
+            //  "vocabulary",
+            //  "article",
+            //  "parts-of-speech",
+            //  "right-form-of-verbs",
             "subject-verb-agreement",
-            "synonym-antonym",
-            "spelling",
-            "true,-false,-not-given",
-            "mcq-from-passage",
+            //  "synonym-antonym",
+            //  "spelling",
+            //  "true,-false,-not-given",
+            //  "mcq-from-passage",
         ]
     },
     {
@@ -18,7 +18,7 @@ export const indexDB = [
         "topicList": [
             "geometry",
             "algebra",
-            "arithmetic",
+            // "arithmetic",
             "vocabulary",
         ],
         "topicDetails": {
@@ -46,26 +46,26 @@ export const indexDB = [
                 "inequality",
                 "trigonometry",
             ],
-            "arithmetic": [
-                "percentage-problem-numbers",
-                "profit-loss-divisibility-rules",
-                "ratio,-fraction",
-                "speed-distance-time",
-                "work-time-series",
-                "average,-median",
-                "probability",
-            ],
+            // "arithmetic": [
+            //     "percentage-problem-numbers",
+            //     "profit-loss-divisibility-rules",
+            //     "ratio,-fraction",
+            //     "speed-distance-time",
+            //     "work-time-series",
+            //     "average,-median",
+            //     "probability",
+            // ],
         }
     },
-    {
-        "section": "quiz",
-        "topicList": [
-            "11-feb-2023",
-            "15-mar-2023",
-            "21-apr-2023",
-            "28-may-2023"
-        ]
-    }
+    // {
+    //     "section": "quiz",
+    //     "topicList": [
+    //         "11-feb-2023",
+    //         "15-mar-2023",
+    //         "21-apr-2023",
+    //         "28-may-2023"
+    //     ]
+    // }
 ]
 
 export const data404 = {
