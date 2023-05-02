@@ -20,44 +20,50 @@
         {#each dataSet as formula, idxFormula (idxFormula)}
             {#if typeof formula === "string" && formula.includes("\\text{")}
                 <!-- `\\text{$a$}`.replace(/\\text{/g, '').slice(0, -1).split('$').map((a,idx)=>idx%2) -->
-                <div>
+                <div class="flex flex-row justify-start items-start">
                     {#if serial}
                         <span class="font-semibold"
                             >{idxFormula + 1}.&nbsp;</span
                         >
                     {/if}
-                    {#each formula
-                        .replace(/\\text{/g, "")
-                        .slice(0, -1)
-                        .split("$") as part, idxPart (idxPart)}
-                        {#if idxPart % 2 === 0}
-                            {@html `${part}`}
-                        {:else}
-                            <Katex expression={part} />
-                        {/if}
-                    {/each}
+                    <div>
+                        {#each formula
+                            .replace(/\\text{/g, "")
+                            .slice(0, -1)
+                            .split("$") as part, idxPart (idxPart)}
+                            {#if idxPart % 2 === 0}
+                                {@html `${part.replace(/^ | $/g, "&nbsp;")}`}
+                            {:else}
+                                <Katex expression={part} />
+                            {/if}
+                        {/each}
+                    </div>
                 </div>
             {:else if Array.isArray(formula)}
-                <div>
+                <div class="flex flex-row justify-start items-start">
                     {#if serial}
                         <span class="font-semibold"
                             >{idxFormula + 1}.&nbsp;</span
                         >
                     {/if}
-                    {#each formula as part, idxPart (idxPart)}
-                        {#if !Array.isArray(part)}
-                            {@html `${part}`}
-                        {:else}
-                            <Katex expression={part[0]} />
-                        {/if}
-                    {/each}
+                    <div>
+                        {#each formula as part, idxPart (idxPart)}
+                            {#if !Array.isArray(part)}
+                                {@html `${part.replace(/^ | $/g, "&nbsp;")}`}
+                            {:else}
+                                <Katex expression={part[0]} />
+                            {/if}
+                        {/each}
+                    </div>
                 </div>
             {:else if typeof formula === "string" && !formula.includes("\\text{")}
                 {#if serial}
-                    {@html `<div><span class="font-semibold">${
-                        idxFormula + 1
-                    }.&nbsp;</span>
-                    <span>${formula}</span></div>`}
+                    <div class="flex flex-row justify-start items-start">
+                        {@html `<span class="font-semibold">${
+                            idxFormula + 1
+                        }.&nbsp;</span>
+                    <span>${formula}</span>`}
+                    </div>
                 {:else}
                     {@html `<div>${formula}</div>`}
                 {/if}
