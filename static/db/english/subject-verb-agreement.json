@@ -177,7 +177,7 @@
         },
         {
             "title": "Ans:",
-            "serial": true,
+            "serial": false,
             "dataSet": [
                 "<b>Q(A):</b>",
                 "<b>1.</b> make, <b>2.</b> is, <b>3.</b> is, <b>4.</b> is, <b>5.</b> is, <b>6.</b> is, <b>7.</b> is, <b>8.</b> is, <b>9.</b> is, <b>10.</b> is, <b>11.</b> is, <b>12.</b> are, <b>13.</b> am, <b>14.</b> is, <b>15.</b> are, <b>16.</b> wins, <b>17.</b> are, <b>18.</b> waits, <b>19.</b> has, <b>20.</b> are, <b>21.</b> is, <b>22.</b> has, <b>23.</b> are, <b>24.</b> are, <b>25.</b> were, <b>26.</b> is, <b>27.</b> have, <b>28.</b> are, <b>29.</b> were, <b>30.</b> are.",
