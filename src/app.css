@@ -11,3 +11,11 @@
 * {
     border-color: #000;
 }
+
+b {
+    font-weight: 600;
+}
+
+a {
+    text-decoration: underline;
+}

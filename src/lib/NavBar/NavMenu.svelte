@@ -44,3 +44,11 @@
         </li>
     {/if}
 {/each}
+<li>
+    <button
+        class="active:scale-90 duration-150 sm:hidden p-2"
+        on:click={() => {
+            location.reload();
+        }}>Reload</button
+    >
+</li>

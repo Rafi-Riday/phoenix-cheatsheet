@@ -179,7 +179,7 @@
                                     ]}
                                 />
                                 <label
-                                    class="cursor-pointer w-full border rounded px-2 py-1 {submitSection ===
+                                    class="sm:cursor-pointer w-full border rounded px-2 py-1 {submitSection ===
                                     'Submit'
                                         ? 'bg-base-200 border-slate-300 peer-checked:bg-neutral peer-checked:text-neutral-content peer-checked:border-neutral-focus'
                                         : submitSection === 'Reset' &&

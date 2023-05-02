@@ -7,6 +7,7 @@
     "dataSet": [
         {
             "title": "equation-solving",
+            "serial": true,
             "dataSet": [
                 "\\text{$(a+b)^2=a^2+2ab+b^2=(a+b)^2+4ab$}",
                 "\\text{$(a-b)^2=a^2-2ab+b^2=(a+b)^2-4ab$}",
@@ -23,6 +24,7 @@
         },
         {
             "title": "logarithm",
+            "serial": true,
             "dataSet": [
                 "\\text{$log_aM=X$; where$M=a^X$}",
                 "\\text{$log_aN=Y$; where$N=a^Y$}",
