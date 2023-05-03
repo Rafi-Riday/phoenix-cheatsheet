@@ -8,6 +8,7 @@
         {
             "title": "phoenix-PDF",
             "serial": true,
+            "collapse": true,
             "dataSet": [
                 "A subject will come before a phrase beginning with of. This is a key rule for understanding subjects.<br/>The word of is the culprit in many, perhaps most, subject verb mistakes.<br/>Hasty writers, speakers, readers, and listeners might miss the all-toocommon mistake in the following sentence:<br/>Incorrect: A bouquet of yellow roses lend color and fragrance to the room.<br/>Correct: A bouquet of yellow roses lends . . . (bouquet lends, not roses lend) Here the subject \"A bouquet\" is singular.",
                 "Two singular subjects connected by or, either/or, or neither/nor require a singular verb.<br/><u>Examples:</u> My aunt or my uncle is arriving by train today.<br/>Neither Juan nor Carmen is available.<br/>Either Kiana or Casey is helping today with stage decorations.",
@@ -32,6 +33,7 @@
         {
             "title": "Advanched Rules",
             "serial": true,
+            "collapse": true,
             "dataSet": [
                 "দুই বা ততোধিক singular subject যদি and দ্বারা যুক্ত হয় তবে উক্ত বাক্যের verb টি plural হয়। <br/>i) Ram and Rahim (to be) two friends. <br/>Ram and Rahim are two friends. <br/>ii) He and his father (to go) to Dhaka. <br/>He and his father go to Dhaka. <br/>iii) Karim and Rahim (to be) present yesterday. <br/>Karim and Rahim were present yesterday.",
                 "And দ্বারা যুক্ত দুটি Subject যদি একক সমষ্টিগত ধারনার ইঙ্গিত প্রদান করে তবে উক্ত বাক্যের verb টি singular হয় । <br/>i) Slow and steady (to win ) the race. <br/>Slow and steady wins the race. <br/>ii) The honour and glory of life (to be) character. <br/>The honour and glory of life is character. <br/>iii) Rice and curry (to be) <br/>only food. <br/>Rice and curry is my only food.",
@@ -67,6 +69,7 @@
         {
             "title": "Practice-yourself",
             "serial": true,
+            "collapse": true,
             "dataSet": [
                 "The captain and the Adjutant <b>(to have)</b> finished the meeting.",
                 "The Headmaster and chairman <b>(to be)</b> present today.",
@@ -122,6 +125,7 @@
         {
             "title": "Exercise A. Subject এর সাথে সামঞ্জস্য রেখে শূন্যস্থানে যথার্থ verbটি বসাও :",
             "serial": true,
+            "collapse": true,
             "dataSet": [
                 "Two and two <b>___</b> four. <b>(makes/make)</b>",
                 "Rice as well as jute <b>___</b> grown in Bangladesh. <b>(is/are)</b>",
@@ -158,6 +162,7 @@
         {
             "title": "Exercise B. Fill in the blanks with the suitable verbs:",
             "serial": true,
+            "collapse": true,
             "dataSet": [
                 "No book and no furniture saved <b>___</b> a big sum.",
                 "Ten thousand taka <b>___</b> a big sum.",
@@ -177,12 +182,20 @@
         },
         {
             "title": "Ans:",
-            "serial": false,
+            "collapse": true,
             "dataSet": [
-                "<b>Q(A):</b>",
-                "<b>1.</b> make, <b>2.</b> is, <b>3.</b> is, <b>4.</b> is, <b>5.</b> is, <b>6.</b> is, <b>7.</b> is, <b>8.</b> is, <b>9.</b> is, <b>10.</b> is, <b>11.</b> is, <b>12.</b> are, <b>13.</b> am, <b>14.</b> is, <b>15.</b> are, <b>16.</b> wins, <b>17.</b> are, <b>18.</b> waits, <b>19.</b> has, <b>20.</b> are, <b>21.</b> is, <b>22.</b> has, <b>23.</b> are, <b>24.</b> are, <b>25.</b> were, <b>26.</b> is, <b>27.</b> have, <b>28.</b> are, <b>29.</b> were, <b>30.</b> are.",
-                "<b>Q(B):</b>",
-                "<b>1.</b> was, <b>2.</b> is, <b>3.</b> has, <b>4.</b> was, <b>5.</b> have, <b>6.</b> am, <b>7.</b> is, <b>8.</b> is, <b>9.</b> is, <b>10.</b> has, <b>11.</b> was, <b>12.</b> was, <b>13.</b> was, <b>14.</b> are."
+                {
+                    "title": "Q(A):",
+                    "dataSet": [
+                        "<b>1.</b> make, <b>2.</b> is, <b>3.</b> is, <b>4.</b> is, <b>5.</b> is, <b>6.</b> is, <b>7.</b> is, <b>8.</b> is, <b>9.</b> is, <b>10.</b> is, <b>11.</b> is, <b>12.</b> are, <b>13.</b> am, <b>14.</b> is, <b>15.</b> are, <b>16.</b> wins, <b>17.</b> are, <b>18.</b> waits, <b>19.</b> has, <b>20.</b> are, <b>21.</b> is, <b>22.</b> has, <b>23.</b> are, <b>24.</b> are, <b>25.</b> were, <b>26.</b> is, <b>27.</b> have, <b>28.</b> are, <b>29.</b> were, <b>30.</b> are."
+                    ]
+                },
+                {
+                    "title": "Q(B):",
+                    "dataSet": [
+                        "<b>1.</b> was, <b>2.</b> is, <b>3.</b> has, <b>4.</b> was, <b>5.</b> have, <b>6.</b> am, <b>7.</b> is, <b>8.</b> is, <b>9.</b> is, <b>10.</b> has, <b>11.</b> was, <b>12.</b> was, <b>13.</b> was, <b>14.</b> are."
+                    ]
+                }
             ]
         }
     ]
