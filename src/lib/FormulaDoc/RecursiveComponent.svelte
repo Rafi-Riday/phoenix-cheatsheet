@@ -6,7 +6,7 @@
     let titleSizeArray = ["text-xl", "text-lg", "text-base"];
 </script>
 
-{#each dataSet as { title, img, collapse, serial, dataSet }, idx (idx)}
+{#each dataSet as { title, img, collapse, serial, noBadge, dataSet }, idx (idx)}
     <section class={collapse ? "collapse collapse-arrow" : ""}>
         <!-- collapse inp -->
         {#if collapse}
@@ -22,6 +22,11 @@
                     : ''}"
             >
                 {@html upperCaseWord(title)}
+                {#if noBadge !== true}
+                    <div class="badge badge-xs py-2 -translate-y-[2px]">
+                        {dataSet.length}
+                    </div>
+                {/if}
             </h2>
         {/if}
         <!-- body -->

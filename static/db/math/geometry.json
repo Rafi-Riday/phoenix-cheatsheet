@@ -22,7 +22,7 @@
                 "\\text{Perimeter = 3a}",
                 "\\text{Height =$\\frac{\\sqrt{3}}{4}a$}",
                 {
-                    "title": "demo",
+                    "noBadge": true,
                     "img": "",
                     "dataSet": [
                         "\\text{Area of Equilateral Triangle with a Circle inscribed inside whose radius is$r$ is$3\\sqrt{3}r^2$}"

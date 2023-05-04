@@ -24,7 +24,7 @@
             ]
         },
         {
-            "title": "practice-here",
+            "title": "practice-online",
             "serial": true,
             "dataSet": [
                 "<a href='https://www.grammarbd.com/practice/32/exercise-on-subject-verbagreement-with-explanation' target='_blank'>Grammarbd</a>"
@@ -186,12 +186,14 @@
             "dataSet": [
                 {
                     "title": "Q(A):",
+                    "noBadge": true,
                     "dataSet": [
                         "<b>1.</b> make, <b>2.</b> is, <b>3.</b> is, <b>4.</b> is, <b>5.</b> is, <b>6.</b> is, <b>7.</b> is, <b>8.</b> is, <b>9.</b> is, <b>10.</b> is, <b>11.</b> is, <b>12.</b> are, <b>13.</b> am, <b>14.</b> is, <b>15.</b> are, <b>16.</b> wins, <b>17.</b> are, <b>18.</b> waits, <b>19.</b> has, <b>20.</b> are, <b>21.</b> is, <b>22.</b> has, <b>23.</b> are, <b>24.</b> are, <b>25.</b> were, <b>26.</b> is, <b>27.</b> have, <b>28.</b> are, <b>29.</b> were, <b>30.</b> are."
                     ]
                 },
                 {
                     "title": "Q(B):",
+                    "noBadge": true,
                     "dataSet": [
                         "<b>1.</b> was, <b>2.</b> is, <b>3.</b> has, <b>4.</b> was, <b>5.</b> have, <b>6.</b> am, <b>7.</b> is, <b>8.</b> is, <b>9.</b> is, <b>10.</b> has, <b>11.</b> was, <b>12.</b> was, <b>13.</b> was, <b>14.</b> are."
                     ]
