@@ -3,7 +3,7 @@ export const indexDB = [
         "section": "english",
         "topicList": [
             //  "vocabulary",
-            //  "article",
+            "article",
             //  "parts-of-speech",
             //  "right-form-of-verbs",
             "subject-verb-agreement",

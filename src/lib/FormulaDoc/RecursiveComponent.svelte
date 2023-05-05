@@ -4,6 +4,7 @@
     export let dataSet;
     export let titleSize = 3;
     let titleSizeArray = ["text-xl", "text-lg", "text-base"];
+    import { range } from "$lib/utilities";
 </script>
 
 {#each dataSet as { title, img, collapse, serial, noBadge, dataSet }, idx (idx)}
@@ -28,6 +29,14 @@
                     </div>
                 {/if}
             </h2>
+        {/if}
+        {#if img}
+            {#each range(img.length) as l (l)}
+                <img
+                    src="{img.before}{l + 1}{img.after}"
+                    alt="{l}{img.after}"
+                />
+            {/each}
         {/if}
         <!-- body -->
         <div

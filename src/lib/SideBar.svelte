@@ -49,6 +49,15 @@
                         </a>
                     {/each}
                 {/if}
+                <!--  -->
+                <a
+                    href="/others"
+                    class="{$page.url.pathname === '/others'
+                        ? 'btn btn-primary' // 'btn btn-info bg-[#2292e4] text-white hover:bg-[#2292e4]'
+                        : 'btn btn-ghost'} justify-start rounded underline"
+                >
+                    Others
+                </a>
             </aside>
         </ul>
     </div>

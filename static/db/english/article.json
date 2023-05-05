@@ -1,0 +1,21 @@
+{
+    "prototype": "FormulaDoc",
+    "title": "Article",
+    "description": "Article from basic to advanched",
+    "keywords": "article, a, an, the",
+    "author": "Phoenix Admission Care",
+    "dataSet": [
+        {
+            "title": "rules",
+            "serial": true,
+            "collapse": true,
+            "img": {
+                "before": "https://raw.githubusercontent.com/Rafi-Riday/phoenix-cheatsheet/main/static/image-data/article/",
+                "length": 7,
+                "after": ".jpg",
+                "avoid": []
+            },
+            "dataSet": []
+        }
+    ]
+}
