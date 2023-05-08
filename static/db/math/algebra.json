@@ -1,13 +1,14 @@
 {
     "prototype": "FormulaDoc",
-    "title": "Algebra Formula",
-    "description": "Math Algebra formula from basic to advanched",
-    "keywords": "Math, Algebra, formula",
+    "title": "algebra-formula",
+    "description": "math algebra formula from basic to advanched",
+    "keywords": "math, algebra, formula",
     "author": "Phoenix Admission Care",
     "dataSet": [
         {
             "title": "equation-solving",
             "serial": true,
+            "collapse": true,
             "dataSet": [
                 "\\text{$(a+b)^2\\newline=a^2+2ab+b^2\\newline=(a+b)^2+4ab$}",
                 "\\text{$(a-b)^2\\newline=a^2-2ab+b^2\\newline=(a+b)^2-4ab$}",
@@ -25,6 +26,7 @@
         {
             "title": "logarithm",
             "serial": true,
+            "collapse": true,
             "dataSet": [
                 "\\text{$log_aM=X$; where $M=a^X$}",
                 "\\text{$log_aN=Y$; where $N=a^Y$}",
@@ -37,6 +39,41 @@
                 "\\text{$alog_am=m$}",
                 "\\text{$log_a1=0$}",
                 "\\text{$log_ex=lnx$}"
+            ]
+        },
+        {
+            "title": "real-numbers",
+            "serial": true,
+            "collapse": true,
+            "dataSet": [
+                "Two positive integers are called co-prime numbers if and only if they have 1 as their only common factor and thus HCF(x, y) = 1.",
+                "An irrational number is a real number that cannot be expressed as a ratio of integers; for example, √2 & √3 are irrational number.",
+                "Adding 1 to the product of any four consecutive natural numbers makes the sum a whole square number.",
+                {
+                    "title": "From Recurring decimal to ratio",
+                    "serial": true,
+                    "collapse": true,
+                    "img": {
+                        "display": "formula",
+                        "before": "/image-data/algebra/",
+                        "len": [
+                            1,
+                            3
+                        ],
+                        "after": ".jpg",
+                        "width": "600px",
+                        "gap": "10px",
+                        "avoid": []
+                    }
+                }
+            ]
+        },
+        {
+            "title": "set-and-function",
+            "serial": true,
+            "collapse": true,
+            "dataSet": [
+                ""
             ]
         }
     ]

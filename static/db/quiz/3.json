@@ -1,0 +1,102 @@
+{
+    "prototype": "Quiz",
+    "title": "quiz-03-geometry",
+    "description": "math geometry quiz",
+    "keywords": "math, geometry, quiz",
+    "author": "Phoenix Admission Care",
+    "time": 600,
+    "questions": [
+        [
+            "What will be the ratio of circumference and diameter of a circle?",
+            "\\text{π$r^3$}",
+            "\\text{π$r^2$}",
+            "2πr",
+            "πr",
+            "π"
+        ],
+        [
+            "The height of a cylinder is 10cm and radius = 10π. The cylinder will contain how many liters of water?",
+            "7",
+            "15",
+            "10",
+            "1",
+            "5"
+        ],
+        [
+            "What is the half of the complementary angle of 560?",
+            "170",
+            "200",
+            "340",
+            "460",
+            "560"
+        ],
+        [
+            "If the diameter of a wheel = 10cm, what will be the distance crossed by the wheel after 10 rotation?",
+            "10 cm",
+            "100 cm",
+            "100π cm",
+            "10π cm",
+            "5π cm"
+        ],
+        [
+            "The largest chord of a circle = 10m, what will be the area of the circle?",
+            "\\text{25 $cm^2$}",
+            "\\text{50 $cm^2$}",
+            "100 cm",
+            "25 cm",
+            "\\text{25π $cm^2$}"
+        ],
+        [
+            "If the volume of a cube = 27 units then which one of the following is the diagonal of the cube?",
+            "\\text{$3^3$}",
+            "\\text{$27^3$}",
+            "3",
+            "3",
+            "None"
+        ],
+        [
+            "If the diameter of a cone = 10 cm and height = 12 cm, what will be the length of slant height?",
+            "244 cm",
+            "244 cm",
+            "13 cm",
+            "10 cm",
+            "24 cm"
+        ],
+        [
+            "There is a circular garden with a diameter of 30m. Inside of the circle there is a grass road with 4m width around the garden. What is the area of the road?",
+            "\\text{208π $m^2$}",
+            "\\text{320π $m^2$}",
+            "\\text{104π $m^2$}",
+            "\\text{56π $m^2$}",
+            "\\text{104π $m^2$}"
+        ],
+        [
+            "\\text{There is a square-shaped field whose area is 121 $m^2$.There is a rectangle shaped road along the diagonal of the field. If the breadth of the road is 2 m what is the area of the road?}",
+            "2",
+            "11",
+            "10",
+            "22",
+            "2"
+        ],
+        [
+            "The base of a right-angle triangle = y and perpendicular= y. Which one of the following ratios indicates the triangle?",
+            "2: 2 ∶ 2",
+            "2: 2: 4",
+            "1: 1: 2",
+            "All",
+            "None"
+        ]
+    ],
+    "answers": [
+        "e",
+        "d",
+        "a",
+        "c",
+        "e",
+        "d",
+        "a",
+        "c",
+        "e",
+        "d"
+    ]
+}

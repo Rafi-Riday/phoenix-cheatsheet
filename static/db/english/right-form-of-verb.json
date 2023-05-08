@@ -1,19 +1,19 @@
 {
     "prototype": "FormulaDoc",
-    "title": "article",
-    "description": "article from basic to advanched",
-    "keywords": "article, a, an, the",
+    "title": "right-form-of-Verb",
+    "description": "right form of verb from basic to advanched",
+    "keywords": "right, form, of, verb",
     "author": "Phoenix Admission Care",
     "dataSet": [
         {
-            "title": "advanched-article",
+            "title": "advanched-right-form-of-verb",
             "serial": true,
             "img": {
                 "display": "formula",
-                "before": "/image-data/article/",
+                "before": "/image-data/right-form-of-verb/",
                 "len": [
                     1,
-                    7
+                    17
                 ],
                 "after": ".jpg",
                 "width": "600px",

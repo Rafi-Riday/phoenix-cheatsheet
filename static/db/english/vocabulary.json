@@ -1,0 +1,57 @@
+{
+    "prototype": "FormulaDoc",
+    "title": "vocabulary",
+    "description": "basic vocabulary",
+    "keywords": "vocabulary, word meaning",
+    "author": "Phoenix Admission Care",
+    "dataSet": [
+        {
+            "title": "vocabulary-1 to 5",
+            "serial": true,
+            "collapse": true,
+            "img": {
+                "display": "formula",
+                "before": "/image-data/vocabulary/",
+                "len": [
+                    1,
+                    5
+                ],
+                "after": ".jpg",
+                "width": "1200px",
+                "gap": "10px"
+            }
+        },
+        {
+            "title": "vocabulary-6 to 10",
+            "serial": true,
+            "collapse": true,
+            "img": {
+                "display": "formula",
+                "before": "/image-data/vocabulary/",
+                "len": [
+                    6,
+                    10
+                ],
+                "after": ".jpg",
+                "width": "1200px",
+                "gap": "10px"
+            }
+        },
+        {
+            "title": "vocabulary-11 to 15",
+            "serial": true,
+            "collapse": true,
+            "img": {
+                "display": "formula",
+                "before": "/image-data/vocabulary/",
+                "len": [
+                    11,
+                    15
+                ],
+                "after": ".jpg",
+                "width": "1200px",
+                "gap": "10px"
+            }
+        }
+    ]
+}

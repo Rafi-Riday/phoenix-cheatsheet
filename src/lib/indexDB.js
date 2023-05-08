@@ -2,15 +2,11 @@ export const indexDB = [
     {
         "section": "english",
         "topicList": [
-            //  "vocabulary",
+            "vocabulary",
             "article",
-            //  "parts-of-speech",
-            //  "right-form-of-verbs",
+            "parts-of-speech",
+            "right-form-of-verb",
             "subject-verb-agreement",
-            //  "synonym-antonym",
-            //  "spelling",
-            //  "true,-false,-not-given",
-            //  "mcq-from-passage",
         ]
     },
     {
@@ -18,7 +14,7 @@ export const indexDB = [
         "topicList": [
             "geometry",
             "algebra",
-            // "arithmetic",
+            "arithmetic",
             "vocabulary",
         ],
         "topicDetails": {
@@ -46,15 +42,15 @@ export const indexDB = [
                 "inequality",
                 "trigonometry",
             ],
-            // "arithmetic": [
-            //     "percentage-problem-numbers",
-            //     "profit-loss-divisibility-rules",
-            //     "ratio,-fraction",
-            //     "speed-distance-time",
-            //     "work-time-series",
-            //     "average,-median",
-            //     "probability",
-            // ],
+            "arithmetic": [
+                "percentage-problem-numbers",
+                "profit-loss-divisibility-rules",
+                "ratio,-fraction",
+                "speed-distance-time",
+                "work-time-series",
+                "average,-median",
+                "probability",
+            ],
         }
     },
     // {

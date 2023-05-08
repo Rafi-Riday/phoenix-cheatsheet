@@ -1,8 +1,8 @@
 {
     "prototype": "SharedTwoDataObj",
-    "title": "Math Vocabulary",
-    "description": "Math English to Bangla and vice-versa word meaning and Exam",
-    "keywords": "Math, English to Bangla, word meaning, Exam",
+    "title": "math vocabulary",
+    "description": "math english to bangla and vice-versa word meaning and Exam",
+    "keywords": "math, english to bangla, word meaning, Exam",
     "author": "Phoenix Admission Care",
     "direction": {
         "dataOne": "English",
@@ -20,6 +20,10 @@
         {
             "dataOne": "Abscissa",
             "dataTwo": "ভুজ"
+        },
+        {
+            "dataOne": "Ordinate",
+            "dataTwo": "কোটি"
         },
         {
             "dataOne": "Trigonometry",
@@ -400,6 +404,34 @@
         {
             "dataOne": "Additive inverse",
             "dataTwo": "যোগাত্নক বিপরীত"
+        },
+        {
+            "dataOne": "Co-prime Number",
+            "dataTwo": "সহ-মৌলিক সংখ্যা"
+        },
+        {
+            "dataOne": "Finite Set",
+            "dataTwo": "সসীম সেট"
+        },
+        {
+            "dataOne": "Infinite Set",
+            "dataTwo": "অসীম সেট"
+        },
+        {
+            "dataOne": "Proper Subset",
+            "dataTwo": "প্রকৃত  উপসেট"
+        },
+        {
+            "dataOne": "Complement of Set",
+            "dataTwo": "পূরক সেট"
+        },
+        {
+            "dataOne": "Disjoint Set",
+            "dataTwo": "নিশ্ছেদ সেট"
+        },
+        {
+            "dataOne": "Power Set P(A)",
+            "dataTwo": "উপসেটসমূহের সেট"
         }
     ]
 }

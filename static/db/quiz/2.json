@@ -1,0 +1,102 @@
+{
+    "prototype": "Quiz",
+    "title": "quiz-02-geometry",
+    "description": "math algebra quiz",
+    "keywords": "math, algebra, quiz",
+    "author": "Phoenix Admission Care",
+    "time": 600,
+    "questions": [
+        [
+            "Which one of the following ratios of sides doesn’t indicate right angle triangle?",
+            "7: 24 : 25",
+            "5: 12: 13",
+            "8: 6: 10",
+            "8: 16: 17",
+            "All"
+        ],
+        [
+            "Length, breadth and height of an aquarium are 15 cm, 10 cm and 100 cm respectively. If 15 liters of water are added to the aquarium, how much will the height of the water increase?",
+            "40 cm",
+            "60 cm",
+            "80 cm",
+            "100 cm",
+            "120 cm"
+        ],
+        [
+            "If the central angle of a circle is 600 what will be the inscribed angle?",
+            "60",
+            "30",
+            "50",
+            "120",
+            "100"
+        ],
+        [
+            "If the 3 sides of a trapezium are 5 cm, 13 cm and 21 cm what will be the length of the fourth side if the perimeter of the trapezium is 59 cm?",
+            "10",
+            "20",
+            "30",
+            "40",
+            "None."
+        ],
+        [
+            "If a wheel crosses 2600π meter by 100 rotation, what is the area of the wheel?",
+            "13π",
+            "26π",
+            "130π",
+            "169π",
+            "None"
+        ],
+        [
+            "If the hypotenuse of a right-angle triangle is 52cm and base = 5x, what will be height?",
+            "13",
+            "20",
+            "48",
+            "58",
+            "None"
+        ],
+        [
+            "Radius of a circle = 10cm. What will be the length of the largest chord of the circle?",
+            "10",
+            "20",
+            "30",
+            "58",
+            "60"
+        ],
+        [
+            "If we divide a rectangle room into two equal square rooms what will be the length of each partition if the length of the rectangle room = 4 m?",
+            "5m",
+            "4m",
+            "3m",
+            "2m",
+            "1m"
+        ],
+        [
+            "If the angles of a right-angle triangle are 90°,45°,45°.what will be the ratio of sides?",
+            "1:2:2",
+            "2:2:2 2",
+            "2:2:2",
+            "1:1:2",
+            "None"
+        ],
+        [
+            "If the diameter of a sphere = 1unit then what will be total surface area of that sphere?",
+            "4πr",
+            "π",
+            "2π",
+            "8π",
+            "None"
+        ]
+    ],
+    "answers": [
+        "d",
+        "d",
+        "d",
+        "b",
+        "d",
+        "c",
+        "b",
+        "d",
+        "b",
+        "b"
+    ]
+}

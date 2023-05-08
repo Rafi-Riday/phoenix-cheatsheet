@@ -1,13 +1,12 @@
 {
     "prototype": "FormulaDoc",
-    "title": "Geometry Formula",
-    "description": "Math Geometry formula from basic to advanched",
-    "keywords": "Math, Geometry, formula",
+    "title": "geometry-formula",
+    "description": "math geometry formula from basic to advanched",
+    "keywords": "math, geometry, formula",
     "author": "Phoenix Admission Care",
     "dataSet": [
         {
             "title": "right-angle-triangle",
-            "img": "",
             "dataSet": [
                 "\\text{Area =$\\frac{1}{2}ab$}",
                 "\\text{Perimeter = a + b + c}",
@@ -16,14 +15,12 @@
         },
         {
             "title": "equilateral-triangle",
-            "img": "",
             "dataSet": [
                 "\\text{Area =$\\frac{\\sqrt{3}}{4}a^2$}",
                 "\\text{Perimeter = 3a}",
                 "\\text{Height =$\\frac{\\sqrt{3}}{4}a$}",
                 {
                     "noBadge": true,
-                    "img": "",
                     "dataSet": [
                         "\\text{Area of Equilateral Triangle with a Circle inscribed inside whose radius is$r$ is$3\\sqrt{3}r^2$}"
                     ]

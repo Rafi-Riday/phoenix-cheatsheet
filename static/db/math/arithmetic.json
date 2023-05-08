@@ -1,0 +1,17 @@
+{
+    "prototype": "FormulaDoc",
+    "title": "arithmetic-formula",
+    "description": "math arithmetic formula from basic to advanched",
+    "keywords": "math, arithmetic, formula",
+    "author": "Phoenix Admission Care",
+    "dataSet": [
+        {
+            "title": "demo",
+            "serial": true,
+            "collapse": true,
+            "dataSet": [
+                "demo"
+            ]
+        }
+    ]
+}

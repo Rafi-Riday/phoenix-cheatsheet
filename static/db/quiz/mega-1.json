@@ -1,0 +1,238 @@
+{
+    "prototype": "Quiz",
+    "title": "mega-quiz-1-geometry",
+    "description": "math geometry quiz",
+    "keywords": "math, geometry, quiz",
+    "author": "Phoenix Admission Care",
+    "time": 2100,
+    "questions": [
+        [
+            "If there are a total of three angles 2x, 3x and x in a straight angle, then what are the values of the angles?",
+            "120°, 30°, 30°",
+            "60°, 90°, 30°",
+            "120°, 0°, 60°",
+            "100°, 40°, 40°",
+            "None"
+        ],
+        [
+            "If wz || hi, then what is the value of x + y ?<br/><img src='/image-data/mega-2/2.jpg' alt='2' />",
+            "120°",
+            "130°",
+            "140°",
+            "150°",
+            "160°"
+        ],
+        [
+            "In the figure below, O is the center of the circle. If the area of triangle XOY is 25 what is the area of the circle?<br/><img src='/image-data/mega-2/3.jpg' alt='3' />",
+            "25n",
+            "25nV2",
+            "50tt",
+            "50nV3",
+            "625tt"
+        ],
+        [
+            "If the diameter of a circle increased by 50%; by what percent will the area of the circle increase?",
+            "25%",
+            "50%",
+            "100%",
+            "125%",
+            "225%"
+        ],
+        [
+            "What is the measurement of ∠C ?<br/><img src='/image-data/mega-2/5.jpg' alt='5' />",
+            "100°",
+            "80°",
+            "60°",
+            "75°",
+            "95°"
+        ],
+        [
+            "If AB = AC then ∠CED = ?<br/><img src='/image-data/mega-2/6.jpg' alt='6' />",
+            "50°",
+            "70°",
+            "60°",
+            "110°",
+            "120°"
+        ],
+        [
+            "What is the area of a semicircle with a diameter of 16 inches?",
+            "32rt sq. ft",
+            "64rt sq. ft",
+            "128n sq.ft",
+            "256rt sq. ft",
+            "512n sq.ft"
+        ],
+        [
+            "In a equilateral triangle AABC, If AD is the median, then what will be the value of ZBAD",
+            "30°",
+            "45°",
+            "60°",
+            "90°",
+            "100°"
+        ],
+        [
+            "If we extend a side of an equilateral triangle then what will be the difference of two external angles which are created due to extension of side?",
+            "120°",
+            "0°",
+            "60°",
+            "100°",
+            "150°"
+        ],
+        [
+            "If we extend the base DC of parallelogram ABCD to E and ∠BAD = 100°. ∠BCE = ?",
+            "100°",
+            "80°",
+            "180°",
+            "200°",
+            "150°"
+        ],
+        [
+            "In the rhombus ABCD, the diagonals AC and BD intersects at point O. If ∠ACD = 60° then ∠ODC = ?",
+            "60°",
+            "50°",
+            "90°",
+            "45°",
+            "30°"
+        ],
+        [
+            "If the ratio of the sides of a triangle is 1:1 : V2, then what will be the largest angle of the triangle?",
+            "180°",
+            "100°",
+            "90°",
+            "110°",
+            "150°"
+        ],
+        [
+            "ABDE is a parallelogram and its area is 100 sq.cm. Side ED is extended to C such that DE = DC. If CA intersects BD at point F, then what is the area of △AFB?",
+            "25 sq.cm",
+            "50 sq.cm",
+            "100 sq.cm",
+            "200 sq.cm",
+            "None"
+        ],
+        [
+            "If the area of a parallelogram = a and perimeter = p, which one of the following is true?",
+            "a = p",
+            "a = 2p",
+            "a = p2",
+            "p = a2",
+            "None"
+        ],
+        [
+            "There is a wire which can make a square whose length = 22m. If we want to make a circle with that wire then what will be the diameter of the circle?",
+            "14 m",
+            "10 m",
+            "15 m",
+            "28 m",
+            "30 m"
+        ],
+        [
+            "The length and breadth of a rectangle are 14 cm and 11 cm. If the area of the rectangle and a circle is equal then what will be the diameter of the circle?",
+            "7 cm",
+            "27 cm",
+            "17 cm",
+            "24 cm",
+            "14 cm"
+        ],
+        [
+            "If the length and breadth of a rectangle is increased by 10% and",
+            "25% respectively, what is the increased percentage of area?",
+            "10%",
+            "27.5%",
+            "37.5%",
+            "47.5%",
+            "57.5%"
+        ],
+        [
+            "The perimeter of a rectangle is 206 m. If the difference between the length and breadth of a rectangle is 23 m what will be the area?",
+            "\\text{$2520 m^2$}",
+            "\\text{$2420 m^2$}",
+            "\\text{$2480 m^2$}",
+            "\\text{$1520 m^2$}",
+            "\\text{$2240 m^2$}"
+        ],
+        [
+            "There is a rectangle whose length = 20 m and breadth = 14 m. If a circle is cut out from the rectangle what will be the ratio of the area of the circle to the remaining area of the rectangle?",
+            "11 : 9",
+            "20 : 11",
+            "11 : 20",
+            "9 : 11",
+            "None"
+        ],
+        [
+            "If the adjacent angles of the rhombus are in the ratio of 4 : 5 what will be the difference between the larger angle and smaller angle?",
+            "10°",
+            "20°",
+            "15°",
+            "25°",
+            "30°"
+        ],
+        [
+            "What is the area of the shaded portion?<br/><img src='/image-data/mega-2/21.jpg' alt='21' />",
+            "3.1416 sq.cm",
+            "1.1416 sq.cm",
+            ".1416 sq.cm",
+            "2.1416 sq.cm",
+            "None"
+        ],
+        [
+            "Which one of the following will give us a horizontal line?",
+            "-x = 1",
+            "y = l",
+            "x + y = 1",
+            "-x-y = 0",
+            "None"
+        ],
+        [
+            "Which one of the following equations passes through origin?",
+            "y = 2x + 4",
+            "y = 3x",
+            "5y = 5x + 17",
+            "3x = 3 + y",
+            "None"
+        ],
+        [
+            "In the equation 4y - 13x + 19 = 0, what is the slope?",
+            "4/13",
+            "6/13",
+            "13/4",
+            "13/6",
+            "11/13"
+        ],
+        [
+            "Two st.lines x = a and y = b intersect at -",
+            "(b, a)",
+            "(a, 0)",
+            "(a, b)",
+            "(b, 0)",
+            "(0, 0)"
+        ]
+    ],
+    "answers": [
+        "b",
+        "d",
+        "c",
+        "d",
+        "b",
+        "c",
+        "a",
+        "a",
+        "b",
+        "b",
+        "c",
+        "c",
+        "a",
+        "e",
+        "d",
+        "d",
+        "c",
+        "a",
+        "a",
+        "b",
+        "b",
+        "b",
+        "b",
+        "c",
+        "c"
+    ]
+}

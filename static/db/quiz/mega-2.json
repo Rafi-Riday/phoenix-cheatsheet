@@ -1,0 +1,237 @@
+{
+    "prototype": "Quiz",
+    "title": "mega-quiz-02-algebra",
+    "description": "math algebra quiz",
+    "keywords": "math, algebra, quiz",
+    "author": "Phoenix Admission Care",
+    "time": 2100,
+    "dataSet": [
+        [
+            "How many of the integers between 110 and 120 are prime numbers?",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        [
+            "The number of prime numbers between 0 and 50 is -",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18"
+        ],
+        [
+            "If the numbers from 1 to 24, which are divisible by 2 are arranged in descending order, which number will be at the 8th place from the bottom?",
+            "18",
+            "14",
+            "12",
+            "10",
+            "16"
+        ],
+        [
+            "In the series 2 – 2 + 2 – 2 + ...... what is the sum of 101th terms?",
+            "2022",
+            "2",
+            "-2",
+            "1012",
+            "0"
+        ],
+        [
+            "Which of the following number is exactly divisible by 9?",
+            "3699",
+            "87255",
+            "732762",
+            "All",
+            "None"
+        ],
+        [
+            "Which of the following number is exactly divisible by 12?",
+            "748287",
+            "982837",
+            "984224",
+            "342342",
+            "None"
+        ],
+        [
+            "A fraction becomes 1/3 when 1 is subtracted from the numerator and it becomes 1/4 when 8 is added to its denominator. The fraction obtained is?",
+            "3/12",
+            "4/12",
+            "5/12",
+            "7/12",
+            "None"
+        ],
+        [
+            "The angles of cyclic quadrilaterals ABCD are: A = (6x+10), B=(5x)°, C = (x+y)° and D=(3y-10)°. The value of x and y is?",
+            "x = 20°, y = 10°",
+            "x = 20°, y = 30°",
+            "x = 44°, y = 15°",
+            "x = 15°, y = 15°",
+            "x = 25°, y = 15°"
+        ],
+        [
+            "\\text{If $log_4{32}$ = x, then what is the value of x?}",
+            "3/2",
+            "5/2",
+            "7/2",
+            "9/2",
+            "None"
+        ],
+        [
+            "\\text{What will be the value of $log_{10}(0.0001)$?}",
+            "1/4",
+            "-1/4",
+            "-4",
+            "4",
+            "None"
+        ],
+        [
+            "\\text{What is the value of $\\frac{1}{log_ab}×\\frac{1}{log_bc}×\\frac{1}{log_ca}$?}",
+            "a + b + c",
+            "abc",
+            "0",
+            "1",
+            "None"
+        ],
+        [
+            "\\text{If $f(x) = \\frac{x}{5} + 8$ then what will be the value of $f(5)$?}",
+            "5",
+            "x",
+            "8",
+            "9",
+            "10"
+        ],
+        [
+            "What will be the inverse of the function f(x) = 3x + 2?",
+            "3y + 2",
+            "(y - 2)/3",
+            "(x - 2)/3",
+            "Both b and c",
+            "None"
+        ],
+        [
+            "\\text{What will be the composite function of g(x) = 2x + 3 and h(x) = $x^2$?}",
+            "\\text{$(2x + 3)^2$}",
+            "3x + 2",
+            "\\text{$2x^2 + 3$}",
+            "2x",
+            "3 + 2x"
+        ],
+        [
+            "\\text{If $f(x) = x^2 + 1$ and $g(x) = 2x + 3$, what is the composite function g of (x)?}",
+            "\\text{$(2x + 3)^2 + 1$}",
+            "\\text{$(x^2 + 1) + 2x + 3$}",
+            "\\text{$(x^2 + 1)(2x + 3)$}",
+            "\\text{$(2x + 3)(x^2 + 1)$}",
+            "None"
+        ],
+        [
+            "In an exam, 60% of the candidates passed in Maths and 70% candidates passed in English and 10% of the candidates failed in both subjects. If 300 candidates passed in both the subjects, then what is the total number of candidates appeared in the exam?",
+            "730",
+            "750",
+            "550",
+            "680",
+            "700"
+        ],
+        [
+            "In a class 40% of the students enrolled for Math and 70% enrolled for Economics. If 15% of the students enrolled for both Math and Economics, what % of the students of the class did not enroll for either of the two subjects?",
+            "5%",
+            "15%",
+            "0%",
+            "25%",
+            "None"
+        ],
+        [
+            "If the number of elements of a set A, n(A) = 40, Set B n(B) = 26 and n(A ⋂ B) = 16 then what will be the value of n (A ∪ B)?",
+            "50",
+            "60",
+            "30",
+            "40",
+            "20"
+        ],
+        [
+            "\\text{What is the value of $i^32$?}",
+            "-i",
+            "\\text{$\\sqrt{-1}$}",
+            "1",
+            "0",
+            "None"
+        ],
+        [
+            "\\text{What is the value of $\\sqrt{-16}$?}",
+            "-4i",
+            "4i",
+            "-2i",
+            "2i",
+            "None"
+        ],
+        [
+            "If 7 – 5x < –4x – 4 then which one of the following is true for x?",
+            "x > 11",
+            "x < 11",
+            "x ≥ 11",
+            "x ≤ 11",
+            "x = 11"
+        ],
+        [
+            "Which one of the following is equal to tanθ?",
+            "\\text{$\\frac{sinθ}{cosθ}$}",
+            "\\text{$\\frac{cosθ}{cotθ}$}",
+            "\\text{$\\frac{secθ}{cosecθ}$}",
+            "a & c",
+            "None"
+        ],
+        [
+            "\\text{If $sinθ.cosθ = 1$, what is the value of $(sinθ + cosθ)^2$}",
+            "2",
+            "3",
+            "0",
+            "1",
+            "Can't determine"
+        ],
+        [
+            "\\text{In the series $1^3 + 2^3 + \\_\\_\\_\\_\\_\\_ + k^3 = 44100$, What will be the value of k here?}",
+            "23",
+            "21",
+            "22",
+            "20",
+            "30"
+        ],
+        [
+            "In an arithmetic series, 11th term = 5.25, 7th term = 3.25. What will be the sum of the first 15 terms?",
+            "52.5",
+            "60",
+            "56.25",
+            "55",
+            "48"
+        ]
+    ],
+    "answer": [
+        "a",
+        "d",
+        "e",
+        "b",
+        "d",
+        "e",
+        "b",
+        "b",
+        "b",
+        "c",
+        "d",
+        "d",
+        "c",
+        "c",
+        "d",
+        "b",
+        "a",
+        "a",
+        "c",
+        "b",
+        "a",
+        "d",
+        "b",
+        "d",
+        "c"
+    ]
+}

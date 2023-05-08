@@ -1,0 +1,102 @@
+{
+    "prototype": "Quiz",
+    "title": "quiz-11-arithmetic",
+    "description": "math arithmetic quiz",
+    "keywords": "math, arithmetic, quiz",
+    "author": "Phoenix Admission Care",
+    "time": 600,
+    "questions": [
+        [
+            "Every day, Rahim sells 10 litres of milk at TK 45 per litre, but he has to pay the municipal corporation TK 50 as a tax every week. In September 2021, how much money does Ratiram make?",
+            "13250 TK",
+            "13500 TK",
+            "13450 TK",
+            "13300 TK",
+            "15000 TK"
+        ],
+        [
+            "Flora's fishing company catches 9000 kg of fresh fish every month. The selling price of fresh fish is TK 30/kg and the selling price of dried fish is TK 120/kg, but when fresh fish is dried it remains l/4th of its weight. If flora sells dried fish, how much more money will she get than if she sells fresh fish?",
+            "108000 TK",
+            "27000 TK",
+            "360000",
+            "90000",
+            "0"
+        ],
+        [
+            "Ratul can finish a work in 12 hours but he works for 8 hours only and the remaining work was done by Ahad, whose rate of working is just 20% of what Ratul can do. How much time did Ahad works to complete that remaining work ?",
+            "6 Hours",
+            "10 Hours",
+            "12 Hours",
+            "18 Hours",
+            "20 Hours"
+        ],
+        [
+            "Selim can do a certain job in 12 days and Jamal is 60% more efficient than Selim. Jamal does the same piece of work in ?",
+            "6 Days",
+            "7 Days",
+            "7.5 Days",
+            "8 Days",
+            "9 Days"
+        ],
+        [
+            "What is the mean of the first 10 even integers?",
+            "11",
+            "14",
+            "10",
+            "13",
+            "20"
+        ],
+        [
+            "The average of 20 numbers is zero. Of them, at the most, how many may be greater than zero?",
+            "0",
+            "1",
+            "10",
+            "19",
+            "14"
+        ],
+        [
+            "The average weight of 8 person's increases by 2.5 kg when a new person comes in place of one of them weighing 65 kg. What might be the weight of the new person?",
+            "76 KG",
+            "80 KG",
+            "90 KG",
+            "86 KG",
+            "85 KG"
+        ],
+        [
+            "What is the probability of getting exactly one head in tossing a pair of coins?",
+            "0",
+            "1",
+            "1/5",
+            "1/3",
+            "1/2"
+        ],
+        [
+            "What is the probability of getting less than 3 in a single throw of a dice?",
+            "1/3",
+            "1/2",
+            "1/4",
+            "1/6",
+            "1"
+        ],
+        [
+            "If an event cannot occur, then its probability is ?",
+            "1",
+            "3",
+            "0",
+            "-1",
+            "-2"
+        ]
+    ],
+    "answers": [
+        "d",
+        "e",
+        "e",
+        "c",
+        "a",
+        "d",
+        "e",
+        "e",
+        "a",
+        "c"
+    ]
+}

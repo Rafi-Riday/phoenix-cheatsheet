@@ -1,0 +1,102 @@
+{
+    "prototype": "Quiz",
+    "title": "quiz-12-arithmetic",
+    "description": "math arithmetic quiz",
+    "keywords": "math, arithmetic, quiz",
+    "author": "Phoenix Admission Care",
+    "time": 600,
+    "questions": [
+        [
+            "The combined salaries of A and B are Tk. 2000. A spends 95% of his income, while B spends 85% of his. If their savings are the same now, how much does A make?",
+            "1500",
+            "1250",
+            "750",
+            "1600",
+            "1700"
+        ],
+        [
+            "The size of p is six times that of q. How likely is it that q is less than p?",
+            "\\text{$83\\frac{1}{3}%$}",
+            "\\text{$16\\frac{2}{3}%$}",
+            "90%",
+            "60%",
+            "None"
+        ],
+        [
+            "The tax on the water goes up by 20%, but people use 20% less of it. Then, the increase or decrease in how much money was spent is —",
+            "No Change",
+            "5% Decrease",
+            "4% Increase",
+            "4% Decrease",
+            "None"
+        ],
+        [
+            "What must be added to each term of the ratio 7:13 in order to transform the ratio into 2:3?",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        [
+            "The letters of the word SOCIETY are placed at random in a row. The probability of getting a vowel is?",
+            "1/7",
+            "2/7",
+            "3/7",
+            "4/7",
+            "5/7"
+        ],
+        [
+            "If a man travels 10.2 kilometers in three hours, his distance traveled in five hours is:",
+            "18 km",
+            "15 km",
+            "16 km",
+            "17 km",
+            "20 km"
+        ],
+        [
+            "If it takes a man four hours to go 15 km, how long will it take him to go 63 km at the same speed?",
+            "12 Hrs 36 Min",
+            "16 Hrs 48 Min",
+            "16 Hrs 4 Min",
+            "15 Hrs 32 Min",
+            "None"
+        ],
+        [
+            "A boy goes to school at 3 km/hr and comes back to his village at 2 km/hr. If he takes a total of 5 hours, the distance from the village to the school is:",
+            "7 Km",
+            "6 Km",
+            "8 Km",
+            "9 Km",
+            "10 Km"
+        ],
+        [
+            "The velocity of a bus is 54 km/hr when it is moving and 45 km/hr when it is stopped. How long does the bus stop for every hour:",
+            "9 Mins",
+            "10 Mins",
+            "12 Mins",
+            "20 Mins",
+            "30 Mins"
+        ],
+        [
+            "A train is going 92.4 kilometers per hour. In 10 minutes, how many meters will it go?",
+            "1540 m",
+            "15400 m",
+            "154 m",
+            "15.4 m",
+            ".154 m"
+        ]
+    ],
+    "answers": [
+        "a",
+        "a",
+        "d",
+        "e",
+        "c",
+        "d",
+        "b",
+        "b",
+        "b",
+        "b"
+    ]
+}

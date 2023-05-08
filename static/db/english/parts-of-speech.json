@@ -1,0 +1,153 @@
+{
+    "prototype": "FormulaDoc",
+    "title": "parts-of-speech",
+    "description": "parts of speech from basic to advanched",
+    "keywords": "parts, speech, noun, pronoun, adjective, verb, adverb, preposition, conjunction, interjection",
+    "author": "Phoenix Admission Care",
+    "dataSet": [
+        {
+            "title": "noun",
+            "serial": true,
+            "collapse": true,
+            "img": {
+                "display": "formula",
+                "before": "/image-data/parts-of-speech/",
+                "len": [
+                    1,
+                    3
+                ],
+                "after": ".jpg",
+                "width": "600px",
+                "gap": "10px"
+            }
+        },
+        {
+            "title": "pronoun",
+            "serial": true,
+            "collapse": true,
+            "img": {
+                "display": "formula",
+                "before": "/image-data/parts-of-speech/",
+                "len": [
+                    4,
+                    6
+                ],
+                "after": ".jpg",
+                "width": "600px",
+                "gap": "10px"
+            }
+        },
+        {
+            "title": "adjective",
+            "serial": true,
+            "collapse": true,
+            "img": {
+                "display": "formula",
+                "before": "/image-data/parts-of-speech/",
+                "len": [
+                    7,
+                    14
+                ],
+                "after": ".jpg",
+                "width": "600px",
+                "gap": "10px"
+            }
+        },
+        {
+            "title": "verb",
+            "serial": true,
+            "collapse": true,
+            "img": {
+                "display": "formula",
+                "before": "/image-data/parts-of-speech/",
+                "len": [
+                    15,
+                    20
+                ],
+                "after": ".jpg",
+                "width": "600px",
+                "gap": "10px"
+            }
+        },
+        {
+            "title": "adverb",
+            "serial": true,
+            "collapse": true,
+            "img": {
+                "display": "formula",
+                "before": "/image-data/parts-of-speech/",
+                "len": [
+                    21,
+                    28
+                ],
+                "after": ".jpg",
+                "width": "600px",
+                "gap": "10px"
+            }
+        },
+        {
+            "title": "preposition",
+            "serial": true,
+            "collapse": true,
+            "img": {
+                "display": "formula",
+                "before": "/image-data/parts-of-speech/",
+                "len": [
+                    29,
+                    33
+                ],
+                "after": ".jpg",
+                "width": "600px",
+                "gap": "10px"
+            }
+        },
+        {
+            "title": "conjunction",
+            "serial": true,
+            "collapse": true,
+            "img": {
+                "display": "formula",
+                "before": "/image-data/parts-of-speech/",
+                "len": [
+                    34,
+                    39
+                ],
+                "after": ".jpg",
+                "width": "600px",
+                "gap": "10px"
+            }
+        },
+        {
+            "title": "interjection",
+            "serial": true,
+            "collapse": true,
+            "img": {
+                "display": "formula",
+                "before": "/image-data/parts-of-speech/",
+                "len": [
+                    40,
+                    43
+                ],
+                "after": ".jpg",
+                "width": "600px",
+                "gap": "10px"
+            }
+        },
+        {
+            "title": "same-words-used-as-different-parts-of-speech",
+            "serial": true,
+            "collapse": true,
+            "img": {
+                "display": "formula",
+                "before": "/image-data/parts-of-speech/",
+                "len": [
+                    44,
+                    49
+                ],
+                "after": ".jpg",
+                "width": "600px",
+                "gap": "10px"
+            }
+        }
+    ]
+}
