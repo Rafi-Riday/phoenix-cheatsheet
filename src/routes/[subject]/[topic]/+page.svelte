@@ -5,6 +5,7 @@
         FormulaDoc: () => import("$lib/FormulaDoc/FormulaDoc.svelte"),
         SharedTwoDataObj: () =>
             import("$lib/SharedTwoDataObj/SharedTwoDataObj.svelte"),
+        Quiz: () => import("$lib/Quiz/Quiz.svelte"),
         PageNotFound: () => import("$lib/PageNotFound.svelte"),
     };
 </script>

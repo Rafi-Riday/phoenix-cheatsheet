@@ -53,15 +53,20 @@ export const indexDB = [
             ],
         }
     },
-    // {
-    //     "section": "quiz",
-    //     "topicList": [
-    //         "11-feb-2023",
-    //         "15-mar-2023",
-    //         "21-apr-2023",
-    //         "28-may-2023"
-    //     ]
-    // }
+    {
+        "section": "quiz",
+        "topicList": [
+            "quiz-2",
+            "quiz-3",
+            "quiz-6",
+            "quiz-7",
+            "quiz-8",
+            "quiz-11",
+            "quiz-12",
+            "mega-quiz-1",
+            "mega-quiz-2"
+        ]
+    }
 ]
 
 export const data404 = {

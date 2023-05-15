@@ -1,14 +1,13 @@
 <script>
-    import { randomNumRange } from "$lib/utilities";
+    import { randomNumRange, shuffleArray } from "$lib/utilities";
     export let producedUsableData;
     export let direction;
     // predefined
     let questionDirection = "dataOne";
     let reRenderTest = true;
     let submitSection = "Submit";
-    const oneDirectionRange = 4;
-    // random number generator
-
+    const oneDirectionRange = 5;
+    // options to be selectes as wrong option
     const returnQuestionSet = (idx) => {
         const optionSet = [];
         for (let i = 1; i <= oneDirectionRange; i++) {
@@ -32,9 +31,18 @@
             qSet: producedUsableData[idx],
         };
     };
-
+    // selected option set generator
     const returnMCQ = (idx) => {
         const { optionSet, qSet } = returnQuestionSet(idx);
+        // return {
+        //     finalOptionSet: shuffleArray(
+        //         shuffleArray(optionSet)
+        //             .filter((_, idx) => idx < oneDirectionRange - 1)
+        //             .concat([qSet])
+        //     ),
+        //     qSet,
+        // };
+
         const selectedWrongAns = [];
         const recursiveRandomOption = () => {
             const randomOption = optionSet[randomNumRange(optionSet.length)];
@@ -47,39 +55,31 @@
         };
         recursiveRandomOption();
         const rightOptionNum = randomNumRange(oneDirectionRange);
-        const finalOptionSet = []
-            .concat(selectedWrongAns.slice(0, rightOptionNum))
-            .concat([qSet])
-            .concat(
-                selectedWrongAns.slice(rightOptionNum, selectedWrongAns.length)
-            );
+        const finalOptionSet = shuffleArray(
+            []
+                .concat(selectedWrongAns.slice(0, rightOptionNum))
+                .concat([qSet])
+                .concat(
+                    selectedWrongAns.slice(
+                        rightOptionNum,
+                        selectedWrongAns.length
+                    )
+                )
+        );
         return {
             finalOptionSet,
             qSet,
         };
     };
-
-    let serializedQuestionSet = [];
-    let generateFinalQuestionSet = () => {
-        serializedQuestionSet = [];
-        producedUsableData.forEach(({ n }, idx) => {
-            serializedQuestionSet.push(returnMCQ(idx));
-        });
-    };
-    generateFinalQuestionSet();
+    // serialed question set
     // randomizing question set
-    let randomizedQuestionSet = [];
+    let randomizedQuestionSet;
     const randomizeQuestionSetFunc = () => {
-        const randomData =
-            serializedQuestionSet[randomNumRange(serializedQuestionSet.length)];
-        if (
-            !randomizedQuestionSet.find((r) => r.qSet.n === randomData.qSet.n)
-        ) {
-            randomizedQuestionSet.push(randomData);
-        }
-        if (randomizedQuestionSet.length !== serializedQuestionSet.length) {
-            randomizeQuestionSetFunc();
-        }
+        randomizedQuestionSet = shuffleArray(
+            Array.from({ length: producedUsableData.length }, (_, i) => i).map(
+                (idx) => returnMCQ(idx)
+            )
+        );
     };
     randomizeQuestionSetFunc();
     // result logic
@@ -102,9 +102,15 @@
         >Select the <span class="text-green-700">right</span> answer</center
     >
     <center class="mb-2">
-        <button class="btn btn-sm btn-success rounded">Right</button>
-        <button class="btn btn-sm btn-info rounded">Unselected Right</button>
-        <button class="btn btn-sm btn-error rounded text-white">Wrong</button>
+        <button class="duration-300 btn btn-sm btn-success rounded"
+            >Right</button
+        >
+        <button class="duration-300 btn btn-sm btn-info rounded"
+            >Unselected Right</button
+        >
+        <button class="duration-300 btn btn-sm btn-error rounded text-white"
+            >Wrong</button
+        >
     </center>
     <center
         class="mb-4 flex {questionDirection === 'dataOne'
@@ -141,16 +147,8 @@
                 >
                     <legend
                         class="bg-base-300 border border-slate-300 py-1 px-2 rounded"
-                        ><a
-                            href="https://www.google.com/search?q={qSet[
-                                questionDirection
-                            ]
-                                .split(' ')
-                                .join('+')}"
-                            target="_blank"
-                            rel="noreferrer"
-                            class="font-semibold underline"
-                            >{idx + 1}. {qSet[questionDirection]}</a
+                        ><span class="font-semibold underline"
+                            >{idx + 1}. {qSet[questionDirection]}</span
                         ></legend
                     >
                     <div class="grid grid-cols-2 gap-2">
@@ -159,7 +157,7 @@
                                 class="flex flex-row items-center last:grow gap-1"
                             >
                                 <input
-                                    class="peer radio radio-xs"
+                                    class="peer radio radio-xs hidden"
                                     disabled={submitSection === "Submit"
                                         ? false
                                         : true}
@@ -178,6 +176,7 @@
                                             : "dataOne"
                                     ]}
                                 />
+                                <span>{String.fromCharCode(opIdx + 97)}.</span>
                                 <label
                                     class="sm:cursor-pointer w-full border rounded px-2 py-1 {submitSection ===
                                     'Submit'
@@ -218,9 +217,7 @@
             {:else}
                 <button
                     on:click={() => {
-                        randomizedQuestionSet = [];
                         randomizeQuestionSetFunc();
-                        reRenderTest = !reRenderTest;
                         submitSection = "Submit";
                         markSheet.answered = 0;
                         markSheet.correct = 0;

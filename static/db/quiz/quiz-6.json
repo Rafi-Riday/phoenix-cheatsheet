@@ -41,8 +41,8 @@
         [
             "Which one of the following is true for In p ?",
             "\\text{$log_ep$}",
-            "\\frac{logp}{lnp}",
-            "\\frac{Inp}{Ine}",
+            "\\text{$\\frac{logp}{lnp}$}",
+            "\\text{$\\frac{Inp}{Ine}$}",
             "log p",
             "a & c"
         ],

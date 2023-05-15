@@ -1,6 +1,6 @@
 {
     "prototype": "Quiz",
-    "title": "quiz—07-algebra",
+    "title": "quiz-07-algebra",
     "description": "math algebra quiz",
     "keywords": "math, algebra, quiz",
     "author": "Phoenix Admission Care",
@@ -40,11 +40,11 @@
         ],
         [
             "\\text{If $1+i^{-2}+i^{-2}+x=0$, then what will be the value of x?}",
-            "\\text{$\\frac{i^{-3}}$}",
-            "\\text{$\\frac{i^{3}}$}",
-            "\\text{$\\frac{i^{2}}$}",
+            "\\text{$i^{-3}$}",
+            "\\text{$i^3$}",
+            "\\text{$i^2$}",
             "1",
-            "\\text{$\\frac{i^{0}}$}"
+            "\\text{$i^0$}"
         ],
         [
             "\\text{If $sin\\theta=\\frac{1}{\\sqrt 2}$, then what will be the base of the triangle?}",

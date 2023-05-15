@@ -7,7 +7,6 @@
     import { range } from "$lib/utilities";
 </script>
 
-<!-- FIXME: remove boilerplaty codes -->
 {#each dataSet as { title, img, collapse, serial, noBadge, dataSet }, idx (idx)}
     <section class={collapse ? "collapse collapse-arrow grow" : ""}>
         <!-- collapse inp -->
@@ -15,7 +14,7 @@
             <input type="checkbox" class="peer min-h-0" />
         {/if}
         <!-- title -->
-        {#if title}
+        {#if title || collapse}
             <h2
                 class="font-medium {titleSize <= titleSizeArray?.length - 1
                     ? titleSizeArray[titleSize]
@@ -23,29 +22,11 @@
                     ? 'collapse-title p-0 min-h-0 border-b-2 peer-checked:mb-2'
                     : ''}"
             >
-                {@html upperCaseWord(title)}
-                {#if noBadge !== true}
-                    <div class="badge badge-xs py-2 -translate-y-[2px]">
-                        {img || dataSet
-                            ? (img && img.len?.length === 2
-                                  ? img.len[1] +
-                                    1 -
-                                    img.len[0] -
-                                    (img.avoid ? img.avoid : []).length
-                                  : 0) + (dataSet ? dataSet.length : 0)
-                            : 0}
-                    </div>
+                {#if title}
+                    {@html upperCaseWord(title)}
+                {:else if collapse}
+                    <span class="text-neutral font-mono">Expand</span>
                 {/if}
-            </h2>
-        {:else if collapse}
-            <h2
-                class="font-medium {titleSize <= titleSizeArray?.length - 1
-                    ? titleSizeArray[titleSize]
-                    : 'base'} {collapse
-                    ? 'collapse-title p-0 min-h-0 border-b-2 peer-checked:mb-2'
-                    : ''}"
-            >
-                <span class="text-neutral font-mono">Expand</span>
                 {#if noBadge !== true}
                     <div class="badge badge-xs py-2 -translate-y-[2px]">
                         {img || dataSet
@@ -69,6 +50,7 @@
                 : ''}"
             style="padding-bottom: 0 !important;"
         >
+            <!-- img body -->
             {#if img && img.display === "formula"}
                 <center>
                     <section
@@ -93,57 +75,45 @@
                     </section>
                 </center>
             {/if}
+            <!-- string body -->
             {#if dataSet}
                 {#each dataSet as formula, idxFormula (idxFormula)}
-                    {#if typeof formula === "string" && formula.includes("\\text{")}
-                        <div class="flex flex-row justify-start items-start">
-                            {#if serial}
-                                <span class="font-semibold"
-                                    >{(img &&
-                                    img.display === "formula" &&
-                                    img.len?.length === 2
-                                        ? img.len[1] +
-                                          1 -
-                                          img.len[0] -
-                                          (img.avoid ? img.avoid : []).length
-                                        : 0) +
-                                        idxFormula +
-                                        1}.&nbsp;</span
-                                >
-                            {/if}
-                            <div>
+                    <div class="flex flex-row justify-start items-start">
+                        {#if serial}
+                            <span class="font-semibold"
+                                >{(img &&
+                                img.display === "formula" &&
+                                img.len?.length === 2
+                                    ? img.len[1] +
+                                      1 -
+                                      img.len[0] -
+                                      (img.avoid ? img.avoid : []).length
+                                    : 0) +
+                                    idxFormula +
+                                    1}.&nbsp;</span
+                            >
+                        {/if}
+                        <div>
+                            {#if typeof formula === "string" && formula.includes("\\text{")}
                                 {#each formula
                                     .replace(/\\text{/g, "")
                                     .slice(0, -1)
                                     .split("$") as part, idxPart (idxPart)}
                                     {#if idxPart % 2 === 0}
-                                        {@html `${part.replace(
-                                            /^ | $/g,
-                                            "&nbsp;"
-                                        )}`}
+                                        {@html part.replace(/^ | $/g, "&nbsp;")}
                                     {:else}
                                         <Katex expression={part} />
                                     {/if}
                                 {/each}
-                            </div>
-                        </div>
-                    {:else if Array.isArray(formula)}
-                        <div class="flex flex-row justify-start items-start">
-                            {#if serial}
-                                <span class="font-semibold"
-                                    >{(img &&
-                                    img.display === "formula" &&
-                                    img.len?.length === 2
-                                        ? img.len[1] +
-                                          1 -
-                                          img.len[0] -
-                                          (img.avoid ? img.avoid : []).length
-                                        : 0) +
-                                        idxFormula +
-                                        1}.&nbsp;</span
-                                >
-                            {/if}
-                            <div>
+                            {:else if typeof formula === "string" && !formula.includes("\\text{")}
+                                {@html formula}
+                            {:else if typeof formula === "object" && !Array.isArray(formula)}
+                                <svelte:self
+                                    dataSet={[formula]}
+                                    titleSize={titleSize + 1}
+                                />
+                                <!-- ignore this -->
+                            {:else if Array.isArray(formula)}
                                 {#each formula as part, idxPart (idxPart)}
                                     {#if !Array.isArray(part)}
                                         {@html `${part.replace(
@@ -154,52 +124,9 @@
                                         <Katex expression={part[0]} />
                                     {/if}
                                 {/each}
-                            </div>
-                        </div>
-                    {:else if typeof formula === "string" && !formula.includes("\\text{")}
-                        {#if serial}
-                            <div
-                                class="flex flex-row justify-start items-start"
-                            >
-                                {@html `<span class="font-semibold">${
-                                    (img &&
-                                    img.display === "formula" &&
-                                    img.len?.length === 2
-                                        ? img.len[1] +
-                                          1 -
-                                          img.len[0] -
-                                          (img.avoid ? img.avoid : []).length
-                                        : 0) +
-                                    idxFormula +
-                                    1
-                                }.&nbsp;</span>
-                            <span>${formula}</span>`}
-                            </div>
-                        {:else}
-                            {@html `<div>${formula}</div>`}
-                        {/if}
-                    {:else if typeof formula === "object" && !Array.isArray(formula)}
-                        <div class="flex flex-row justify-start items-start">
-                            {#if serial}
-                                <span class="font-semibold"
-                                    >{(img &&
-                                    img.display === "formula" &&
-                                    img.len?.length === 2
-                                        ? img.len[1] +
-                                          1 -
-                                          img.len[0] -
-                                          (img.avoid ? img.avoid : []).length
-                                        : 0) +
-                                        idxFormula +
-                                        1}.&nbsp;</span
-                                >
                             {/if}
-                            <svelte:self
-                                dataSet={[formula]}
-                                titleSize={titleSize + 1}
-                            />
                         </div>
-                    {/if}
+                    </div>
                 {/each}
             {/if}
         </div>

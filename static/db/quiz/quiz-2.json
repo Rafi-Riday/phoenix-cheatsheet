@@ -8,10 +8,10 @@
     "questions": [
         [
             "Which one of the following ratios of sides doesn’t indicate right angle triangle?",
-            "7: 24 : 25",
-            "5: 12: 13",
-            "8: 6: 10",
-            "8: 16: 17",
+            "7 : 24 : 25",
+            "5 : 12 : 13",
+            "8 : 6 : 10",
+            "8 : 16 : 17",
             "All"
         ],
         [
@@ -71,11 +71,11 @@
             "1m"
         ],
         [
-            "If the angles of a right-angle triangle are 90°,45°,45°.what will be the ratio of sides?",
-            "1:2:2",
-            "2:2:2 2",
-            "2:2:2",
-            "1:1:2",
+            "If the angles of a right-angle triangle are 90°,45°,45°, what will be the ratio of sides?",
+            "1 : 2 : √2",
+            "2 : 2 : 2√2",
+            "2 : 2 : √2",
+            "1 : 1 : 2",
             "None"
         ],
         [

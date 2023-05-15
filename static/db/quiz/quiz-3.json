@@ -8,8 +8,8 @@
     "questions": [
         [
             "What will be the ratio of circumference and diameter of a circle?",
-            "\\text{π$r^3$}",
-            "\\text{π$r^2$}",
+            "\\text{$\\pi r^3$}",
+            "\\text{$\\pi r^2$}",
             "2πr",
             "πr",
             "π"
@@ -44,7 +44,7 @@
             "\\text{50 $cm^2$}",
             "100 cm",
             "25 cm",
-            "\\text{25π $cm^2$}"
+            "\\text{25$\\pi cm^2$}"
         ],
         [
             "If the volume of a cube = 27 units then which one of the following is the diagonal of the cube?",
@@ -64,11 +64,11 @@
         ],
         [
             "There is a circular garden with a diameter of 30m. Inside of the circle there is a grass road with 4m width around the garden. What is the area of the road?",
-            "\\text{208π $m^2$}",
-            "\\text{320π $m^2$}",
-            "\\text{104π $m^2$}",
-            "\\text{56π $m^2$}",
-            "\\text{104π $m^2$}"
+            "\\text{208$\\pi m^2$}",
+            "\\text{320$\\pi m^2$}",
+            "\\text{104$\\pi m^2$}",
+            "\\text{56$\\pi m^2$}",
+            "\\text{104$\\pi m^2$}"
         ],
         [
             "\\text{There is a square-shaped field whose area is 121 $m^2$.There is a rectangle shaped road along the diagonal of the field. If the breadth of the road is 2 m what is the area of the road?}",
@@ -80,9 +80,9 @@
         ],
         [
             "The base of a right-angle triangle = y and perpendicular= y. Which one of the following ratios indicates the triangle?",
-            "2: 2 ∶ 2",
-            "2: 2: 4",
-            "1: 1: 2",
+            "√2 : √2 ∶ 2",
+            "√2 : √2 : 2√2",
+            "1: 1: √2",
             "All",
             "None"
         ]

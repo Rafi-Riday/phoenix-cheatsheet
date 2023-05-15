@@ -5,7 +5,7 @@
     "keywords": "math, algebra, quiz",
     "author": "Phoenix Admission Care",
     "time": 2100,
-    "dataSet": [
+    "questions": [
         [
             "How many of the integers between 110 and 120 are prime numbers?",
             "1",
@@ -207,7 +207,7 @@
             "48"
         ]
     ],
-    "answer": [
+    "answers": [
         "a",
         "d",
         "e",

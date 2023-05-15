@@ -29,7 +29,7 @@
     <center class="text-3xl my-3">
         <span class="font-bold text-primary">Phoenix</span> Cheat-Sheet
     </center>
-    <Timer title={["NSU", "Admission"]} date={"2023-05-27T10:00:00"} />
+    <Timer title={["NSU", "Admission"]} date={"2023-05-27T00:00:00"} />
     <section class="flex flex-col w-full gap-2 lg:gap-4">
         {#each $page.data.mainData.sideBarInfo.topicList as topic, idx (idx)}
             <InfoOverview {topic} {idx} />

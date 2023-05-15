@@ -61,18 +61,20 @@
                         <a
                             target="_blank"
                             rel="noreferrer"
-                            href="https://www.google.com/search?q={dataOne
-                                .split(' ')
-                                .join('+')}">{dataOne}</a
+                            href="https://www.google.com/search?q={dataOne.replace(
+                                / /g,
+                                '%20'
+                            )}">{dataOne}</a
                         >
                     </td>
                     <td class="border border-slate-400 px-3 py-1 underline">
                         <a
                             target="_blank"
                             rel="noreferrer"
-                            href="https://www.google.com/search?q={dataTwo
-                                .split(' ')
-                                .join('+')}">{dataTwo}</a
+                            href="https://www.google.com/search?q={dataTwo.replace(
+                                / /g,
+                                '%20'
+                            )}">{dataTwo}</a
                         >
                     </td>
                 </tr>

@@ -12,6 +12,6 @@
             <slot />
         </section>
 
-        <!-- <footer class="">Footer</footer> -->
+        <!-- <footer>Footer</footer> -->
     </main>
 </SideBar>
