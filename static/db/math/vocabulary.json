@@ -432,6 +432,10 @@
         {
             "dataOne": "Power Set P(A)",
             "dataTwo": "উপসেটসমূহের সেট"
+        },
+        {
+            "dataOne": "Reciprocal Fraction",
+            "dataTwo": "ভগ্নাংশ উল্টা করা"
         }
     ]
 }

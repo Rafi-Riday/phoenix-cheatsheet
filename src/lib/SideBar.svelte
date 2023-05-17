@@ -63,6 +63,14 @@
                         >
                             Others
                         </a>
+                        <a
+                            href="/timer"
+                            class="{$page.url.pathname === '/timer'
+                                ? 'btn btn-primary'
+                                : 'btn btn-ghost'} justify-start rounded underline"
+                        >
+                            Timer
+                        </a>
                     </aside>
                 </ul>
             </div>

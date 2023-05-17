@@ -8,9 +8,26 @@
         {
             "title": "probability",
             "serial": true,
-            "collapse": true,
+            "collapse": false,
             "dataSet": [
-                "\\text{**The probability of rolling any number on a weighted 6-sided die, with faces numbered 1 through 6, is directly proportional to the number rolled. What is the probability of getting 5, if the die rolled only once?<br>Ans:** Probability = $\\frac{individual~probability}{total~probability}$ = $\\frac{5}{1+2+3+4+5+6}$ = $\\frac{5}{21}}"
+                "\\text{**The probability of rolling any number on a weighted 6-sided die, with faces numbered 1 through 6, is directly proportional to the number rolled. What is the probability of getting 5, if the die rolled only once?<br>Ans:** Probability = individual probability / total probability = $\\frac{5}{1+2+3+4+5+6}$ = $\\frac{5}{21}}",
+                "\\text{**Out of 4 men and 4 women, if two of them are selected at random, what is the probability that both will be women?<br>Ans:** $\\frac{4}{8}\\times\\frac{3}{7}=\\frac{3}{14}$}"
+            ]
+        },
+        {
+            "title": "percentage",
+            "serial": true,
+            "collapse": false,
+            "dataSet": [
+                "\\text{**In a group of men, 80% are less than or equal to 50 years old. 20% of all men play football. If 20% of men above 50 plays football, then what percentage of the football players are less than or equal to 50 years old?<br>Ans:** Out of 100 men, 20 men are older than 50.<br>So, 20% of 20 men = 4 men plays football are older than 50.<br>So, 16 of 20 football players are younger or same as 50 years. Then the percentage is $\\frac{16}{20}\\times 100\\%=80\\%$}"
+            ]
+        },
+        {
+            "title": "clock-angle",
+            "serial": true,
+            "collapse": false,
+            "dataSet": [
+                "The angle from the hour hand to the minute hand : **(60H - 11M) / 2**<br>Example, when its `10:55`, the angle is `(60×10 - 11×55) / 2 = ∣-5/2∣ = 2.5`"
             ]
         }
     ]

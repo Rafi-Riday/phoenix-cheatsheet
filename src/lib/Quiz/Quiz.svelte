@@ -32,6 +32,7 @@
                   ).length,
         };
     }
+    // timer logic
     let givingExam = false;
     let dynamicTime = time;
     let structTime = secondsToHMS(dynamicTime);
@@ -40,9 +41,11 @@
     const timerFunc = () => {
         givingExam = true;
         const timer = setInterval(() => {
-            if (dynamicTime <= 0 || givingExam === false) {
+            if (dynamicTime <= 0) {
+                clearInterval(timer);
                 givingExam = false;
                 submitted = true;
+            } else if (givingExam === false) {
                 clearInterval(timer);
             } else {
                 dynamicTime -= 1;
@@ -96,7 +99,6 @@
             {#if givingExam === false}
                 <button
                     on:click={() => {
-                        givingExam = true;
                         timerFunc();
                     }}
                     class="btn btn-info text-info-content shadow-custom"
@@ -114,23 +116,6 @@
                     Submit
                 </button>
             {/if}
-            <center
-                class="mt-2 sm:mt-3 grid grid-flow-col gap-3 text-center auto-cols-max justify-center"
-            >
-                {#each ["hours", "min", "sec"] as t}
-                    <div
-                        class="flex gap-1 sm:gap-0 sm:flex-col p-2 bg-neutral rounded text-neutral-content items-center text-[10px] sm:text-xs shadow-custom {dynamicTime <=
-                        10
-                            ? 'text-red-300'
-                            : ''}"
-                    >
-                        <span class="countdown font-mono text-xs sm:text-sm">
-                            <span style="--value:{structTime[t]};" />
-                        </span>
-                        {t}
-                    </div>
-                {/each}
-            </center>
         {:else}
             <button
                 on:click={() => {
@@ -152,19 +137,22 @@
                 <span>Wrong: {markSheet?.wrong}</span>
             </div>
         {/if}
+        <center
+            class="mt-2 sm:mt-3 grid grid-flow-col gap-3 text-center auto-cols-max justify-center"
+        >
+            {#each ["hours", "min", "sec"] as t}
+                <div
+                    class="flex gap-1 sm:gap-0 sm:flex-col p-2 bg-neutral rounded text-neutral-content items-center text-[10px] sm:text-xs shadow-custom {dynamicTime <=
+                    10
+                        ? 'text-red-300'
+                        : ''}"
+                >
+                    <span class="countdown font-mono text-xs sm:text-sm">
+                        <span style="--value:{structTime[t]};" />
+                    </span>
+                    {t}
+                </div>
+            {/each}
+        </center>
     </center>
 </main>
-
-<style>
-    /* Chrome, Safari, Edge, Opera */
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-
-    /* Firefox */
-    input[type="number"] {
-        -moz-appearance: textfield;
-    }
-</style>
