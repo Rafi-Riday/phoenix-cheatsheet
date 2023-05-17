@@ -45,10 +45,12 @@ export const indexDB = [
             "arithmetic": [
                 "percentage-problem-numbers",
                 "profit-loss-divisibility-rules",
-                "ratio,-fraction",
+                "ratio",
+                "fraction",
                 "speed-distance-time",
                 "work-time-series",
-                "average,-median",
+                "average",
+                "median",
                 "probability",
             ],
         }

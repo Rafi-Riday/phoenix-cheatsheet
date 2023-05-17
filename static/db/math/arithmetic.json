@@ -6,11 +6,11 @@
     "author": "Phoenix Admission Care",
     "dataSet": [
         {
-            "title": "demo",
+            "title": "probability",
             "serial": true,
             "collapse": true,
             "dataSet": [
-                "demo"
+                "\\text{**The probability of rolling any number on a weighted 6-sided die, with faces numbered 1 through 6, is directly proportional to the number rolled. What is the probability of getting 5, if the die rolled only once?<br>Ans:** Probability = $\\frac{individual~probability}{total~probability}$ = $\\frac{5}{1+2+3+4+5+6}$ = $\\frac{5}{21}}"
             ]
         }
     ]

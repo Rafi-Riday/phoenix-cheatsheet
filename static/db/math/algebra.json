@@ -74,18 +74,19 @@
             "collapse": true,
             "dataSet": [
                 "A – A = Ø",
-                "B – A = B ∩ A’",
-                "B – A = B – (A ∩ B)",
+                "A’ = U – A",
+                "A – B = A ∩ B’",
+                "A – B = A – (A ∩ B)",
+                "n(A – B) =  n(A ∪ B) – n(B)",
+                "(A – B) = A if A ∩ B = Ø",
                 "n(A ∪ B) = n(A) + n(B) – n(A ∩ B)",
                 "n(A ∪ B) = n(A – B) + n(B – A) + n(A ∩ B)",
                 "n(A ∪ B ∪ C) = n(A) + n(B) + n(C) – n(A ∩ B) – n(B ∩ C) – n(C ∩ A) + n(A ∩ B ∩ C)",
-                "n(A – B) =  n(A ∪ B) – n(B)",
-                "n(A – B) = n(A) – n(A∩B)",
-                "(A – B) = A if A ∩ B =  Ø",
+                "n(A ∪ B ∪ C) = n(All A) + n(All B) + n(All C) - n(`exactly two`) - 2×n(all three) + n(neither)<br>Previously, n(A) = n(only A). Here, n(All A) = All A which are also common in others. `exactly two` = common in any two only",
                 "(A – B) ∩ C = (A ∩ C) – (B ∩ C)",
-                "A Δ B = (A-B) ∪ (B- A) ",
-                "n(A‘) = n(U) – n(A)",
-                "Problem:<br/>Out of 50 People, 35 people speak in English and 25 people speak both Bangla and English and everybody<br/>speaks at least one language.<br/>1. How many people speak in Bangla?<br/>2. Hoe many people speak in only Bangla?<br/>3. How many people speak in English?<br/>4. How many people speak in only English?<br/>5. How many people speak in at least one language?"
+                "A Δ B = (A - B) ∪ (B - A); where Δ = `symmetric difference`",
+                "**Problem: Out of 50 People, 35 people speak in English and 25 people speak both Bangla and English and everybody speaks at least one language.**<br>1. How many people speak in Bangla? **Ans:** 40<br>2. Hoe many people speak in only Bangla? **Ans:** 15<br>3. How many people speak in English? **Ans:** 35<br>4. How many people speak in only English? **Ans:** 10<br>5. How many people speak in at least one language? **Ans:** 25",
+                "**In class of 120 students, 60% can speak French and the rest speak only English. If 25% of French speaker can also speak English, how many can speak English?<br>Ans:** 55% = 66"
             ]
         },
         {
@@ -100,7 +101,7 @@
                 "If a ∈ R, then | a | ≥ a",
                 "If a ∈ R, then | a | ≥ - a",
                 "If a ∈ R, then | - a | = | a |",
-                "\\text{If a ∈ R, then | a $|^2$ = $a^2$ or | a | = $\\sqrt{a^2}$}",
+                "\\text{If a ∈ R, then | a |$^2$ = a$^2$ or | a | = $\\sqrt{a^2}$}",
                 "If a, b ∈ R, then | ab | = | a | | b |",
                 "| a + b | ≤ | a | + | b |",
                 "| a - b | ≤ | a | + | b |",

@@ -11,8 +11,17 @@
     border-color: #000;
 }
 
-b {
+strong {
     font-weight: 600;
+}
+
+code {
+    background-color: rgba(0, 0, 0, .06);
+    border-radius: 3px;
+    padding: 2px 4px;
+    font-family: Roboto Mono, Lucida Sans Typewriter, Lucida Console, monaco, Courrier, monospace;
+    font-size: .85em;
+    font-weight: 500;
 }
 
 a {

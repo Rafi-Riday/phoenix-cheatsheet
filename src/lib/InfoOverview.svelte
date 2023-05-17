@@ -30,14 +30,9 @@
                             <div
                                 class="pl-10 no-underline flex flex-row flex-wrap gap-x-2"
                             >
-                                {#each topic.topicDetails[d] as ttd, idx (idx)}
-                                    <span class="underline underline-offset-4">
-                                        {ttd.split("-").join(" ")}{idx !==
-                                        topic.topicDetails[d].length - 1
-                                            ? ","
-                                            : ""}
-                                    </span>
-                                {/each}
+                                {topic.topicDetails[d]
+                                    .map((ttd) => upperCaseWord(ttd))
+                                    .join(", ")}
                             </div>
                         {/if}
                     {/each}

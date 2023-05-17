@@ -24,6 +24,9 @@ devDependencies:
   katex:
     specifier: ^0.16.4
     version: 0.16.4
+  marked:
+    specifier: 4.3.0
+    version: 4.3.0
   postcss:
     specifier: ^8.4.21
     version: 8.4.21
@@ -891,6 +894,12 @@ packages:
     dependencies:
       semver: 6.3.0
     dev: false
+
+  /marked@4.3.0:
+    resolution: {integrity: sha512-PRsaiG84bK+AMvxziE/lCFss8juXjNaWzVbN5tXAm4XjeaS9NAHhop+PjQxz2A9h8Q4M/xGmzP8vqNwy6JeK0A==}
+    engines: {node: '>= 12'}
+    hasBin: true
+    dev: true
 
   /merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}

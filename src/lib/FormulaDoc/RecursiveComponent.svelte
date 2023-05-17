@@ -1,4 +1,5 @@
 <script>
+    import { marked } from "marked";
     import { upperCaseWord } from "$lib/utilities";
     import Katex from "$lib/Katex.svelte";
     export let dataSet;
@@ -93,20 +94,23 @@
                                     1}.&nbsp;</span
                             >
                         {/if}
-                        <div>
+                        <div class="grow">
                             {#if typeof formula === "string" && formula.includes("\\text{")}
                                 {#each formula
                                     .replace(/\\text{/g, "")
                                     .slice(0, -1)
                                     .split("$") as part, idxPart (idxPart)}
                                     {#if idxPart % 2 === 0}
-                                        {@html part.replace(/^ | $/g, "&nbsp;")}
+                                        {@html marked.parseInline(
+                                            part.replace(/^ | $/g, "&nbsp;")
+                                        )}
+                                        <!-- {@html part.replace(/^ | $/g, "&nbsp;")} -->
                                     {:else}
                                         <Katex expression={part} />
                                     {/if}
                                 {/each}
                             {:else if typeof formula === "string" && !formula.includes("\\text{")}
-                                {@html formula}
+                                {@html marked.parseInline(formula)}
                             {:else if typeof formula === "object" && !Array.isArray(formula)}
                                 <svelte:self
                                     dataSet={[formula]}
@@ -116,10 +120,9 @@
                             {:else if Array.isArray(formula)}
                                 {#each formula as part, idxPart (idxPart)}
                                     {#if !Array.isArray(part)}
-                                        {@html `${part.replace(
-                                            /^ | $/g,
-                                            "&nbsp;"
-                                        )}`}
+                                        {@html marked.parseInline(
+                                            part.replace(/^ | $/g, "&nbsp;")
+                                        )}
                                     {:else}
                                         <Katex expression={part[0]} />
                                     {/if}
