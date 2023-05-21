@@ -1,7 +1,7 @@
 <script>
     import { marked } from "marked";
     import { upperCaseWord } from "$lib/utilities";
-    import Katex from "$lib/Katex.svelte";
+    import Katexify from "$lib/Katexify";
     export let dataSet;
     export let titleSize = 3;
     let titleSizeArray = ["text-xl", "text-lg", "text-base"];
@@ -104,9 +104,8 @@
                                         {@html marked.parseInline(
                                             part.replace(/^ | $/g, "&nbsp;")
                                         )}
-                                        <!-- {@html part.replace(/^ | $/g, "&nbsp;")} -->
                                     {:else}
-                                        <Katex expression={part} />
+                                        {@html Katexify(part)}
                                     {/if}
                                 {/each}
                             {:else if typeof formula === "string" && !formula.includes("\\text{")}
@@ -124,7 +123,7 @@
                                             part.replace(/^ | $/g, "&nbsp;")
                                         )}
                                     {:else}
-                                        <Katex expression={part[0]} />
+                                        {@html Katexify(part[0])}
                                     {/if}
                                 {/each}
                             {/if}

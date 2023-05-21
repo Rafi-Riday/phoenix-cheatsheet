@@ -19,7 +19,8 @@
             "serial": true,
             "collapse": false,
             "dataSet": [
-                "\\text{**In a group of men, 80% are less than or equal to 50 years old. 20% of all men play football. If 20% of men above 50 plays football, then what percentage of the football players are less than or equal to 50 years old?<br>Ans:** Out of 100 men, 20 men are older than 50.<br>So, 20% of 20 men = 4 men plays football are older than 50.<br>So, 16 of 20 football players are younger or same as 50 years. Then the percentage is $\\frac{16}{20}\\times 100\\%=80\\%$}"
+                "\\text{**In a group of men, 80% are less than or equal to 50 years old. 20% of all men play football. If 20% of men above 50 plays football, then what percentage of the football players are less than or equal to 50 years old?<br>Ans:** Out of 100 men, 20 men are older than 50.<br>So, 20% of 20 men = 4 men plays football are older than 50.<br>So, 16 of 20 football players are younger or same as 50 years. Then the percentage is $\\frac{16}{20}\\times 100\\%=80\\%$}",
+                "\\text{If $\\frac{x}{b-c}=\\frac{y}{c-a}=\\frac{z}{a-b}$ then $x+y+z=?$<br>**Ans :** Let, $\\frac{x}{b-c}=\\frac{y}{c-a}=\\frac{z}{a-b}=k$<br>So, $x=k(b-c);~y=k(a-b);~z=k(a-b)$<br>So, $x+y+z=k(b-c+c-a+a-b)=0$}"
             ]
         },
         {

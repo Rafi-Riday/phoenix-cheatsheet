@@ -1,6 +1,6 @@
 <script>
     import { shuffleArray } from "$lib/utilities";
-    import Katex from "$lib/Katex.svelte";
+    import Katexify from "$lib/Katexify";
     export let submitted;
     export let questions;
     export let answers;
@@ -37,7 +37,7 @@
                                 {#if idxPart % 2 === 0}
                                     {@html part.replace(/^ | $/g, "&nbsp;")}
                                 {:else}
-                                    <Katex expression={part} />
+                                    {@html Katexify(part)}
                                 {/if}
                             {/each}
                         {/if}</span
@@ -81,7 +81,7 @@
                                                 "&nbsp;"
                                             )}
                                         {:else}
-                                            <Katex expression={part} />
+                                            {@html Katexify(part)}
                                         {/if}
                                     {/each}
                                 {/if}
