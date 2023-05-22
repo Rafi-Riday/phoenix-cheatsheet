@@ -10,7 +10,7 @@
             "serial": true,
             "img": {
                 "display": "formula",
-                "before": "/image-data/article/",
+                "before": "https://raw.githubusercontent.com/Rafi-Riday/phoenix-cheatsheet/main/static/image-data/article/",
                 "len": [
                     1,
                     7

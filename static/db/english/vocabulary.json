@@ -11,7 +11,7 @@
             "collapse": true,
             "img": {
                 "display": "formula",
-                "before": "/image-data/vocabulary/",
+                "before": "https://raw.githubusercontent.com/Rafi-Riday/phoenix-cheatsheet/main/static/image-data/vocabulary/",
                 "len": [
                     1,
                     5
@@ -27,7 +27,7 @@
             "collapse": true,
             "img": {
                 "display": "formula",
-                "before": "/image-data/vocabulary/",
+                "before": "https://raw.githubusercontent.com/Rafi-Riday/phoenix-cheatsheet/main/static/image-data/vocabulary/",
                 "len": [
                     6,
                     10
@@ -43,7 +43,7 @@
             "collapse": true,
             "img": {
                 "display": "formula",
-                "before": "/image-data/vocabulary/",
+                "before": "https://raw.githubusercontent.com/Rafi-Riday/phoenix-cheatsheet/main/static/image-data/vocabulary/",
                 "len": [
                     11,
                     15

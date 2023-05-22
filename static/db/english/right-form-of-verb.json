@@ -10,7 +10,7 @@
             "serial": true,
             "img": {
                 "display": "formula",
-                "before": "/image-data/right-form-of-verb/",
+                "before": "https://raw.githubusercontent.com/Rafi-Riday/phoenix-cheatsheet/main/static/image-data/right-form-of-verb/",
                 "len": [
                     1,
                     17

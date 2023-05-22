@@ -55,7 +55,7 @@
                     "collapse": true,
                     "img": {
                         "display": "formula",
-                        "before": "/image-data/algebra/",
+                        "before": "https://raw.githubusercontent.com/Rafi-Riday/phoenix-cheatsheet/main/static/image-data/algebra/",
                         "len": [
                             1,
                             3
