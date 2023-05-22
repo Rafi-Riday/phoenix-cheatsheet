@@ -14,6 +14,14 @@
             ]
         },
         {
+            "title": "isosceles-triangle",
+            "dataSet": [
+                "\\text{Area = $\\frac{b}{2}\\sqrt{a^2-\\frac{b^2}{4}}$}",
+                "\\text{Perimeter = 2a + b}",
+                "\\text{Hypotenuse, c = $\\sqrt{a^2-\\frac{b^2}{4}}$}"
+            ]
+        },
+        {
             "title": "equilateral-triangle",
             "dataSet": [
                 "\\text{Area = $\\frac{\\sqrt{3}}{4}a^2$}",
