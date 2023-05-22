@@ -15,7 +15,7 @@
             "Both a and d"
         ],
         [
-            "\\text{If $x^2+10x+21=0$, then what are the values of x?}",
+            "If $x^2+10x+21=0$, then what are the values of x?",
             "3, -7",
             "-3, 7",
             "7, 3",
@@ -40,9 +40,9 @@
         ],
         [
             "Which one of the following is true for In p ?",
-            "\\text{$log_ep$}",
-            "\\text{$\\frac{logp}{lnp}$}",
-            "\\text{$\\frac{Inp}{Ine}$}",
+            "$log_ep$",
+            "$\\frac{logp}{lnp}$",
+            "$\\frac{Inp}{Ine}$",
             "log p",
             "a & c"
         ],
@@ -55,7 +55,7 @@
             "None"
         ],
         [
-            "\\text{If $2^{4x-12}=16$, then what will be the value of x?}",
+            "If $2^{4x-12}=16$, then what will be the value of x?",
             "4",
             "8",
             "10",
@@ -63,15 +63,15 @@
             "12"
         ],
         [
-            "\\text{For which condition the statement “$log_a1=0$” is true?}",
+            "For which condition the statement “$log_a1=0$” is true?",
             "a = 0",
             "a = 1",
-            "\\text{$a=\\infty$}",
+            "$a=\\infty$",
             "a&b&c",
             "None"
         ],
         [
-            "\\text{In a graduating class with same number of boys and of girls, $\\frac{1}{8}$ of the girls and $\\frac{5}{6}$ of the boys are honors students. How many students of the class are not honors students if total students = 48?}",
+            "In a graduating class with same number of boys and of girls, $\\frac{1}{8}$ of the girls and $\\frac{5}{6}$ of the boys are honors students. How many students of the class are not honors students if total students = 48?",
             "15",
             "23",
             "25",
@@ -79,11 +79,11 @@
             "30"
         ],
         [
-            "\\text{A fraction becomes $\\frac{1}{3}$ when 1 is subtracted from the numerator and it becomes $\\frac{1}{4}$ when 8 is added to its denominator. The fraction obtained is?}",
-            "\\text{$\\frac{3}{12}$}",
-            "\\text{$\\frac{4}{12}$}",
-            "\\text{$\\frac{5}{12}$}",
-            "\\text{$\\frac{7}{12}$}",
+            "A fraction becomes $\\frac{1}{3}$ when 1 is subtracted from the numerator and it becomes $\\frac{1}{4}$ when 8 is added to its denominator. The fraction obtained is?",
+            "$\\frac{3}{12}$",
+            "$\\frac{4}{12}$",
+            "$\\frac{5}{12}$",
+            "$\\frac{7}{12}$",
             "None"
         ]
     ],

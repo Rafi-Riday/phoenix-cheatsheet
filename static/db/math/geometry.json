@@ -8,29 +8,29 @@
         {
             "title": "right-angle-triangle",
             "dataSet": [
-                "\\text{Area = $\\frac{1}{2}ab$}",
-                "\\text{Perimeter = a + b + c}",
-                "\\text{Hypotenuse, c = $\\sqrt{a^2+b^2}$}"
+                "Area = $\\frac{1}{2}ab$",
+                "Perimeter = a + b + c",
+                "Hypotenuse, c = $\\sqrt{a^2+b^2}$"
             ]
         },
         {
             "title": "isosceles-triangle",
             "dataSet": [
-                "\\text{Area = $\\frac{b}{2}\\sqrt{a^2-\\frac{b^2}{4}}$}",
-                "\\text{Perimeter = 2a + b}",
-                "\\text{Hypotenuse, c = $\\sqrt{a^2-\\frac{b^2}{4}}$}"
+                "Area = $\\frac{b}{2}\\sqrt{a^2-\\frac{b^2}{4}}$",
+                "Perimeter = 2a + b",
+                "Hypotenuse, c = $\\sqrt{a^2-\\frac{b^2}{4}}$"
             ]
         },
         {
             "title": "equilateral-triangle",
             "dataSet": [
-                "\\text{Area = $\\frac{\\sqrt{3}}{4}a^2$}",
-                "\\text{Perimeter = 3a}",
-                "\\text{Height = $\\frac{\\sqrt{3}}{4}a$}",
+                "Area = $\\frac{\\sqrt{3}}{4}a^2$",
+                "Perimeter = 3a",
+                "Height = $\\frac{\\sqrt{3}}{4}a$",
                 {
                     "noBadge": true,
                     "dataSet": [
-                        "\\text{Area of Equilateral Triangle with a Circle inscribed inside whose radius is$r$ is $3\\sqrt{3}r^2$}"
+                        "Area of Equilateral Triangle with a Circle inscribed inside whose radius is$r$ is $3\\sqrt{3}r^2$"
                     ]
                 }
             ]

@@ -5,7 +5,7 @@
     export let dataSet;
     export let titleSize = 3;
     let titleSizeArray = ["text-xl", "text-lg", "text-base"];
-    import { range } from "$lib/utilities";
+    import { range, splitMdKatex } from "$lib/utilities";
 </script>
 
 {#each dataSet as { title, img, collapse, serial, noBadge, dataSet }, idx (idx)}
@@ -95,33 +95,19 @@
                             >
                         {/if}
                         <div class="grow">
-                            {#if typeof formula === "string" && formula.includes("\\text{")}
-                                {#each formula
-                                    .replace(/\\text{/g, "")
-                                    .slice(0, -1)
-                                    .split("$") as part, idxPart (idxPart)}
-                                    {#if idxPart % 2 === 0}
-                                        {@html marked.parseInline(part)}
-                                    {:else}
-                                        {@html Katexify(part)}
+                            {#if typeof formula === "string"}
+                                {#each splitMdKatex(formula) as part, idx (idx)}
+                                    {#if part.md}
+                                        {@html marked.parseInline(part.md)}
+                                    {:else if part.k}
+                                        {@html Katexify(part.k)}
                                     {/if}
                                 {/each}
-                            {:else if typeof formula === "string" && !formula.includes("\\text{")}
-                                {@html marked.parseInline(formula)}
                             {:else if typeof formula === "object" && !Array.isArray(formula)}
                                 <svelte:self
                                     dataSet={[formula]}
                                     titleSize={titleSize + 1}
                                 />
-                                <!-- ignore this -->
-                            {:else if Array.isArray(formula)}
-                                {#each formula as part, idxPart (idxPart)}
-                                    {#if !Array.isArray(part)}
-                                        {@html marked.parseInline(part)}
-                                    {:else}
-                                        {@html Katexify(part[0])}
-                                    {/if}
-                                {/each}
                             {/if}
                         </div>
                     </div>

@@ -1,5 +1,6 @@
 <script>
-    import { shuffleArray } from "$lib/utilities";
+    import { shuffleArray, splitMdKatex } from "$lib/utilities";
+    import { marked } from "marked";
     import Katexify from "$lib/Katexify";
     export let submitted;
     export let questions;
@@ -27,20 +28,13 @@
                 <legend
                     class="bg-base-100 border border-slate-300 py-1 px-2 rounded w-full"
                     ><span class="font-medium"
-                        >{qIdx + 1}. {#if !question.includes("\\text{")}
-                            {@html question}
-                        {:else}
-                            {#each question
-                                .replace(/\\text{/g, "")
-                                .slice(0, -1)
-                                .split("$") as part, idxPart (idxPart)}
-                                {#if idxPart % 2 === 0}
-                                    {@html part}
-                                {:else}
-                                    {@html Katexify(part)}
-                                {/if}
-                            {/each}
-                        {/if}</span
+                        >{qIdx + 1}. {#each splitMdKatex(question) as part, idx (idx)}
+                            {#if part.md}
+                                {@html marked.parseInline(part.md)}
+                            {:else if part.k}
+                                {@html Katexify(part.k)}
+                            {/if}
+                        {/each}</span
                     ></legend
                 >
                 <div class="grid grid-cols-2 gap-2">
@@ -68,23 +62,15 @@
                                     : ''}"
                                 for="op_{qIdx}_{opIdx}"
                             >
-                                {#if !option.includes("\\text{")}
-                                    {@html option}
-                                {:else}
-                                    {#each option
-                                        .replace(/\\text{/g, "")
-                                        .slice(0, -1)
-                                        .split("$") as part, idxPart (idxPart)}
-                                        {#if idxPart % 2 === 0}
-                                            {@html part.replace(
-                                                /^ | $/g,
-                                                "&nbsp;"
-                                            )}
-                                        {:else}
-                                            {@html Katexify(part)}
-                                        {/if}
-                                    {/each}
-                                {/if}
+                                {#each splitMdKatex(option) as part, idx (idx)}
+                                    {#if part.md}
+                                        {@html marked.parseInline(
+                                            part.md.replace(/^ | $/g, "&nbsp;")
+                                        )}
+                                    {:else if part.k}
+                                        {@html Katexify(part.k)}
+                                    {/if}
+                                {/each}
                             </label>
                         </div>
                     {/each}

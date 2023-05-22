@@ -9,8 +9,8 @@
         [
             "What will be the summation of the first 100 odd natural numbers?",
             "100",
-            "\\text{$10^2$}",
-            "\\text{$100^3$}",
+            "$10^2$",
+            "$100^3$",
             "10000",
             "5050"
         ],
@@ -23,7 +23,7 @@
             "50"
         ],
         [
-            "\\text{What will be the value of $\\sqrt{-121}$?}",
+            "What will be the value of $\\sqrt{-121}$?",
             "-11i",
             "11",
             "11i",
@@ -31,7 +31,7 @@
             "None"
         ],
         [
-            "\\text{What is the value of $\\frac{i^{-2}}{i^{-4}}$?}",
+            "What is the value of $\\frac{i^{-2}}{i^{-4}}$?",
             "1",
             "-i",
             "-1",
@@ -39,27 +39,27 @@
             "None"
         ],
         [
-            "\\text{If $1+i^{-2}+i^{-2}+x=0$, then what will be the value of x?}",
-            "\\text{$i^{-3}$}",
-            "\\text{$i^3$}",
-            "\\text{$i^2$}",
+            "If $1+i^{-2}+i^{-2}+x=0$, then what will be the value of x?",
+            "$i^{-3}$",
+            "$i^3$",
+            "$i^2$",
             "1",
-            "\\text{$i^0$}"
+            "$i^0$"
         ],
         [
-            "\\text{If $sin\\theta=\\frac{1}{\\sqrt 2}$, then what will be the base of the triangle?}",
+            "If $sin\\theta=\\frac{1}{\\sqrt 2}$, then what will be the base of the triangle?",
             "5",
-            "\\text{$sqrt 5$}",
-            "\\text{$sqrt 2$}",
+            "$sqrt 5$",
+            "$sqrt 2$",
             "1",
             "2"
         ],
         [
-            "\\text{Which one of the following is the value of $cot^2θ$?}",
-            "\\text{$cosec^2θ + 1$}",
-            "\\text{$tan^2θ - 1$}",
-            "\\text{$cosec^2θ - 1$}",
-            "\\text{$Sin^2θ + cos^2θ$}",
+            "Which one of the following is the value of $cot^2θ$?",
+            "$cosec^2θ + 1$",
+            "$tan^2θ - 1$",
+            "$cosec^2θ - 1$",
+            "$Sin^2θ + cos^2θ$",
             "None"
         ],
         [
@@ -71,7 +71,7 @@
             "sin0"
         ],
         [
-            "\\text{A man travels $\\frac{2}{15}$ km by rail, $\\frac{9}{20}$ km by train, and the remaining 10 km on foot; his total distance traveled is:}",
+            "A man travels $\\frac{2}{15}$ km by rail, $\\frac{9}{20}$ km by train, and the remaining 10 km on foot; his total distance traveled is:",
             "15.6",
             "12.8",
             "16.4",

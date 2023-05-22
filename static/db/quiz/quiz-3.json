@@ -8,8 +8,8 @@
     "questions": [
         [
             "What will be the ratio of circumference and diameter of a circle?",
-            "\\text{$\\pi r^3$}",
-            "\\text{$\\pi r^2$}",
+            "$\\pi r^3$",
+            "$\\pi r^2$",
             "2πr",
             "πr",
             "π"
@@ -40,16 +40,16 @@
         ],
         [
             "The largest chord of a circle = 10m, what will be the area of the circle?",
-            "\\text{25 $cm^2$}",
-            "\\text{50 $cm^2$}",
+            "25 $cm^2$",
+            "50 $cm^2$",
             "100 cm",
             "25 cm",
-            "\\text{25$\\pi cm^2$}"
+            "25$\\pi cm^2$"
         ],
         [
             "If the volume of a cube = 27 units then which one of the following is the diagonal of the cube?",
-            "\\text{$3^3$}",
-            "\\text{$27^3$}",
+            "$3^3$",
+            "$27^3$",
             "3",
             "3",
             "None"
@@ -64,14 +64,14 @@
         ],
         [
             "There is a circular garden with a diameter of 30m. Inside of the circle there is a grass road with 4m width around the garden. What is the area of the road?",
-            "\\text{208$\\pi m^2$}",
-            "\\text{320$\\pi m^2$}",
-            "\\text{104$\\pi m^2$}",
-            "\\text{56$\\pi m^2$}",
-            "\\text{104$\\pi m^2$}"
+            "208$\\pi m^2$",
+            "320$\\pi m^2$",
+            "104$\\pi m^2$",
+            "56$\\pi m^2$",
+            "104$\\pi m^2$"
         ],
         [
-            "\\text{There is a square-shaped field whose area is 121 $m^2$.There is a rectangle shaped road along the diagonal of the field. If the breadth of the road is 2 m what is the area of the road?}",
+            "There is a square-shaped field whose area is 121 $m^2$.There is a rectangle shaped road along the diagonl of the field. If the breadth of the road is 2 m what is the area of the road?}",
             "2",
             "11",
             "10",

@@ -38,3 +38,25 @@ export const secondsToHMS = (seconds) => {
     const sec = seconds % 60;
     return { hours, min, sec };
 }
+
+export const splitMdKatex = (text) => {
+    // Regular expression pattern to match $...$ without a space after the first $
+    const regex = /\$[^$\s][^$]*\$/g;
+    let match;
+    let lastIndex = 0;
+    const result = [];
+
+    while ((match = regex.exec(text)) !== null) {
+        if (match.index > lastIndex) {
+            result.push({ md: text.slice(lastIndex, match.index) });
+        }
+        result.push({ k: match[0].slice(1, -1) });
+        lastIndex = regex.lastIndex;
+    }
+
+    if (lastIndex < text.length) {
+        result.push({ md: text.slice(lastIndex) });
+    }
+
+    return result;
+}
