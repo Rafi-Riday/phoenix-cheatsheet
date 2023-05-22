@@ -1,6 +1,12 @@
 <script>
     import PageNotFound from "$lib/PageNotFound.svelte";
-    import { data404 } from "$lib/indexDB.js";
+    const data404 = {
+        title: "Page not found",
+        description: "404 page of phoenix coaching cheatsheet",
+        keywords: "404, page-not-found",
+        author: "Rafiul Hossain Riday",
+        prototype: "PageNotFound",
+    };
     const { title, description, keywords, author } = data404;
 </script>
 

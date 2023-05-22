@@ -1,6 +1,30 @@
 <script>
+    import { onMount } from "svelte";
     import { page } from "$app/stores";
+    import PageNotFound from "$lib/PageNotFound.svelte";
 
+    let fetchPrefix =
+        "https://raw.githubusercontent.com/Rafi-Riday/phoenix-cheatsheet/main/static";
+    let mainData;
+
+    // client side fetching
+    const fetchData = async (subject, topic) => {
+        try {
+            const response = await fetch(
+                `${fetchPrefix}/db/${subject}/${topic}.json`
+            );
+            mainData = await response.json();
+        } catch (error) {
+            mainData = 404;
+        }
+    };
+    // updating page
+    onMount(() => {
+        fetchData($page.params.subject, $page.params.topic);
+    });
+    $: fetchData($page.params.subject, $page.params.topic);
+
+    // importing component conditionally
     const imports = {
         FormulaDoc: () => import("$lib/FormulaDoc/FormulaDoc.svelte"),
         SharedTwoDataObj: () =>
@@ -11,13 +35,22 @@
 </script>
 
 <svelte:head>
-    <title>{$page.data.mainData.title.toUpperCase().split("-").join(" ")}</title
-    >
-    <meta name="description" content={$page.data.mainData.description} />
-    <meta name="keywords" content={$page.data.mainData.keywords} />
-    <meta name="author" content={$page.data.mainData.author} />
+    {#if mainData !== undefined && mainData !== 404}
+        <title>{mainData.title.toUpperCase().split("-").join(" ")}</title>
+        <meta name="description" content={mainData.description} />
+        <meta name="keywords" content={mainData.keywords} />
+        <meta name="author" content={mainData.author} />
+    {/if}
 </svelte:head>
 
-{#await imports[$page.data.mainData.prototype]() then response}
-    <svelte:component this={response.default} mainData={$page.data.mainData} />
-{/await}
+{#if mainData === undefined}
+    <center class="text-2xl flex flex-col justify-center items-center h-full">
+        <progress class="progress progress-primary w-5/6" />
+    </center>
+{:else if mainData === 404}
+    <PageNotFound />
+{:else if mainData}
+    {#await imports[mainData.prototype]() then response}
+        <svelte:component this={response.default} {mainData} />
+    {/await}
+{/if}

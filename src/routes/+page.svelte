@@ -1,15 +1,7 @@
 <script>
-    import { page } from "$app/stores";
+    import { indexDB } from "$lib/indexDB";
     import InfoOverview from "$lib/InfoOverview.svelte";
-    import { SideBarInfo } from "$lib/stores";
     import Timer from "$lib/Timer.svelte";
-
-    SideBarInfo.set({
-        titles: $page.data.mainData.sideBarInfo.topicList.map((i) => i.section),
-        prefix: "",
-    });
-
-    // duration left from exam time
 </script>
 
 <svelte:head>
@@ -31,7 +23,7 @@
     </center>
     <Timer title={["NSU", "Admission"]} date={"2023-05-27T00:00:00"} />
     <section class="flex flex-col w-full gap-2 lg:gap-4">
-        {#each $page.data.mainData.sideBarInfo.topicList as topic, idx (idx)}
+        {#each indexDB as topic, idx (idx)}
             <InfoOverview {topic} {idx} />
         {/each}
     </section>

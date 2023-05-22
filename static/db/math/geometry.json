@@ -8,21 +8,21 @@
         {
             "title": "right-angle-triangle",
             "dataSet": [
-                "\\text{Area =$\\frac{1}{2}ab$}",
+                "\\text{Area = $\\frac{1}{2}ab$}",
                 "\\text{Perimeter = a + b + c}",
-                "\\text{Hypotenuse, c =$\\sqrt{a^2+b^2}$}"
+                "\\text{Hypotenuse, c = $\\sqrt{a^2+b^2}$}"
             ]
         },
         {
             "title": "equilateral-triangle",
             "dataSet": [
-                "\\text{Area =$\\frac{\\sqrt{3}}{4}a^2$}",
+                "\\text{Area = $\\frac{\\sqrt{3}}{4}a^2$}",
                 "\\text{Perimeter = 3a}",
-                "\\text{Height =$\\frac{\\sqrt{3}}{4}a$}",
+                "\\text{Height = $\\frac{\\sqrt{3}}{4}a$}",
                 {
                     "noBadge": true,
                     "dataSet": [
-                        "\\text{Area of Equilateral Triangle with a Circle inscribed inside whose radius is$r$ is$3\\sqrt{3}r^2$}"
+                        "\\text{Area of Equilateral Triangle with a Circle inscribed inside whose radius is$r$ is $3\\sqrt{3}r^2$}"
                     ]
                 }
             ]

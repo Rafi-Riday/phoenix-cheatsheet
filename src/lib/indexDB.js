@@ -70,11 +70,3 @@ export const indexDB = [
         ]
     }
 ]
-
-export const data404 = {
-    title: 'Page not found',
-    description: '404 page of phoenix coaching cheatsheet',
-    keywords: '404, page-not-found',
-    author: 'Rafiul Hossain Riday',
-    prototype: 'PageNotFound'
-};

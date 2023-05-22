@@ -35,7 +35,7 @@
                                 .slice(0, -1)
                                 .split("$") as part, idxPart (idxPart)}
                                 {#if idxPart % 2 === 0}
-                                    {@html part.replace(/^ | $/g, "&nbsp;")}
+                                    {@html part}
                                 {:else}
                                     {@html Katexify(part)}
                                 {/if}

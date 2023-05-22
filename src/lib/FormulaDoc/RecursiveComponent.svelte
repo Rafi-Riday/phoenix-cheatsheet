@@ -101,9 +101,7 @@
                                     .slice(0, -1)
                                     .split("$") as part, idxPart (idxPart)}
                                     {#if idxPart % 2 === 0}
-                                        {@html marked.parseInline(
-                                            part.replace(/^ | $/g, "&nbsp;")
-                                        )}
+                                        {@html marked.parseInline(part)}
                                     {:else}
                                         {@html Katexify(part)}
                                     {/if}
@@ -119,9 +117,7 @@
                             {:else if Array.isArray(formula)}
                                 {#each formula as part, idxPart (idxPart)}
                                     {#if !Array.isArray(part)}
-                                        {@html marked.parseInline(
-                                            part.replace(/^ | $/g, "&nbsp;")
-                                        )}
+                                        {@html marked.parseInline(part)}
                                     {:else}
                                         {@html Katexify(part[0])}
                                     {/if}
