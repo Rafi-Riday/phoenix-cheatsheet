@@ -11,12 +11,7 @@
                 "Area = $\\frac{1}{2}ab$",
                 "Perimeter = a + b + c",
                 "Hypotenuse, c = $\\sqrt{a^2+b^2}$",
-                {
-                    "title": "Some common ratio of Right Angle Triangle :",
-                    "dataSet": [
-                        "S:S:S$\\sqrt 2$<br>S:S$\\sqrt 3$:2S where S is opposite side of 30°<br>3:4:5<br>5:12:13<br>7:24:25<br>8:15:17<br>9:40:41<br>11:60:61"
-                    ]
-                }
+                "**Some common ratio of Right Angle Triangle :**<br>S:S:S$\\sqrt 2$<br>S:S$\\sqrt 3$:2S *where S is opposite side of 30°*<br>3:4:5<br>5:12:13<br>7:24:25<br>8:15:17<br>9:40:41<br>11:60:61"
             ]
         },
         {
