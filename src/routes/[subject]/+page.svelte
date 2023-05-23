@@ -1,6 +1,7 @@
 <script>
     import { indexDB } from "$lib/indexDB";
     import { page } from "$app/stores";
+    import PageNotFound from "$lib/PageNotFound.svelte";
 
     import InfoOverview from "$lib/InfoOverview.svelte";
     import { upperCaseWord } from "$lib/utilities";
@@ -13,5 +14,9 @@
 </svelte:head>
 
 <main>
-    <InfoOverview {topic} idx={0} />
+    {#if topic}
+        <InfoOverview {topic} idx={0} />
+    {:else}
+        <PageNotFound />
+    {/if}
 </main>

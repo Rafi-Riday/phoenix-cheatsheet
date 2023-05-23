@@ -5,7 +5,7 @@
 
     let fetchPrefix =
         "https://raw.githubusercontent.com/Rafi-Riday/phoenix-cheatsheet/main/static";
-    let mainData;
+    let mainData = null;
 
     // client side fetching
     const fetchData = async (subject, topic) => {
@@ -35,7 +35,7 @@
 </script>
 
 <svelte:head>
-    {#if mainData !== undefined && mainData !== 404}
+    {#if mainData !== null && mainData !== 404}
         <title>{mainData.title.toUpperCase().split("-").join(" ")}</title>
         <meta name="description" content={mainData.description} />
         <meta name="keywords" content={mainData.keywords} />
@@ -43,7 +43,7 @@
     {/if}
 </svelte:head>
 
-{#if mainData === undefined}
+{#if mainData === null}
     <center class="text-2xl flex flex-col justify-center items-center h-full">
         <progress class="progress progress-primary w-5/6" />
     </center>
