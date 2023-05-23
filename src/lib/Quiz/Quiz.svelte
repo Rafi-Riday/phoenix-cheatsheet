@@ -17,7 +17,7 @@
                       .map((q) => q.questions)
                       .flat().length
                 : questions.length,
-            answered: passage ? 0 : Object.keys(resultSet).length, // Object.keys(resultSet).length,
+            answered: passage ? 0 : Object.keys(resultSet).length,
             correct: passage
                 ? 0
                 : Object.keys(resultSet).filter(

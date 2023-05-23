@@ -34,14 +34,6 @@
     // selected option set generator
     const returnMCQ = (idx) => {
         const { optionSet, qSet } = returnQuestionSet(idx);
-        // return {
-        //     finalOptionSet: shuffleArray(
-        //         shuffleArray(optionSet)
-        //             .filter((_, idx) => idx < oneDirectionRange - 1)
-        //             .concat([qSet])
-        //     ),
-        //     qSet,
-        // };
 
         const selectedWrongAns = [];
         const recursiveRandomOption = () => {
@@ -71,7 +63,6 @@
             qSet,
         };
     };
-    // serialed question set
     // randomizing question set
     let randomizedQuestionSet;
     const randomizeQuestionSetFunc = () => {
@@ -125,7 +116,6 @@
                     : (questionDirection = "dataOne")}
             class="btn btn-xs btn-accent"
         >
-            <!-- border border-sky-200 p-1 bg-sky-200 hover:bg-transparent -->
             <svg
                 class="w-5 h-5"
                 focusable="false"

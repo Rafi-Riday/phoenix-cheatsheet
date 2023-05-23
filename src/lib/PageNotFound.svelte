@@ -4,5 +4,4 @@
         src="https://raw.githubusercontent.com/Rafi-Riday/phoenix-cheatsheet/main/static/404.png"
         alt="404"
     />
-    <!-- -translate-y-14 sm:-translate-y-0 -->
 </center>

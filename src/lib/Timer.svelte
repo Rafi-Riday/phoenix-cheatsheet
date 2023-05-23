@@ -52,7 +52,4 @@
         <span class="font-bold text-error">{title[0]}</span>
         {title[1]}
     </center>
-    <!-- <center class="mb-6">
-        <span class="font-semibold">Exam passed</span>
-    </center> -->
 {/if}

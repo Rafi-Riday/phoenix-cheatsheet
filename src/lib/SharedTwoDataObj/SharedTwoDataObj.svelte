@@ -22,7 +22,7 @@
     $: passField?.focus();
 
     let startUpPass;
-    $: if (startUpPass === "Rima") {
+    $: if (startUpPass === "Rima" /*My Mom's name ❤️*/) {
         currentPage = "Read";
     }
 </script>
@@ -50,7 +50,7 @@
     </div>
 
     <center>
-        <!-- Password -->
+        <!-- simple static pass preview -->
         {#if currentPage === "Pass"}
             <center
                 class="flex flex-col gap-2 font-semibold fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
