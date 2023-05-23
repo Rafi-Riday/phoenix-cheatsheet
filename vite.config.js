@@ -1,24 +1,15 @@
 import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vite';
 import { SvelteKitPWA } from '@vite-pwa/sveltekit'
 
-/** @type {import('vite').UserConfig} */
-const config = {
-	define: {
-		'process.env.NODE_ENV': process.env.NODE_ENV === 'production'
-			? '"production"'
-			: '"development"'
-	},
+export default defineConfig({
 	plugins: [
 		sveltekit(),
 		SvelteKitPWA({
 			srcDir: './src',
 			mode: 'production',
-			// you don't need to do this if you're using generateSW strategy in your app
 			strategies: 'generateSW',
-			// strategies: 'injectManifest',
-			// you don't need to do this if you're using generateSW strategy in your app
-			// filename: generateSW ? undefined : 'prompt-sw.ts',
-			// filename: 'my-sw.js',
+			registerType: 'autoUpdate',
 			scope: '/',
 			base: '/',
 			selfDestroying: process.env.SELF_DESTROYING_SW === 'true',
@@ -46,9 +37,6 @@ const config = {
 					}
 				]
 			},
-			// injectManifest: {
-			// 	globPatterns: ['client/**/*.{js,css,ico,png,svg,webp,woff,woff2}']
-			// },
 			workbox: {
 				globPatterns: ['client/**/*.{js,css,ico,png,svg,webp,woff,woff2}'],
 				runtimeCaching: [{
@@ -68,15 +56,6 @@ const config = {
 					},
 				}]
 			},
-			// devOptions: {
-			// 	enabled: true,
-			// 	type: 'module',
-			// 	navigateFallback: '/',
-			// },
-			// if you have shared info in svelte config file put in a separate module and use it also here
-			// kit: {}
 		})
 	],
-}
-
-export default config
+});
