@@ -41,13 +41,13 @@ export default defineConfig({
 				globPatterns: ['client/**/*.{js,css,ico,png,svg,webp,woff,woff2}'],
 				runtimeCaching: [{
 					urlPattern: ({ request }) => request.destination === 'image',
-					handler: 'StaleWhileRevalidate',
+					handler: 'NetworkFirst',
 					options: {
 						cacheName: 'images-cache',
 					},
 				}, {
 					urlPattern: ({ url }) => url.origin === 'https://raw.githubusercontent.com' && url.pathname.startsWith('/Rafi-Riday/phoenix-cheatsheet/main/static/db'),
-					handler: 'StaleWhileRevalidate',
+					handler: 'NetworkFirst',
 					options: {
 						cacheName: 'api-cache',
 						cacheableResponse: {
