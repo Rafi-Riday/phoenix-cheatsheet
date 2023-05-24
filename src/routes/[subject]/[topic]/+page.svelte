@@ -2,9 +2,13 @@
     import { onMount } from "svelte";
     import { page } from "$app/stores";
     import PageNotFound from "$lib/PageNotFound.svelte";
+    const tempPageData = {
+        sub: $page.params.subject,
+        top: $page.params.topic,
+    };
 
-    let fetchPrefix =
-        "https://raw.githubusercontent.com/Rafi-Riday/phoenix-cheatsheet/main/static";
+    let fetchPrefix = "";
+    // "https://raw.githubusercontent.com/Rafi-Riday/phoenix-cheatsheet/main/static";
     let mainData = null;
 
     // client side fetching
@@ -16,13 +20,24 @@
             mainData = await response.json();
         } catch (error) {
             mainData = 404;
+            // Retry fetching after 1 second
+            setTimeout(() => {
+                fetchData($page.params.subject, $page.params.topic);
+            }, 2000);
         }
     };
     // updating page
     onMount(() => {
         fetchData($page.params.subject, $page.params.topic);
     });
-    $: fetchData($page.params.subject, $page.params.topic);
+    $: if (
+        tempPageData.top !== $page.params.topic ||
+        tempPageData.sub !== $page.params.subject
+    ) {
+        tempPageData.top = $page.params.topic;
+        tempPageData.sub = $page.params.subject;
+        fetchData($page.params.subject, $page.params.topic);
+    }
 
     // importing component conditionally
     const imports = {

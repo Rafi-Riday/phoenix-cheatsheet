@@ -48,7 +48,7 @@
                 ? 'collapse-content'
                 : title
                 ? 'px-4 mt-2'
-                : ''}"
+                : 'px-4 -mt-2'}"
             style="padding-bottom: 0 !important;"
         >
             <!-- img body -->
