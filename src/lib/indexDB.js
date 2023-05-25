@@ -1,4 +1,4 @@
-export const indexDB = [
+const indexDB = [
     {
         "section": "english",
         "topicList": [
@@ -70,3 +70,5 @@ export const indexDB = [
         ]
     }
 ]
+
+export default indexDB;

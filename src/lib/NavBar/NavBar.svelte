@@ -1,6 +1,8 @@
 <script>
-    import { indexDB } from "$lib/indexDB";
-    import NavMenu from "./NavMenu.svelte";
+    export let indexDB;
+    const imports = {
+        NavMenu: () => import("$lib/NavBar/NavMenu.svelte"),
+    };
 </script>
 
 <div
@@ -30,14 +32,21 @@
                 tabindex="0"
                 class="menu menu-compact dropdown-content mt-0 p-1 shadow-custom bg-primary text-primary-content rounded-box dropdown dropdown-bottom"
             >
-                <NavMenu navData={indexDB} />
+                {#await imports["NavMenu"]() then NavMenu}
+                    <svelte:component
+                        this={NavMenu.default}
+                        navData={indexDB}
+                    />
+                {/await}
             </ul>
         </div>
         <a href="/" class="btn btn-ghost normal-case text-xl">Phoenix</a>
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
-            <NavMenu navData={indexDB} />
+            {#await imports["NavMenu"]() then NavMenu}
+                <svelte:component this={NavMenu.default} navData={indexDB} />
+            {/await}
         </ul>
     </div>
     <div

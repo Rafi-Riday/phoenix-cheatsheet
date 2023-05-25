@@ -1,22 +1,27 @@
 <script>
-    import { indexDB } from "$lib/indexDB";
+    import { getContext } from "svelte";
+    const { upperCaseWord } = getContext("utilities");
+    const indexDB = getContext("indexDB");
     import { page } from "$app/stores";
-    import PageNotFound from "$lib/PageNotFound.svelte";
-
-    import InfoOverview from "$lib/InfoOverview.svelte";
-    import { upperCaseWord } from "$lib/utilities";
-
+    const imports = {
+        InfoOverview: () => import("$lib/InfoOverview.svelte"),
+        PageNotFound: () => import("$lib/PageNotFound.svelte"),
+    };
     const topic = indexDB.find((sec) => sec.section === $page.params.subject);
 </script>
 
 <svelte:head>
-    <title>{upperCaseWord($page.params.subject)} | Phoenix Cheat-Sheet</title>
+    <title>{upperCaseWord($page.params.subject)}</title>
 </svelte:head>
 
 <main>
     {#if topic}
-        <InfoOverview {topic} idx={0} />
+        {#await imports["InfoOverview"]() then InfoOverview}
+            <svelte:component this={InfoOverview.default} {topic} idx={0} />
+        {/await}
     {:else}
-        <PageNotFound />
+        {#await imports["PageNotFound"]() then PageNotFound}
+            <svelte:component this={PageNotFound.default} />
+        {/await}
     {/if}
 </main>

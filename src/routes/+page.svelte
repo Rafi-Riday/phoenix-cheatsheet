@@ -1,11 +1,14 @@
 <script>
-    import { indexDB } from "$lib/indexDB";
-    import InfoOverview from "$lib/InfoOverview.svelte";
-    import Timer from "$lib/Timer.svelte";
+    import { getContext } from "svelte";
+    const indexDB = getContext("indexDB");
+    const imports = {
+        InfoOverview: () => import("$lib/InfoOverview.svelte"),
+        Timer: () => import("$lib/Timer.svelte"),
+    };
 </script>
 
 <svelte:head>
-    <title>Home | Phoenix Cheat-Sheet</title>
+    <title>Home</title>
     <meta
         name="description"
         content="North South University admission online coaching center, Phoenix Admission Care"
@@ -21,10 +24,18 @@
     <center class="text-3xl my-3">
         <span class="font-bold text-primary">Phoenix</span> Cheat-Sheet
     </center>
-    <Timer title={["NSU", "Admission"]} date={"2023-05-27T00:00:00"} />
+    {#await imports["Timer"]() then Timer}
+        <svelte:component
+            this={Timer.default}
+            title={["NSU", "Admission"]}
+            date={"2023-05-27T00:00:00"}
+        />
+    {/await}
     <section class="flex flex-col w-full gap-2 lg:gap-4">
         {#each indexDB as topic, idx (idx)}
-            <InfoOverview {topic} {idx} />
+            {#await imports["InfoOverview"]() then InfoOverview}
+                <svelte:component this={InfoOverview.default} {topic} {idx} />
+            {/await}
         {/each}
     </section>
 </main>

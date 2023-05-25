@@ -3,5 +3,5 @@
 </center>
 
 <svelte:head>
-    <title>404 | Phoenix Cheat-Sheet</title>
+    <title>404</title>
 </svelte:head>

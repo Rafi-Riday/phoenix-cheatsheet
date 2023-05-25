@@ -1,7 +1,10 @@
 <script>
-    import { upperCaseWord, secondsToHMS } from "$lib/utilities";
-    import NoPassage from "$lib/Quiz/NoPassage.svelte";
-    import Passage from "$lib/Quiz/Passage.svelte";
+    import { getContext } from "svelte";
+    const { upperCaseWord, secondsToHMS } = getContext("utilities");
+    const imports = {
+        NoPassage: () => import("$lib/Quiz/NoPassage.svelte"),
+        Passage: () => import("$lib/Quiz/Passage.svelte"),
+    };
     export let mainData;
     const { passage, questions, dataSet, answers, title, time } = mainData;
     let submitted = false;
@@ -82,15 +85,27 @@
 
     <center>
         {#if passage}
-            <Passage {dataSet} {answers} {submitted} {rerender} {resultSet} />
+            {#await imports["Passage"]() then Passage}
+                <svelte:component
+                    this={Passage.default}
+                    {dataSet}
+                    {answers}
+                    {submitted}
+                    {rerender}
+                    {resultSet}
+                />
+            {/await}
         {:else}
-            <NoPassage
-                {questions}
-                {answers}
-                {submitted}
-                {rerender}
-                {resultSet}
-            />
+            {#await imports["NoPassage"]() then NoPassage}
+                <svelte:component
+                    this={NoPassage.default}
+                    {questions}
+                    {answers}
+                    {submitted}
+                    {rerender}
+                    {resultSet}
+                />
+            {/await}
         {/if}
     </center>
 

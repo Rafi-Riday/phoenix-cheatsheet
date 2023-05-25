@@ -1,6 +1,7 @@
 <script>
     export let navData;
-    import { upperCaseWord } from "$lib/utilities";
+    import { getContext } from "svelte";
+    const { upperCaseWord } = getContext("utilities");
 </script>
 
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->

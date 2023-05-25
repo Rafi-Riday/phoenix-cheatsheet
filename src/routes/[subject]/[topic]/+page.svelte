@@ -1,14 +1,13 @@
 <script>
     import { onMount } from "svelte";
     import { page } from "$app/stores";
-    import PageNotFound from "$lib/PageNotFound.svelte";
     const tempPageData = {
         sub: $page.params.subject,
         top: $page.params.topic,
     };
 
-    let fetchPrefix = "";
-    // "https://raw.githubusercontent.com/Rafi-Riday/phoenix-cheatsheet/main/static";
+    let fetchPrefix =
+        "https://raw.githubusercontent.com/Rafi-Riday/phoenix-cheatsheet/main/static";
     let mainData = null;
 
     // client side fetching
@@ -63,9 +62,11 @@
         <progress class="progress progress-primary w-5/6" />
     </center>
 {:else if mainData === 404}
-    <PageNotFound />
+    {#await imports["PageNotFound"]() then PageNotFound}
+        <svelte:component this={PageNotFound.default} />
+    {/await}
 {:else if mainData}
-    {#await imports[mainData.prototype]() then response}
-        <svelte:component this={response.default} {mainData} />
+    {#await imports[mainData.prototype]() then Prototype}
+        <svelte:component this={Prototype.default} {mainData} />
     {/await}
 {/if}

@@ -1,11 +1,11 @@
 <script>
-    import { marked } from "marked";
-    import { upperCaseWord } from "$lib/utilities";
-    import Katexify from "$lib/Katexify";
+    import { getContext } from "svelte";
+    const { marked, Katexify } = getContext("md+k");
+    const { addCrossOrigin, splitMdKatex, upperCaseWord, range } =
+        getContext("utilities");
     export let dataSet;
     export let titleSize = 3;
     let titleSizeArray = ["text-xl", "text-lg", "text-base"];
-    import { range, splitMdKatex } from "$lib/utilities";
 </script>
 
 {#each dataSet as { title, img, collapse, serial, noBadge, dataSet }, idx (idx)}
@@ -70,6 +70,7 @@
                                     class="w-full shadow-lg"
                                     src="{img.before}{l}{img.after}"
                                     alt="{l}{img.after}"
+                                    crossorigin="anonymous"
                                 />
                             </div>
                         {/each}
@@ -94,7 +95,7 @@
                                     1}.&nbsp;</span
                             >
                         {/if}
-                        <div class="grow">
+                        <div use:addCrossOrigin class="grow">
                             {#if typeof formula === "string"}
                                 {#each splitMdKatex(formula) as part, idx (idx)}
                                     {#if part.md}

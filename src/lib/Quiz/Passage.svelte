@@ -1,4 +1,7 @@
 <script>
+    import { getContext } from "svelte";
+    const { marked, Katexify } = getContext("md+k");
+    const { addCrossOrigin, splitMdKatex } = getContext("utilities");
     import { PassageInfo } from "$lib/stores";
     export let submitted;
     export let dataSet;
@@ -50,8 +53,15 @@
                 </label>
                 <span
                     class="text-justify w-full bg-base-100 px-3 py-4 rounded hidden lg:block"
+                    use:addCrossOrigin
                 >
-                    {@html data.passage}
+                    {#each splitMdKatex(data.passage) as part, idx (idx)}
+                        {#if part.md}
+                            {@html marked.parseInline(part.md)}
+                        {:else if part.k}
+                            {@html Katexify(part.k)}
+                        {/if}
+                    {/each}
                 </span>
                 <label
                     for="passage-sidebar"
@@ -71,8 +81,17 @@
                     >
                 </label>
             {:else if data.string}
-                <span class="text-justify w-full font-medium">
-                    {@html data.string}
+                <span
+                    use:addCrossOrigin
+                    class="text-justify w-full font-medium"
+                >
+                    {#each splitMdKatex(data.string) as part, idx (idx)}
+                        {#if part.md}
+                            {@html marked.parseInline(part.md)}
+                        {:else if part.k}
+                            {@html Katexify(part.k)}
+                        {/if}
+                    {/each}
                 </span>
             {:else if data.questions}
                 <span class="max-w-xl grid grid-cols-1 gap-4">
@@ -82,8 +101,14 @@
                         >
                             <legend
                                 class="bg-base-100 border border-slate-300 py-1 px-2 rounded"
-                                ><span class="font-medium"
-                                    >{serial}. {@html question}</span
+                                ><span use:addCrossOrigin class="font-medium"
+                                    >{serial}. {#each splitMdKatex(question) as part, idx (idx)}
+                                        {#if part.md}
+                                            {@html marked.parseInline(part.md)}
+                                        {:else if part.k}
+                                            {@html Katexify(part.k)}
+                                        {/if}
+                                    {/each}</span
                                 ></legend
                             >
                             <div class="grid grid-cols-2 gap-2">
@@ -123,7 +148,16 @@
                                                 ? 'border-slate-300 peer-checked:bg-error peer-checked:text-white peer-checked:border-red-600'
                                                 : ''}"
                                             for="op_{qIdx}_{opIdx}"
-                                            >{@html option}
+                                        >
+                                            {#each splitMdKatex(option) as part, idx (idx)}
+                                                {#if part.md}
+                                                    {@html marked.parseInline(
+                                                        part.md
+                                                    )}
+                                                {:else if part.k}
+                                                    {@html Katexify(part.k)}
+                                                {/if}
+                                            {/each}
                                         </label>
                                     </div>
                                 {/each}

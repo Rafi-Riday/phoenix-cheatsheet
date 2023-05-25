@@ -1,7 +1,8 @@
 <script>
-    import { shuffleArray, splitMdKatex } from "$lib/utilities";
-    import { marked } from "marked";
-    import Katexify from "$lib/Katexify";
+    import { getContext } from "svelte";
+    const { marked, Katexify } = getContext("md+k");
+    const { addCrossOrigin, shuffleArray, splitMdKatex } =
+        getContext("utilities");
     export let submitted;
     export let questions;
     export let answers;
@@ -27,7 +28,7 @@
             >
                 <legend
                     class="bg-base-100 border border-slate-300 py-1 px-2 rounded w-full"
-                    ><span class="font-medium"
+                    ><span use:addCrossOrigin class="font-medium"
                         >{qIdx + 1}. {#each splitMdKatex(question) as part, idx (idx)}
                             {#if part.md}
                                 {@html marked.parseInline(part.md)}

@@ -1,5 +1,7 @@
 <script>
-    import PageNotFound from "$lib/PageNotFound.svelte";
+    const imports = {
+        PageNotFound: () => import("$lib/PageNotFound.svelte"),
+    };
     const data404 = {
         title: "Page not found",
         description: "404 page of phoenix coaching cheatsheet",
@@ -17,4 +19,6 @@
     <meta name="author" content={author} />
 </svelte:head>
 
-<PageNotFound />
+{#await imports["PageNotFound"]() then PageNotFound}
+    <svelte:component this={PageNotFound.default} />
+{/await}

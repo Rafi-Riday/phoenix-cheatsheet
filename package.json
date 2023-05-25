@@ -1,10 +1,10 @@
 {
 	"name": "phoenix-cheatsheet",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"build": "vite build && node postbuild.js",
 		"preview": "vite preview"
 	},
 	"devDependencies": {
@@ -13,12 +13,15 @@
 		"@vite-pwa/sveltekit": "^0.2.2",
 		"autoprefixer": "^10.4.13",
 		"daisyui": "^2.51.6",
+		"glob": "^10.2.6",
+		"html-minifier-terser": "^7.2.0",
 		"katex": "^0.16.4",
 		"marked": "4.3.0",
 		"postcss": "^8.4.21",
 		"svelte": "^3.54.0",
 		"tailwindcss": "^3.2.7",
 		"vite": "^4.0.0",
+		"vite-plugin-svelte-console-remover": "^1.0.10",
 		"workbox-cacheable-response": "^6.5.4",
 		"workbox-routing": "^6.5.4",
 		"workbox-strategies": "^6.5.4",

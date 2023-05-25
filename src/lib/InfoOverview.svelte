@@ -1,5 +1,6 @@
 <script>
-    import { upperCaseWord } from "$lib/utilities";
+    import { getContext } from "svelte";
+    const { upperCaseWord } = getContext("utilities");
     export let idx = 0;
     export let topic;
 </script>
@@ -18,7 +19,7 @@
     </h3>
     <div class="flex flex-col gap-2">
         {#each topic.topicList as sectionTitle}
-            <li class="pl-1">
+            <div class="pl-3">
                 <a
                     href="/{topic.section}/{sectionTitle}"
                     class="underline underline-offset-4 font-medium"
@@ -28,7 +29,7 @@
                     {#each Object.keys(topic.topicDetails) as d}
                         {#if d.toLowerCase() === sectionTitle.toLowerCase()}
                             <div
-                                class="pl-10 no-underline flex flex-row flex-wrap gap-x-2"
+                                class="pl-4 no-underline flex flex-row flex-wrap gap-x-2"
                             >
                                 {topic.topicDetails[d]
                                     .map((ttd) => upperCaseWord(ttd))
@@ -37,7 +38,7 @@
                         {/if}
                     {/each}
                 {/if}
-            </li>
+            </div>
         {/each}
     </div>
 </div>

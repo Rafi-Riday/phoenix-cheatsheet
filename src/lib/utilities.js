@@ -60,3 +60,10 @@ export const splitMdKatex = (text) => {
 
     return result;
 }
+
+export function addCrossOrigin(node) {
+    const images = node.getElementsByTagName('img');
+    for (const img of images) {
+        img.setAttribute('crossorigin', 'anonymous');
+    }
+}

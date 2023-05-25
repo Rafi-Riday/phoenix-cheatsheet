@@ -1,5 +1,7 @@
 <script>
-    import Timer from "$lib/Timer.svelte";
+    const imports = {
+        Timer: () => import("$lib/Timer.svelte"),
+    };
     let dataSet = [
         { title: ["DU", "Admission"], date: "2023-05-12T00:00:00" },
         { title: ["CU", "Admission"], date: "2023-05-17T00:00:00" },
@@ -9,5 +11,7 @@
 </script>
 
 {#each dataSet as { title, date }, idx (idx)}
-    <Timer {title} {date} />
+    {#await imports["Timer"]() then Timer}
+        <svelte:component this={Timer.default} {title} {date} />
+    {/await}
 {/each}

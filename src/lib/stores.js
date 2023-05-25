@@ -1,6 +1,6 @@
 import { writable } from "svelte/store";
 /**
- * $SideBarInfo = {title: str[], prefix: str}
+ * $SideBarInfo = {titles: str[], prefix: str}
  */
 export const SideBarInfo = writable(null);
 export const PassageInfo = writable([]);

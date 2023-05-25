@@ -1,7 +1,10 @@
 <script>
-    import ExamQSet from "$lib/SharedTwoDataObj/ExamQSet.svelte";
-    import ReadQSet from "$lib/SharedTwoDataObj/ReadQSet.svelte";
-    import { upperCaseWord } from "$lib/utilities";
+    import { getContext } from "svelte";
+    const { upperCaseWord } = getContext("utilities");
+    const imports = {
+        ExamQSet: () => import("$lib/SharedTwoDataObj/ExamQSet.svelte"),
+        ReadQSet: () => import("$lib/SharedTwoDataObj/ReadQSet.svelte"),
+    };
 
     export let mainData;
     const { title, direction, dataSet } = mainData;
@@ -75,11 +78,24 @@
         {/if}
         <!-- Read -->
         {#if currentPage === "Read"}
-            <ReadQSet {producedUsableData} {direction} {switchToTest} />
+            {#await imports["ReadQSet"]() then ReadQSet}
+                <svelte:component
+                    this={ReadQSet.default}
+                    {producedUsableData}
+                    {direction}
+                    {switchToTest}
+                />
+            {/await}
         {/if}
         <!-- Test -->
         {#if currentPage === "Test"}
-            <ExamQSet {producedUsableData} {direction} />
+            {#await imports["ExamQSet"]() then ExamQSet}
+                <svelte:component
+                    this={ExamQSet.default}
+                    {producedUsableData}
+                    {direction}
+                />
+            {/await}
         {/if}
     </center>
 </main>

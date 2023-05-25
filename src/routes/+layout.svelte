@@ -1,12 +1,40 @@
 <script>
     import "../app.css";
-    import NavBar from "$lib/NavBar/NavBar.svelte";
     import SideBar from "$lib/SideBar.svelte";
-    import PageNotFound from "$lib/PageNotFound.svelte";
-
     import { page } from "$app/stores";
-    import { indexDB } from "$lib/indexDB";
     import { SideBarInfo } from "$lib/stores";
+    import { onMount } from "svelte";
+    import indexDB from "$lib/indexDB.js";
+    // context api
+    import { setContext } from "svelte";
+    import {
+        upperCaseWord,
+        addCrossOrigin,
+        splitMdKatex,
+        range,
+        shuffleArray,
+        secondsToHMS,
+        randomNumRange,
+    } from "$lib/utilities";
+    import { marked } from "marked";
+    import Katexify from "$lib/Katexify";
+    setContext("indexDB", indexDB);
+    setContext("md+k", { marked, Katexify });
+    setContext("utilities", {
+        upperCaseWord,
+        addCrossOrigin,
+        splitMdKatex,
+        range,
+        shuffleArray,
+        secondsToHMS,
+        randomNumRange,
+    });
+
+    // to be lazy loaded
+    const imports = {
+        NavBar: () => import("$lib/NavBar/NavBar.svelte"),
+        PageNotFound: () => import("$lib/PageNotFound.svelte"),
+    };
 
     const defaultSideBarInfo = () => {
         SideBarInfo.set({
@@ -41,15 +69,11 @@
     }
 
     // pwa functionality
-    import { onMount } from "svelte";
     import { pwaInfo } from "virtual:pwa-info";
     let updating = false;
 
-    const updateUIWithData = (data) => {
-        // Implement your logic to update the UI with the latest data
-        console.log("updated data from StaleWhileRevalidate");
+    const updateUI = (data) => {
         updating = !updating;
-        console.log(data);
     };
 
     onMount(async () => {
@@ -68,10 +92,13 @@
         // Listen for cache updates
         const cacheUpdatesChannel = new BroadcastChannel("cache-updates");
         cacheUpdatesChannel.onmessage = (event) => {
-            if (event.data.type === "CACHE_UPDATED") {
+            if (
+                event.data.type === "CACHE_UPDATED" ||
+                event.data.type === "IMAGE_CACHE_UPDATED"
+            ) {
                 console.log("Cache updated:", event.data.request);
                 // Update the UI with the latest data
-                updateUIWithData(event.data.response);
+                updateUI(event.data.response);
             }
         };
     });
@@ -83,7 +110,9 @@
     {@html webManifest}
 </svelte:head>
 
-<NavBar />
+{#await imports["NavBar"]() then NavBar}
+    <svelte:component this={NavBar.default} {indexDB} />
+{/await}
 
 <SideBar>
     <main class="min-h-full flex flex-col w-full">
@@ -93,8 +122,15 @@
                     <slot />
                 {/key}
             {:else}
-                <PageNotFound />
+                {#await imports["PageNotFound"]() then PageNotFound}
+                    <svelte:component this={PageNotFound.default} />
+                {/await}
             {/if}
         </section>
     </main>
 </SideBar>
+
+<!-- lazy load components -->
+<!-- {#await imports[""]() then response}
+    <svelte:component this={response.default} />
+{/await} -->

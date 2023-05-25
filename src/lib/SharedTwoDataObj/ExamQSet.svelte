@@ -1,5 +1,6 @@
 <script>
-    import { randomNumRange, shuffleArray } from "$lib/utilities";
+    import { getContext } from "svelte";
+    const { randomNumRange, shuffleArray } = getContext("utilities");
     export let producedUsableData;
     export let direction;
     // predefined

@@ -13,6 +13,8 @@ import { CacheableResponsePlugin } from 'workbox-cacheable-response';
 const broadcastChannel = new BroadcastChannel('cache-updates');
 
 // Register routes using StaleWhileRevalidate strategy with custom cacheWillUpdate
+
+// handle api requests
 registerRoute(
     ({ url }) => url.origin === 'https://raw.githubusercontent.com' && url.pathname.startsWith('/Rafi-Riday/phoenix-cheatsheet/main/static/db'),
     new StaleWhileRevalidate({
@@ -35,5 +37,30 @@ registerRoute(
         ],
     })
 );
+
+// handle image requests
+registerRoute(
+    ({ request }) => request.destination === 'image',
+    new StaleWhileRevalidate({
+        cacheName: 'images-cache',
+        plugins: [
+            new CacheableResponsePlugin({ statuses: [0, 200] }),
+            {
+                cacheWillUpdate: async ({ request, response, event }) => {
+                    if (response) {
+                        const clonedResponse = response.clone();
+                        broadcastChannel.postMessage({
+                            type: 'IMAGE_CACHE_UPDATED',
+                            request: request.url,
+                            response: await clonedResponse.blob(),
+                        });
+                    }
+                    return response;
+                },
+            },
+        ],
+    })
+);
+
 
 // Other Workbox configurations

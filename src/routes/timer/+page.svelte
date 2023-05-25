@@ -1,5 +1,6 @@
 <script>
-    import { secondsToHMS } from "$lib/utilities";
+    import { getContext } from "svelte";
+    const { secondsToHMS } = getContext("utilities");
     // timer logic
     let submitted = false;
     let givingExam = false;

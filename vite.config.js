@@ -1,10 +1,12 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import { SvelteKitPWA } from '@vite-pwa/sveltekit'
+import svelteConsoleRemover from 'vite-plugin-svelte-console-remover';
 
 export default defineConfig({
 	plugins: [
 		sveltekit(),
+		svelteConsoleRemover(),
 		SvelteKitPWA({
 			srcDir: './src',
 			swSrc: './src/sw.ts',
@@ -21,7 +23,7 @@ export default defineConfig({
 				start_url: "/",
 				scope: '/',
 				display: "standalone",
-				theme_color: "#570df8",
+				theme_color: "#4506cb",
 				background_color: "#f2f2f2",
 				icons: [
 					{
@@ -40,25 +42,6 @@ export default defineConfig({
 			},
 			workbox: {
 				globPatterns: ['client/**/*.{js,css,ico,png,svg,webp,woff,woff2}'],
-				runtimeCaching: [
-					{
-						urlPattern: ({ request }) => request.destination === 'image',
-						handler: 'StaleWhileRevalidate',
-						options: {
-							cacheName: 'images-cache',
-						},
-					},
-					// {
-					// 	urlPattern: ({ url }) => url.origin === 'https://raw.githubusercontent.com' && url.pathname.startsWith('/Rafi-Riday/phoenix-cheatsheet/main/static/db'),
-					// 	handler: 'StaleWhileRevalidate',
-					// 	options: {
-					// 		cacheName: 'api-cache',
-					// 		cacheableResponse: {
-					// 			statuses: [0, 200]
-					// 		}
-					// 	},
-					// }
-				]
 			},
 		})
 	],
