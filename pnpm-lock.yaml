@@ -43,15 +43,6 @@ devDependencies:
   vite-plugin-svelte-console-remover:
     specifier: ^1.0.10
     version: 1.0.10
-  workbox-cacheable-response:
-    specifier: ^6.5.4
-    version: 6.5.4
-  workbox-routing:
-    specifier: ^6.5.4
-    version: 6.5.4
-  workbox-strategies:
-    specifier: ^6.5.4
-    version: 6.5.4
   workbox-window:
     specifier: ^6.5.4
     version: 6.5.4

@@ -9,7 +9,6 @@ export default defineConfig({
 		svelteConsoleRemover(),
 		SvelteKitPWA({
 			srcDir: './src',
-			swSrc: './src/sw.ts',
 			mode: 'production',
 			strategies: 'generateSW',
 			registerType: 'autoUpdate',
@@ -42,6 +41,25 @@ export default defineConfig({
 			},
 			workbox: {
 				globPatterns: ['client/**/*.{js,css,ico,png,svg,webp,woff,woff2}'],
+				runtimeCaching: [{
+					urlPattern: ({ request }) => request.destination === 'image',
+					handler: 'NetworkFirst',
+					options: {
+						cacheName: 'images-cache',
+						cacheableResponse: {
+							statuses: [0, 200]
+						}
+					},
+				}, {
+					urlPattern: ({url}) => url.origin === 'https://raw.githubusercontent.com' && url.pathname.startsWith('/Rafi-Riday/phoenix-cheatsheet/main/static/db'),
+					handler: 'NetworkFirst',
+					options: {
+						cacheName: 'api-cache',
+						cacheableResponse: {
+							statuses: [0, 200]
+						}
+					}
+				}]
 			},
 		})
 	],
