@@ -1,4 +1,4 @@
-#### Website is created to provide a cheat sheet for Phoenix NSU admission students.
+#### Site is created to provide a cheat sheet for Phoenix coaching NSU admission students.
 
 ##### Used technologies:
 - SvelteKit
@@ -7,7 +7,8 @@
 - Katex (Math)
 
 ##### Website contains features like:
-- Website is Static Site Generated `(SSG)`.
+- It is Static Site Generated `(SSG)` but some parts fetches data from client side.
+- Its PWA, every part of the site can be saved. Information are cached when uaer is connected to network. Offline fetching falls back to cached data.
 - Js framework is [SvelteKit](https://kit.svelte.dev/) which is more like `Next JS`.
 - Provided information related to NSU admission syllabus.
 - Used `Katex` library to show mathematical formula & equations.
