@@ -8,11 +8,10 @@
 
 ##### Website contains features like:
 - Website is Static Site Generated `(SSG)`.
-- Even with intensive tasks, website is much faster, powered by `Svelte JS`, Responsive with `Tailwind CSS`. In this project I found that `Svelte` is really super developer-friendly. Here DX is 10 time better than React. Also its official SSR Framework `SvelteKit` is as cool as `Next JS`.
-- Provided all collection of information related to NSU admission syllabus.
-- No Database is used, instead used `.json` files.
+- Js framework is [SvelteKit](https://kit.svelte.dev/) which is more like `Next JS`.
+- Provided information related to NSU admission syllabus.
 - Used `Katex` library to show mathematical formula & equations.
-- Used SVG format of drawings (Such as for triangles, quadrilaterals etc).
-- Routes are based on subjects.
+- Used optimised images.
+- Routes are based on subjects and topics.
 
-##### Website : https://phoenix-cheatsheet.netlify.app/ (Caution, website maybe simple pass protected for reasons)
+##### Website : https://phoenix-cheatsheet.netlify.app/ (still under construction)
