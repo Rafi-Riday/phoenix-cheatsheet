@@ -1,1 +1,2 @@
 *.html linguist-language=Svelte
+*.svelte linguist-language=JavaScript
