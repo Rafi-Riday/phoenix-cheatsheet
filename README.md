@@ -15,4 +15,4 @@
 - Used optimised images.
 - Routes are based on subjects and topics.
 
-##### Website : https://phoenix-cheatsheet.netlify.app/ (still under construction)
+##### Website : [https://phoenix-cheatsheet.vercel.app/](https://phoenix-cheatsheet.vercel.app/)
