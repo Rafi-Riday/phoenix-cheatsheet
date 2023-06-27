@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build && node postbuild.js",
+		"build": "vite build && node postbuild-windows.js",
 		"preview": "vite preview"
 	},
 	"devDependencies": {
